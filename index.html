@@ -1,85 +1,106 @@
 <!DOCTYPE html>
-<html class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ROBOWORLD</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-    <!-- CSSs -->
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/fav.svg" sizes="any">
-</head>
+<html>
+  <head>
+	  <!--tipo de caracteres-->
+      <meta charset="utf-8">
+	  <!--para que se ajuste el tamaño de la pantalla-->
+      <meta name="viewport" content="width=device-width">
+	  <!--titulo de la pestaña del navegador-->
+      <title>RoboWorld</title>
 
-<body id="body">
+	  <!--para linkear con la hoja de estilos-->
+      <link href="style.css" rel="stylesheet" type="text/css" />
+	  <!--favicon (icono de la pestalla del navegador)-->
+      <link rel="icon" type="image/svg+xml" href="images/fav.svg" sizes="any">
+	  <!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <!--linkear con los scripts de JS-->
+      <script src="plugins/script.js"></script>
+  </head>
+  
+  <body>
+	  <div class="container">
+		  <!--header-->
+		  <header>
+			  <a class="logo" href="#home"><img src="images/logo.png" alt="roboworld logo"/></a>
+			  <nav>
+				  	<ul class="nav-bar"><div class="bg"></div>
+						<li><a class="nav-link active" href="#home">PLAY</a></li>
+						<li><a class="nav-link" href="#howtoplay">HOW TO PLAY</a></li>
+						<li><a class="nav-link" href="#topplayers">TOP PLAYERS</a></li>
+						<li><a class="nav-link" href="#micuenta">MI CUENTA</a></li>
+				   	</ul>
+					
+					<div class="hamburger">
+						<div class="line1"></div>
+						<div class="line2"></div>
+						<div class="line3"></div>
+					</div>
+				</nav>
+			</header>
+			
+			<!--aquí comienza la pagina-->
+			<main>
+				<!--seccion de home-->
+				<div id="home">
+					<div class="filter"></div>
+					<section class="intro">
+						<img src="images/main.png" alt="roboworld logo"/>
+						<hr>
+						<h3 id="subtitulo">Aquí comienza la aventura</h3>
+					</section> 
+				</div>
 
-    <!-- Navigation bar -->
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+				<!--seccion de how to play-->
+				<div id="howtoplay"> 
+					<h3>How to play<hr></h3>
+					<p>Tutorial para comenzar a jugar</p>
+					<div class="work-box">
+						<div class="work">
+							<!--cards-->
+							<div class="card">
+								<img class="work-img" src="images/login.png">
+								<a href="" target="_blank"><!--Link to project--><div class="work-content">1. Da click en mi cuenta y registrate</div></a>
+							</div>
+							
+							<div class="card">
+								<img class="work-img" src="images/custom.png">
+								<a href="" target="_blank"> <!--Link to project--><div class="work-content">2. Diseña tu robot</div></a>
+							</div>
+							
+							<div class="card">
+								<img class="work-img" src="images/play.png">
+								<a href="" target="_blank"> <!--Link to project--><div class="work-content">3. Comienza a jugar</div></a>
+							</div>
+							
+							<div class="card">
+								<img class="work-img" src="images/win.jpg">
+								<a href="" target="_blank"> <!--Link to project--><div class="work-content">4. Avanza de nivel</div></a>
+							</div>
+							
+							<div class="card">
+								<img class="work-img" src="images/robot.jpg">
+								<a href="" target="_blank"> <!--Link to project--><div class="work-content">5. Junta la mayor cantidad de engranes</div></a>
+							</div>
+							
+							<div class="card">
+								<img class="work-img" src="images/fun.jpg">
+								<a href="" target="_blank"> <!--Link to project--><div class="work-content">6. Diviertete</div></a>
+							</div> 	  
+						</div>
+					</div>
+				</div>
 
-              <!-- The company name that is seen on the top of the page -->
-                <a class="navbar-brand" href="#">ROBOWORLD</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+				<!--seccion de top-->
+				<div id="topplayers">
+					<!--social media links-->
+					<h3>Top players<hr></h3>
+					<p>Jugadores que han juntado la mayor cantidad de engranes</p>
+				</div>
+			</main>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto text-center text-lg-left">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">JUGAR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">TO PLAYERS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">MI CUENTA</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!-- Navigation bar finished -->
-
-    <!---------- Main body ---------->
-    <section class="section">
-        <div class="container">
-            <p>AQUÍ VA EL JUEGO</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </section>
-
-    <!---------- Scripts ---------->
-    <script src="plugins/jquery-2.1.1.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="plugins/magnific-popup/jquery.magnific.popup.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+			<!--comienza el footer-->
+			<footer class="copyright">EQUIPO 1</footer>
+		</div> <!--el div de container (todo lo de la pagina)-->
+	</body>
 </html>
