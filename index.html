@@ -9,28 +9,27 @@
       <title>RoboWorld</title>
 
 	  <!--para linkear con la hoja de estilos-->
-      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
 	  <!--favicon (icono de la pestalla del navegador)-->
       <link rel="icon" type="image/svg+xml" href="images/fav.svg" sizes="any">
 	  <!--para linkear con la libreria de jQuery en la pagina de google APIS-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  <!--linkear con los scripts de JS-->
-      <script src="plugins/script.js"></script>
+      <script src="js/script.js"></script>
 	  <!--linkear los iconos-->
 	  <script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
   </head>
   
   <body>
-	  <div class="container">
 		  <!--header-->
 		  <header>
-			  <a class="logo" href="#home"><img src="images/logo.png" alt="roboworld logo"/></a>
+			  <a class="logo" href="#home"><img src="img/logo.png" alt="roboworld logo"/></a>
 			  <nav>
 				  	<ul class="nav-bar"><div class="bg"></div>
-						<li><a class="nav-link active" href="#home">PLAY</a></li>
+						<li><a class="nav-link active" href="#home">HOME</a></li>
 						<li><a class="nav-link" href="#howtoplay">HOW TO PLAY</a></li>
-						<li><a class="nav-link" href="#topplayers">TOP PLAYERS</a></li>
-						<li><a class="nav-link" href="#micuenta">MI CUENTA</a></li>
+						<li><a class="nav-link" href="#stats">STATS</a></li>
+						<li><a class="nav-link" href="login.html">MY ACCOUNT</a></li>
 				   	</ul>
 					
 					<div class="hamburger">
@@ -47,9 +46,13 @@
 				<div id="home">
 					<div class="filter"></div>
 					<section class="intro">
-						<img src="images/main.png" alt="roboworld logo"/>
+						<img src="img/main.png" alt="roboworld logo"/>
 						<hr>
-						<h3 id="subtitulo">Aquí comienza la aventura</h3>
+						<h3 id="subtitulo">
+							<a class="nav-link" href="game.html" target="_blank">PLAY ONLINE</a>
+							<span class="onlineOrDownload">or</span>
+							<a class="nav-link" href="/img/main.png" download>DOWNLOAD</a>
+						</h3>
 					</section> 
 				</div>
 
@@ -61,54 +64,49 @@
 						<div class="work">
 							<!--cards-->
 							<div class="card">
-								<img class="work-img" src="images/login.png">
-								<a href="" target="_blank"><!--Link to project--><div class="work-content">1. Da click en mi cuenta y registrate</div></a>
+								<img class="work-img" src="img/login.jpg">
+								<a href="#" target="_blank"><!--Link--><div class="work-content">1. Da click en mi cuenta y registrate</div></a>
 							</div>
 							
 							<div class="card">
-								<img class="work-img" src="images/custom.png">
-								<a href="" target="_blank"> <!--Link to project--><div class="work-content">2. Diseña tu robot</div></a>
+								<img class="work-img" src="img/custom.jpg">
+								<a href="#" target="_blank"><!--Link--><div class="work-content">2. Diseña tu robot</div></a>
 							</div>
 							
 							<div class="card">
-								<img class="work-img" src="images/play.png">
-								<a href="" target="_blank"> <!--Link to project--><div class="work-content">3. Comienza a jugar</div></a>
+								<img class="work-img" src="img/play.jpg">
+								<a href="#" target="_blank"><!--Link--><div class="work-content">3. Comienza a jugar</div></a>
 							</div>
 							
 							<div class="card">
-								<img class="work-img" src="images/win.jpg">
-								<a href="" target="_blank"> <!--Link to project--><div class="work-content">4. Avanza de nivel</div></a>
+								<img class="work-img" src="img/win.jpg">
+								<a href="#" target="_blank"><!----><div class="work-content">4. Avanza de nivel</div></a>
 							</div>
 							
 							<div class="card">
-								<img class="work-img" src="images/robot.jpg">
-								<a href="" target="_blank"> <!--Link to project--><div class="work-content">5. Junta la mayor cantidad de engranes</div></a>
+								<img class="work-img" src="img/robot.jpg">
+								<a href="#" target="_blank"><!--Link--><div class="work-content">5. Junta la mayor cantidad de engranes</div></a>
 							</div>
 							
 							<div class="card">
-								<img class="work-img" src="images/fun.jpg">
-								<a href="" target="_blank"> <!--Link to project--><div class="work-content">6. Diviertete</div></a>
+								<img class="work-img" src="img/fun.jpg">
+								<a href="#" target="_blank"><!--Link--><div class="work-content">6. Diviertete</div></a>
 							</div> 	  
 						</div>
 					</div>
 				</div>
 
-				<!--seccion de top-->
-				<div id="topplayers">
-					<!--social media links-->
-					<h3>Top players<hr></h3>
+				<!--seccion de stats-->
+				<div id="stats">
+					<h3>Players statistics<hr></h3>
 					<p>Jugadores que han juntado la mayor cantidad de engranes</p>
 				</div>
 			</main>
-
 			<!--comienza el footer-->
 			<footer class="copyright">
-				<p>
-					<a href="https://github.com/grchristian/RoboWorld">
-						<i class="fab fa-github"></i>
-					</a>
-				</p>
+				<p><a href="https://github.com/grchristian/RoboWorld" target="_blank"><i class="fab fa-github"></i></a></p>
 			</footer>
-		</div> <!--el div de container (todo lo de la pagina)-->
+		</div>
+		<!--el div de container (todo lo de la pagina)-->
 	</body>
 </html>

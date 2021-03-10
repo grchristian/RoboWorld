@@ -95,7 +95,7 @@ a.nav-link{
 
 /*imagen de fondo*/
 #home .filter{
-	background: url(images/bg.png) no-repeat;
+	background: url(../img/bg.png) no-repeat;
 	background-size: cover;
 	background-position:center;
     position: absolute;
@@ -135,34 +135,8 @@ a.nav-link{
 	font-size: 22px;
 }
 
-
-/*──────────────────
-    social media
-──────────────────*/
-
-.social-media{
-	padding: 10px;
-	display: flex;
-	position: center;
-    align-items: space-around;
-	justify-content:center;
-}
-
-.social-media a {
-    margin: 10px;
-    font-size: 2rem;
-    text-align:center;
-    display: inline-block;
-	color: var(--main-fonts-color);
-}
-
-.social-media a i{
-	cursor: pointer;
-}
-
-.social-media  a:hover {
-	color: var(--main-decor-color);
-	text-shadow: 0 0 50px var(--main-decor-color);
+.onlineOrDownload {
+	color:#ff7848;
 }
 
 /*──────────────────
@@ -235,10 +209,10 @@ a.nav-link{
 }
 
 /*──────────────────
-      topplayers
+      stats
 ──────────────────*/
 
-#topplayers{
+#stats{
 	margin: auto;
 	padding-bottom: 20px;
 	height: 600px;
@@ -249,7 +223,7 @@ a.nav-link{
 	color: var(--main-fonts-color);
 }
 	
-#topplayers p{
+#stats p{
 	padding:10px;
 	text-align:center;
 	font-size:1.2rem;
@@ -291,7 +265,7 @@ hr {
     background: var(--main-decor-color);
 	margin: 2px;
 	height: 3px;
-	width: 300px;
+	width: 331px;
     border-radius:5px;
 	border: hidden;
 	margin-inline-start: auto;
@@ -371,7 +345,7 @@ hr {
 
 @media only screen and (max-width: 500px) {
 
-	#home, #howtoplay, #topplayers, #micuenta{
+	#home, #howtoplay, #stats, #micuenta{
         overflow-x: hidden;
 	}
 	header{
