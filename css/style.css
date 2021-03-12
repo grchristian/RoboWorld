@@ -86,7 +86,7 @@ a.nav-link{
 
 #home{ 	
 	margin: auto;
-	height: 100vh;
+	height: 95vh;
 	color: var(--main-fonts-color);
 	display: flex;
 	flex-direction: column;
