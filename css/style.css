@@ -1,6 +1,7 @@
 /*se importa la fuente*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
 :root{
 	--main-background: #222222;
 	--main-fonts-color: #ffffff;
@@ -95,7 +96,7 @@ a.nav-link{
 
 /*imagen de fondo*/
 #home .filter{
-	background: url(../img/bg.png) no-repeat;
+	background: url(/img/bg.png) no-repeat;
 	background-size: cover;
 	background-position:center;
     position: absolute;
