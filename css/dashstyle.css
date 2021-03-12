@@ -19,6 +19,7 @@ body {
 .box__header-title {
 	color: #fff;
 	font-size: 18px;
+	text-align: center;
 }
 
 .box__body {
@@ -26,6 +27,11 @@ body {
 }
 
 /* STATS */
+
+.profilepic {
+
+	text-align: center;
+}
 
 .stats {
 	color: #fff;
