@@ -96,7 +96,7 @@ a.nav-link{
 
 /*imagen de fondo*/
 #home .filter{
-	background: url(/img/bg.png) no-repeat;
+	background: url(https://es.rankiapro.com/wp-content/uploads/2019/08/fondo-tecnologico-preferido-selectores.jpg) no-repeat;
 	background-size: cover;
 	background-position:center;
     position: absolute;
