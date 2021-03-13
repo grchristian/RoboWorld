@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(67, 61, 65);
+    text-align: center;
+}
+.texto{
+    text-align: center;
+    color: seashell;
+}
+.img{
+    max-height: 300px;
+}
+.boton{
+    text-align: right;
+    max-height: 50px;
+}

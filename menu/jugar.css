@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(58,61,65);
+ 
+}
+.texto{
+    text-align: center;
+}
+.nivel1{
+    max-height: 500px;
+}
+.nivel2{
+    max-height: 320px;
+}    
+.small{
+    text-align: center;
+}
+.boton2{
+    max-width: 100px;
+}

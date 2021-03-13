@@ -77,3 +77,14 @@ body {
 .stats--main .stats__amount {
 	font-size: 54px;
 }
+
+
+a{
+	color: #00ff08;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #74e145;
+}

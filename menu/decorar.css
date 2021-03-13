@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(57,61,65);
+    text-align: center;
+}
+
+.texto{
+    color: seashell;
+}
+
+.work-img{
+    max-height: 300px;
+}
+.botonMenu1{
+    text-align: left;
+   
+}
+
+.boton1{
+    
+    max-width: 100px;
+}

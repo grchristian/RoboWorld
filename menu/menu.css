@@ -1,0 +1,23 @@
+
+body{
+    background: black;
+    align-items: center;
+}
+
+
+.menu{
+    align-items: center;
+    color: blanchedalmond;
+}
+
+
+
+.work-img{
+    max-height: 50px;
+}
+
+.boton{
+    border-style: dotted;
+    display: inline;
+    align-items: center;
+}

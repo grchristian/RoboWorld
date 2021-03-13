@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    background-color: rgb(57,61,65);
+}
+
+.texto{
+    color: seashell;
+}
+
+.nivel2{
+    max-height: 200px;
+    
+}

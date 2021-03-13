@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(61, 57, 56);
+    text-align: center;
+}
+.nivel1{
+    max-width: 500px;
+}
+.texto {
+    color: seashell;
+}
