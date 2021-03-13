@@ -94,18 +94,7 @@ a.nav-link{
 	justify-content: space-evenly;
 }
 
-/*imagen de fondo*/
-#home .filter{
-	background: url(img/bg.png) no-repeat;
-	background-size: cover;
-	background-position:center;
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-	opacity:.40;
-}  
+
 
 .intro {
 	text-align:center;

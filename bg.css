@@ -1,0 +1,11 @@
+#home .filter{
+	background: url(/bg.png) no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.40;
+} 
