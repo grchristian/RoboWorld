@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--tipo de caracteres-->
+    <meta charset="utf-8">
+
+    <!--para que se ajuste el tamaño de la pantalla-->
+    <meta name="viewport" content="width=device-width">
+
+    <!--titulo de la pestaña del navegador-->
+    <title>RoboWorld | Iniciar sesión</title>
+
+    <!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+
+	  <!--para linkear bootstrap-->
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+    
+    <!--para linkear con el CSS-->
+    <link rel="stylesheet" href="css/stylelog.css">
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <form class="form-signin">       
+        <h2 class="form-signin-heading">login</h2>
+        <input type="text" class="form-control" name="username" placeholder="Email address" required="" autofocus="" />
+        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+        
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <br>
+        <p>/* Si el usuario no habia iniciado sesión, se abrirá esta ventana y despues de iniciar sesión se regrasa a <a href="index.html">HOME</a></p>
+        <p>Si había sesión iniciada, se abre el <a href="dashboard.html">DASHBOARD</a> */</p>
+      </form>
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+
+    <!--tipo de caracteres-->
+    <meta charset="utf-8">
+
+	  <!--para que se ajuste el tamaño de la pantalla-->
+    <meta name="viewport" content="width=device-width">
+
+	  <!--titulo de la pestaña del navegador-->
+    <title>RoboWorld | Mi cuenta</title>
+
+	  <!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+
+	  <!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  <!--linkear con los scripts de JS-->
+		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
+
+	  <!--linkear los iconos-->
+	  <script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
+
+    <!--para linkear con la hoja de estilos-->
+    <link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'roboworld_app/css/style_micuenta.css' %}" rel="stylesheet" type="text/css">
+	</head>
+  
+  <body>
+    <!--header-->
+    <header>
+      <a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+      <nav>
+        <ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="{% url 'stats' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'micuenta' %}">MI CUENTA</a></li>
+				</ul>
+        
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+    
+    <!--aquí comienza la pagina-->
+    <main>
+      <!--DASHBOARD-->
+      <div id="home">
+        <div class="box">
+          <div class="box__header">
+            <h3 class="box__header-title">marianahg11</h3>
+            <div class="profilepic"><img src="{% static 'roboworld_app/img/profile.png' %}" width="70%"></div>
+          </div>
+          <div class="box__body">
+            <div class="stats stats--main">
+              <div class="stats__amount">46</div>
+              <div class="stats__caption">minutes played</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--positive">+12%</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+            
+            <div class="stats">
+              <div class="stats__amount">62</div>
+              <div class="stats__caption">times played</div>
+              <div class="stats__change">
+                <div class="stats__value stats__value--negative">-3%</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+            
+            <div class="stats">
+              <div class="stats__amount">352</div>
+              <div class="stats__caption">collected gears</div>
+              <div class="stats__change">
+                <div class="stats__value">+78</div>
+                <div class="stats__period">this week</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--DASHBOARD-->
+    </main>
+    
+    <!--comienza el footer-->
+    <footer class="copyright">
+      <p><a href="https://github.com/grchristian/RoboWorld" target="_blank"><i class="fab fa-github"></i></a></p>
+    </footer>
+  </div>
+  <!--el div de container (todo lo de la pagina)-->
+</body>
+
+</html>

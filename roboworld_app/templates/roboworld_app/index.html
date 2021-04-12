@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		{% load static %}
+
+		<!--tipo de caracteres-->
+		<meta charset="utf-8">
+		
+		<!--para que se ajuste el tamaño de la pantalla-->
+		<meta name="viewport" content="width=device-width">
+		
+		<!--titulo de la pestaña del navegador-->
+		<title>RoboWorld</title>
+		
+		<!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+		
+		<!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!--linkear los iconos-->
+		<script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
+		
+		<!--para linkear con la hoja de estilos-->
+		<link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+		
+		<!--linkear con los scripts de JS-->
+		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
+	</head>
+	
+	<body>
+		<!--header-->
+		<header>
+			<a class="logo" href="#home"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+			
+			<nav>
+				<ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="#home">INICIO</a></li>
+					<li><a class="nav-link" href="#howtoplay">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="{% url 'stats' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'micuenta' %}">MI CUENTA</a></li>
+				</ul>
+					
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</header>
+		
+		<!--aquí comienza la pagina-->
+		<main>
+			<!--seccion de home-->
+			<div id="home">
+				<div class="filter"></div>
+				<section class="intro">
+					<img src="{% static 'roboworld_app/img/main.png' %}" alt="roboworld logo"/>
+					<hr>
+					<h3 id="subtitulo">
+						<a class="nav-link" href="game/index.html" target="_blank">JUGAR</a>
+						<span class="onlineOrDownload"> | </span>
+						<a class="nav-link" href="https://drive.google.com/uc?id=1rHZ4SiGTtE1M6Sh7cEUc6e5u1cTzEREl&export=download" download>DESCARGAR</a>
+					</h3>
+				</section> 
+			</div>
+
+			<!--seccion de how to play-->
+			<div id="howtoplay"> 
+				<h3>COMO JUGAR<hr></h3>
+				<p>Tutorial para comenzar a jugar</p>
+				<div class="work-box">
+					<div class="work">
+						<!--cards-->
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/login.jpg' %}">
+							<div class="work-content">1. Da click en mi cuenta y registrate</div>
+						</div>
+							
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/custom.jpg' %}">
+							<div class="work-content">2. Diseña tu robot</div>
+						</div>
+							
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/play.jpg' %}">
+							<div class="work-content">3. Comienza a jugar</div>
+						</div>
+							
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/win.jpg' %}">
+							<div class="work-content">4. Avanza de nivel</div>
+						</div>
+							
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/robot.jpg' %}">
+							<div class="work-content">5. Junta la mayor cantidad de engranes</div>
+						</div>
+							
+						<div class="card">
+							<img class="work-img" src="{% static 'roboworld_app/img/fun.jpg' %}">
+							<div class="work-content">6. Diviertete</div>
+						</div> 	  
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<!--comienza el footer-->
+		<footer class="copyright">
+			<p><a href="https://github.com/grchristian/RoboWorld" target="_blank"><i class="fab fa-github"></i></a></p>
+		</footer>
+	</body>
+
+</html>
