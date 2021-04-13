@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'roboworld_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'roboworlddb',
-        'USER': 'admindb',
-        'PASSWORD': 'Equipo1db',
+        'NAME': 'dataroboworld',
+        'USER': 'admin',
+        'PASSWORD': 'adminpass',
         'HOST': 'localhost',
         'PORT': '5432',
     }
