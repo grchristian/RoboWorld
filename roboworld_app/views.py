@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 '''
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -14,7 +15,8 @@ def stats(request):
     return render(request, "roboworld_app/stats.html")
 
 def micuenta(request):
-    return render(request, "roboworld_app/micuenta.html")
+    nombre = "Chritian"
+    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre}) 
 
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
