@@ -14,17 +14,19 @@ def inicio(request):
 def stats(request):
     return render(request, "roboworld_app/stats.html")
 
+def juego_unity(request):
+    return render(request, "roboworld_app/juego_unity/index_unity.html")
+
 def micuenta(request):
     nombre = "Chritian"
     num_engranes = "43"
     min_jugados = "125"
     veces_jugadas = "42"
-    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"engranes":engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-
-def juego_unity(request):
-    return render(request, "roboworld_app/juego_unity/index_unity.html")
+    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
 
 
+
+'''
 def login(request):
     return render(request, "roboworld_app/login.html")
 
@@ -34,4 +36,4 @@ def logged_out(request):
 
 def score(request):
     return render(request, "roboworld_app/score.html")
-
+'''
