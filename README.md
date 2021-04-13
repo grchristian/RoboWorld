@@ -2,10 +2,12 @@
 _Videojuego creado para la clase de construcción de software y toma de decisiones_
 
 ## Lenguajes usados 📦
+* Python
 * C#
 * HTML
 * CSS
 * JavaScript
+
 
 ## Autores ✒️
 * Christian González - [christiangr](https://github.com/grchristian)
