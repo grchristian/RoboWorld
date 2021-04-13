@@ -9,3 +9,6 @@ def stats(request):
 
 def micuenta(request):
     return render(request, "roboworld_app/micuenta.html")
+
+def juego_unity(request):
+    return render(request, "roboworld_app/juego_unity/index.html")
