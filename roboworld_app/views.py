@@ -1,5 +1,11 @@
 from django.shortcuts import render
-
+'''
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from json import loads
+from . models import Reto
+import psycopg2
+'''
 
 def inicio(request):
     return render(request, "roboworld_app/index.html")
@@ -12,3 +18,11 @@ def micuenta(request):
 
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
+
+
+def login(request):
+    return render(request, "roboworld_app/login.html")
+
+def logged_out(request):
+    return render(request, "roboworld_app/logged_out.html")
+
