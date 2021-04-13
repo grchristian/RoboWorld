@@ -16,9 +16,10 @@ def stats(request):
 
 def micuenta(request):
     nombre = "Chritian"
-    score = "43"
+    num_engranes = "43"
     min_jugados = "125"
-    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"score":score,"min_jugados":min_jugados}) 
+    veces_jugadas = "42"
+    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"engranes":engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
 
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
