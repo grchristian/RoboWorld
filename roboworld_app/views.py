@@ -26,3 +26,7 @@ def login(request):
 def logged_out(request):
     return render(request, "roboworld_app/logged_out.html")
 
+
+def score(request):
+    return render(request, "roboworld_app/score.html")
+
