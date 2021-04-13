@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    {% load static %}
+    
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <title>RoboWorld GAME</title>
 
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
 
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <!--------- para linkear con la hoja de estilos y scripts --------->
+    <link rel="stylesheet" href="{% static 'roboworld_app/archivos_unity/TemplateData/style.css' %}">
 
-    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="{% static 'roboworld_app/archivos_unity/TemplateData/UnityProgress.js' %}"></script>
+
+    <script src="{% static 'roboworld_app/archivos_unity/Build/UnityLoader.js' %}"></script>
+    <!--------- para linkear con la hoja de estilos y scripts --------->
     
-    <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Steam.json", {onProgress: UnityProgress});
     </script>
   </head>
+
   <body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
