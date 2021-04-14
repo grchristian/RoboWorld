@@ -22,7 +22,7 @@ def iniciar_sesion(request):
 
 
 def micuenta(request):
-    nombre = "Chritian"
+    nombre = "Rebeca"
     num_engranes = "43"
     min_jugados = "125"
     veces_jugadas = "42"
