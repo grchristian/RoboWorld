@@ -17,13 +17,16 @@ def stats(request):
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
+def iniciar_sesion(request):
+    return render(request, "roboworld_app/iniciar_sesion.html")
+
+
 def micuenta(request):
     nombre = "Chritian"
     num_engranes = "43"
     min_jugados = "125"
     veces_jugadas = "42"
     return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-
 
 
 '''
