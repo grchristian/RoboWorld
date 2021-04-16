@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import psychopg2
+from django.views.decorators.csrf import csrf_exempt
 
 
 '''
@@ -24,11 +24,27 @@ def iniciar_sesion(request):
 
 def micuenta(request):
     nombre = "Rebeca"
+    
+    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre}) 
+
+
+@csrf_exempt
+
+def micuenta(request):
+    session={
+    nombre = "Rebeca"
+    num_engranes = "43"
+    min_jugados = "53"
+    veces_jugadas = "5"}
+    return JsonResponse(session)
+'''
+def micuenta(request):
+    nombre = "Rebeca"
     num_engranes = "43"
     min_jugados = "53"
     veces_jugadas = "5"
     return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-
+'''
 
 '''
 def login(request):
