@@ -9,7 +9,7 @@ urlpatterns = [
     path('stats/', views.stats, name="stats"),
     path('micuenta/', views.micuenta, name="micuenta"),
     path('juego_unity/', views.juego_unity, name="juego_unity"),
-    path('iniciar_sesion/', views.iniciar_sesion, name="iniciar_sesion")
+    path('iniciar_sesion/', views.iniciar_sesion, name="iniciar_sesion"),
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
 ]
