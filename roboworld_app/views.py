@@ -23,7 +23,7 @@ def juego_unity(request):
 
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
-
+'''
 def proceso(request):
     nombre = request.POST['Rebeca']
     nombre=nombre.upper()
@@ -40,7 +40,7 @@ def micuenta(request):
     veces_jugadas = "5"
     }
     return JsonResponse(session)
-
+'''
 @csrf_exempt
 
 def buscaJugadorBody(request):
