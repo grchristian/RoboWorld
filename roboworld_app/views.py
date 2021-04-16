@@ -91,11 +91,11 @@ def ejemploSQL(request):
 
     try:
         connection = psycopg2.connect(
-            user = "marcobglz",
-            password = "marc0.bot",
+            user = "admin",
+            password = "adminpass",
             host = "localhost",
             port = "5432",
-            database = "steam"
+            database = "dataroboworld"
         )
         cursor = connection.cursor()
         cursor.execute("SELECT * FROM juego_reto;")
