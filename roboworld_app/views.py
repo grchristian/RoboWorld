@@ -97,14 +97,13 @@ def ejemploSQL(request):
         "score":score}
     return JsonResponse(retorno)
 
-'''
 def micuenta(request):
     nombre = "Rebeca"
     num_engranes = "43"
     min_jugados = "53"
     veces_jugadas = "5"
     return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-'''
+
 
 '''
 def login(request):
