@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .serializers import RetoSerializer
+class RetoViewSet(viewsets.ModelViewSet):
+    queryset = Reto.objects.all().order_by('nombre')
+    serializer_class = RetoSerializer
 
 '''
 from django.http import HttpResponse, JsonResponse
