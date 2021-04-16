@@ -46,6 +46,14 @@ def score(request):
     score = resultados[0].minutos_jugados
     return render(request, 'score.html', {"nombreUsuario":nombre,"score":score})
 
+@csrf_exempt
+def unity(request):
+    nombre = "Martin"
+    score = "1234"
+    retorno = {"nombreUsuario":nombre,
+        "score":score}
+    return JsonResponse(retorno)
+
 
 '''
 @csrf_exempt
@@ -68,10 +76,7 @@ def buscaJugadorBody(request):
     
     nombre = resultados[0].nombre
     score = resultados[0].minutos_jugados
-    '''
-    nombre = "Marco"
-    score = "5000"
-    '''
+   
     retorno = {"nombreUsuario":nombre,
         "score":score}
     return JsonResponse(retorno)
