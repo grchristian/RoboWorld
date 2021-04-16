@@ -98,7 +98,7 @@ def ejemploSQL(request):
             database = "dataroboworld"
         )
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM roboworld_app_reto;")
+        cursor.execute("SELECT * FROM dataroboworld;")
         rows = cursor.fetchall()
         for row in rows:
             if row[1] == jugador_nombre:
