@@ -1,7 +1,13 @@
 from django.urls import path
+from rest_framework import routers
 from . import views
 
+router = routers.DefaultRouter()
+router.register(r'reto', views.RetoViewSet)
 urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('index',views.index, name = 'index'),
     path('', views.inicio, name="inicio"),
     path('stats/', views.stats, name="stats"),
     path('micuenta/', views.micuenta, name="micuenta"),
