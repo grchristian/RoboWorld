@@ -17,9 +17,6 @@ urlpatterns = [
     path('score',views.score, name = 'score'),
 ]
 
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]
 
 '''
     path('login/', views.login, name="login"),
