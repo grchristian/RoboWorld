@@ -32,7 +32,6 @@ def micuenta(request):
 
 def micuenta(request):
     session={
-    nombre = "Rebeca"
     num_engranes = "43"
     min_jugados = "53"
     veces_jugadas = "5"}
