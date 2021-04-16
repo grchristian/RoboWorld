@@ -34,6 +34,11 @@ def proceso(request):
     return render(request, "proceso.html", {"nombre":nombre}) 
 
 @login_required
+def datos(request):
+    jugadores = Reto.objects.all() #select * from Reto;
+    return render(request, 'datos.html', {'lista_jugadores':jugadores})
+
+@login_required
 def score(request):
     usuario = request.user
     resultados = Reto.objects.filter(nombre=usuario)
