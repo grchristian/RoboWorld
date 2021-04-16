@@ -25,14 +25,23 @@ def juego_unity(request):
 
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
-'''
+
 def proceso(request):
-    nombre = request.POST['Rebeca']
+    nombre = request.POST['nombre']
     nombre=nombre.upper()
     
-    return render(request, "roboworld_app/proceso.html", {"nombre":nombre}) 
+    return render(request, "proceso.html", {"nombre":nombre}) 
+
+@login_required
+def score(request):
+    usuario = request.user
+    resultados = Reto.objects.filter(nombre=usuario)
+    nombre = resultados[0].nombre
+    score = resultados[0].minutos_jugados
+    return render(request, 'score.html', {"nombreUsuario":nombre,"score":score})
 
 
+'''
 @csrf_exempt
 
 def micuenta(request):
