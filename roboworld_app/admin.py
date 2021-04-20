@@ -7,7 +7,7 @@ from django.contrib import admin
 from .models import User
 from .models import Reto
 
-#from .models import Level
+from .models import Level
 #from .models import Engranes
 #from .models import Sesion
 #from .models import Recompensas
