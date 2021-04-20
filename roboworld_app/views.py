@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from . models import Reto
-from json import loads
+from json import loads, dumps
 from random import randrange
 import psycopg2
 
@@ -131,7 +131,7 @@ def ejemploSQL(request):
 
 '''
 Level
-
+'''
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -179,7 +179,7 @@ def Level(request):
          "dificultad":dificultad,
               " duracion_individual": duracion_individual}
     return JsonResponse(retorno)
-'''
+
 def micuenta(request):
     nombre = "Rebeca"
     num_engranes = "43"
