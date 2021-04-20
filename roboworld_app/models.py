@@ -10,7 +10,7 @@ class Reto(models.Model):
     nombre = models.CharField(max_length=30)
     minutos_jugados = models.IntegerField()
 
-
+'''
 class Level(models.Model):
     Levelid = models.IntegerField()
     level_number = models.IntegerField()
@@ -46,5 +46,5 @@ class Prueba(models.Model):
     Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
-
+'''
     
