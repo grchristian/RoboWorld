@@ -42,7 +42,7 @@ class Recompensas(models.Model):
     top_five = models.IntegerField()
 
 
-class Probar(models.Model):
+class Prueba(models.Model):
     Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
