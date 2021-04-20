@@ -12,6 +12,14 @@ class Reto(models.Model):
     Userid = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     minutos_jugados = models.IntegerField()
     minimo = models.IntegerField()
+    maximo = models.IntegerField()
+    repeticion_niveles = models.IntegerField()
+    engranes = models.IntegerField()
+    duracion_promedio = models.IntegerField()
+    success_promedio = models.IntegerField()
+    #danoAlBoss=models.IntegerField()
+    #armaElegida=models.BooleanField()
+    
 
 
 class Level(models.Model):
@@ -20,6 +28,7 @@ class Level(models.Model):
     enemigo = models.CharField(max_length=30)
     dificultad = models.IntegerField()
     duracion_indivudual = models.IntegerField()
+    
   
 
 
