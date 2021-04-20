@@ -45,7 +45,7 @@ class Recompensas(models.Model):
 
 
 class Prueba(models.Model):
-   Levelid = models.IntegerField()
+    Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
 
