@@ -15,18 +15,13 @@ from . models import Reto
 import psycopg2
 '''
 def grafica(request):
-        data = [
-    ['Age', 'Weight'],
-         [8,    12],
-         [4,    5.5],
-         [11,    14],
-         [4,    5],
-         [3,    3.5],
-         [6.5,    12]
-        
-    ]
-        datos_formato=dumps(data)
-    return render(request, "grafica.html", {'losDatos':datos_formato})
+    data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],
+          [ 4,      5],
+          [ 3,      3.5],
+          [ 6.5,    7]
+        ]
+    datos_formato = dumps(data)    
+    return render(request,'grafica.html', {'losDatos':datos_formato})
 
 def inicio(request):
     return render(request, "roboworld_app/index.html")
