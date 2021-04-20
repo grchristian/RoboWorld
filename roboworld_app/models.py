@@ -45,6 +45,6 @@ class Recompensas(models.Model):
 class Try(models.Model):
     Levelid = models.IntegerField()
     SessionID = models.IntegerField()
-    success = models.booleanField() //duda
+    #success = models.booleanField() //duda
 
     
