@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class User(models.Model):
-    Userid = models.AutoField(primary_key=False)
+    Userid = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     contraseña = models.CharField(max_length=30)
     
