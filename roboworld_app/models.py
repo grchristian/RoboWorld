@@ -18,7 +18,7 @@ class Level(models.Model):
     dificultad = models.IntegerField()
     duracion_indivudual = models.IntegerField()
   
-'''
+
 
 class Engranes(models.Model):
     Engraneid = models.IntegerField()
@@ -46,5 +46,5 @@ class Prueba(models.Model):
     Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
-'''
+
     
