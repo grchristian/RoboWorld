@@ -26,7 +26,7 @@ class Engranes(models.Model):
     number = models.IntegerField()
 
 
-class Session(models.Model):
+class Sesion(models.Model):
     SessionId = models.IntegerField()
     UserID = models.IntegerField()
     started = models.IntegerField()
@@ -42,9 +42,9 @@ class Recompensas(models.Model):
     top_five = models.IntegerField()
 
 
-class Try(models.Model):
+class Probar(models.Model):
     Levelid = models.IntegerField()
-    SessionID = models.IntegerField()
-    #success = models.booleanField() //duda
+    SesionID = models.IntegerField()
+    success = models.BooleanField() 
 
     
