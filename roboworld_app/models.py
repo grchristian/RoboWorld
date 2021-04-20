@@ -15,7 +15,7 @@ class Reto(models.Model):
 
 
 class Level(models.Model):
-    Nivelid = models.models.AutoField(primary_key=True)
+    Nivelid = models.AutoField(primary_key=True)
     level_number = models.IntegerField()
     enemigo = models.CharField(max_length=30)
     dificultad = models.IntegerField()
