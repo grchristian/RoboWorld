@@ -119,6 +119,57 @@ def ejemploSQL(request):
         "score":score}
     return JsonResponse(retorno)
 
+'''
+Level
+
+@csrf_exempt
+def Level(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    Levelid = body_json['Levelid']
+    Lvelid = ""
+    level_number = ""
+    enemigo = ""
+    dificultad = ""
+    duracion_individual=""
+
+    try:
+        connection = psycopg2.connect(
+            user = "admin",
+            password = "adminpass",
+            host = "localhost",
+            port = "5432",
+            database = "dataroboworld"
+        )
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM ***createnewone***roboworld_app_reto;")
+        rows = cursor.fetchall()
+        for row in rows:
+            if row[1] == Levelid:
+               
+                Levelid = row[1]
+                level_number = row[2]
+                enemigo = row[3]
+                dificultad = row[4]
+                duracion_individual=row[5]
+            print(row)
+    
+    except(Exception, psycopg2.Error) as error:
+        print('Error connecting to PostgreSQL database', error)
+        connection = None
+    
+    finally:
+        if(connection != None):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is now closed")
+    retorno = {"nivelID":Levelid,
+        "level_number":level_number,
+         "enemigo":enemigo,
+         "dificultad":dificultad,
+              " duracion_individual": duracion_individual}
+    return JsonResponse(retorno)
+'''
 def micuenta(request):
     nombre = "Rebeca"
     num_engranes = "43"
