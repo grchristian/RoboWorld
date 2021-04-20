@@ -4,18 +4,18 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class User(models.Model):
-    #Userid = models.AutoField(primary_key=True)
+    Userid = models.AutoField(primary_key=False)
     nombre = models.CharField(max_length=30)
     contraseña = models.CharField(max_length=30)
     
 class Reto(models.Model):
-    #Userid = models.ForeignKey(User, on_delete=models.CASCADE)
+    Userid = models.ForeignKey(User, on_delete=models.CASCADE)
     minutos_jugados = models.IntegerField()
     minimo = models.IntegerField()
 
 
 class Level(models.Model):
-    #Nivelid = models.models.AutoField(primary_key=True)
+    Nivelid = models.models.AutoField(primary_key=True)
     level_number = models.IntegerField()
     enemigo = models.CharField(max_length=30)
     dificultad = models.IntegerField()
@@ -29,7 +29,7 @@ class Engranes(models.Model):
 
 
 class Sesion(models.Model):
-    #SessionId = models.IntegerField()
+    SessionId = models.IntegerField()
     UserID = models.IntegerField()
     started = models.IntegerField()
     ended = models.IntegerField()
@@ -45,8 +45,8 @@ class Recompensas(models.Model):
 
 
 class Prueba(models.Model):
-   # Levelid = models.IntegerField()
-    #SesionID = models.IntegerField()
+   Levelid = models.IntegerField()
+    SesionID = models.IntegerField()
     success = models.BooleanField() 
 
     
