@@ -131,7 +131,7 @@ def ejemploSQL(request):
 
 '''
 Level
-'''
+
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -179,7 +179,7 @@ def Level(request):
          "dificultad":dificultad,
               " duracion_individual": duracion_individual}
     return JsonResponse(retorno)
-
+'''
 def micuenta(request):
     nombre = "Rebeca"
     num_engranes = "43"
