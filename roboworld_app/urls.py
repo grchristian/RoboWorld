@@ -16,6 +16,11 @@ urlpatterns = [
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
     path('score',views.score, name = 'score'),
     path('grafica',views.grafica, name = 'grafica'),
+    path('level',views.Level, name = 'level'),
+    path('engranes,views.Engranes, name = 'engranes'),
+    path('session',views.Session, name = 'session'),
+    path('recompensas',views.Recompensas, name = 'recompensas'),
+    path('try',views. Try, name = 'try'),
    
 ]
 
