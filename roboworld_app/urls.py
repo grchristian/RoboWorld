@@ -18,9 +18,9 @@ urlpatterns = [
     path('grafica',views.grafica, name = 'grafica'),
     path('level',views.Level, name = 'level'),
     path('engranes',views.Engranes, name = 'engranes'),
-    path('session',views.Session, name = 'session'),
+    path('sesion',views.Sesion, name = 'sesion'),
     path('recompensas',views.Recompensas, name = 'recompensas'),
-    path('try',views. Try, name = 'try'),
+    path('prueba',views. Prueba, name = 'prueba'),
    
 ]
 
