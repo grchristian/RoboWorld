@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from . models import Reto
 from json import loads
+from random import randrange
 import psycopg2
 
 
@@ -15,11 +16,12 @@ from . models import Reto
 import psycopg2
 '''
 def grafica(request):
-    data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],
-          [ 4,      5],
-          [ 3,      3.5],
-          [ 6.5,    7]
-        ]
+    #data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],[ 4,      5],[ 3,      3.5],[ 6.5,    7]]
+    data = [['Edad', 'Peso']]
+    for i in range(0,11):
+        x = randrange(100)
+        y = randrange(100)
+        data.append([x,y])
     datos_formato = dumps(data)    
     return render(request,'grafica.html', {'losDatos':datos_formato})
 
