@@ -10,7 +10,7 @@ class Reto(models.Model):
     nombre = models.CharField(max_length=30)
     minutos_jugados = models.IntegerField()
 
-'''
+
 class Level(models.Model):
     Levelid = models.IntegerField()
     level_number = models.IntegerField()
@@ -18,7 +18,7 @@ class Level(models.Model):
     dificultad = models.IntegerField()
     duracion_indivudual = models.IntegerField()
   
-
+'''
 
 class Engranes(models.Model):
     Engraneid = models.IntegerField()
