@@ -14,6 +14,8 @@ from json import loads
 from . models import Reto
 import psycopg2
 '''
+def grafica(request):
+    return render(request, 'grafica.html')
 
 def inicio(request):
     return render(request, "roboworld_app/index.html")
