@@ -4,15 +4,18 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class User(models.Model):
-    nombre = models.CharField(max_length=200)
+    Userid = models.models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=30)
+    contraseña = models.CharField(max_length=30)
     
 class Reto(models.Model):
-    nombre = models.CharField(max_length=30)
+    Userid = models.ForeignKey(User, on_delete=models.CASCADE)
     minutos_jugados = models.IntegerField()
+    minimo = models.IntegerField()
 
 
 class Level(models.Model):
-    Nivelid = models.IntegerField()
+    Nivelid = models.models.AutoField(primary_key=True)
     level_number = models.IntegerField()
     enemigo = models.CharField(max_length=30)
     dificultad = models.IntegerField()
@@ -21,7 +24,6 @@ class Level(models.Model):
 
 
 class Engranes(models.Model):
-    Engraneid = models.IntegerField()
     sessionObtained = models.IntegerField()
     number = models.IntegerField()
 
