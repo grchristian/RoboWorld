@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+
+		<!--tipo de caracteres-->
+		<meta charset="utf-8">
+		
+		<!--para que se ajuste el tamaño de la pantalla-->
+		<meta name="viewport" content="width=device-width">
+		
+		<!--titulo de la pestaña del navegador-->
+      	<title>RoboWorld | Estadísticas</title>
+
+	  	<!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+
+	  	<!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  	<!--linkear con los scripts de JS-->
+		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
+	  	
+		<!--linkear los iconos-->
+	  	<script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
+
+	  	<!--para linkear con la hoja de estilos-->
+	  	<link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<!------------------ HEADER ------------------>
+		<header>
+			<a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+			<nav>
+				<ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="{% url 'stats' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'micuenta' %}">MI CUENTA</a></li>
+				</ul>
+
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</header>
+		<!------------------ HEADER ------------------>
+		<!----------------- CONTENIDO ----------------->
+		<main>
+			<!--seccion de home-->
+			<div id="home">
+				<section class="intro">
+            		<img src="{% static 'roboworld_app/img/topplayers.png' %}" width="70%">
+				</section>
+			</div>
+		</main>
+		<!----------------- CONTENIDO ----------------->
+		<!------------------ FOOOTER ------------------>
+		<footer class="copyright">
+			<p><a href="https://github.com/grchristian/RoboWorld" target="_blank"><i class="fab fa-github"></i></a></p>
+		</footer>
+		<!------------------ FOOOTER ------------------>
+	</body>
+</html>
