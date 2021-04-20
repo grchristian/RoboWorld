@@ -16,13 +16,7 @@ urlpatterns = [
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
     path('score',views.score, name = 'score'),
     path('grafica',views.grafica, name = 'grafica'),
-    '''
-    path('score',views.Level, name = 'level'),
-    path('score',views.Engranes, name = 'engranes'),
-    path('score',views.Session, name = 'session'),
-    path('score',views.Recompensas, name = 'recompensas'),
-    path('score',views. Try, name = 'try'),
-    '''
+   
 ]
 
 
@@ -31,3 +25,10 @@ urlpatterns = [
     path('logged_out/', views.logged_out, name="logged_out"),
     path('score/', views.score, name="score"),
 '''
+ '''
+    path('score',views.Level, name = 'level'),
+    path('score',views.Engranes, name = 'engranes'),
+    path('score',views.Session, name = 'session'),
+    path('score',views.Recompensas, name = 'recompensas'),
+    path('score',views. Try, name = 'try'),
+    '''
