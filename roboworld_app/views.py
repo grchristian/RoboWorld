@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from . models import Reto
+from django.contrib.auth.decorators import login_required
 from json import loads, dumps
+from . models import Reto
 from random import randrange
 import psycopg2
 
