@@ -127,6 +127,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 import os
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'roboworld_app/static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = '/'
 
