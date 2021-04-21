@@ -199,3 +199,7 @@ def logged_out(request):
 def score(request):
     return render(request, "roboworld_app/score.html")
 '''
+
+
+def index_clase(request):
+    return render(request,'index_clase.html')
