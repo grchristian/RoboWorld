@@ -196,3 +196,8 @@ def score(request):
 
 def index2(request):
     return render(request,'roboworld_app/index2.html')
+
+def proceso2(request):
+    nombre = request.POST['nombre']
+    nombre = nombre.upper()
+    return render(request,'roboworld_app/proceso2.html',{'name':nombre})
