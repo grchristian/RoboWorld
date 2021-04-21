@@ -1,19 +1,37 @@
 <html>
-    <head>
-        {% load static%}
-        <link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
-    </head>
-    
-    <body>
-        <ul>
-            {% if user.is_authenticated%}
-            <li>User: {{user.get_username}}</li>
-            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-            <h1>usuario loggeado</h1>
+  <head>
+    {% load static %}
 
-            {%else%}
-            <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-            {%endif%}
-        </ul>
-    </body>
+    <!--tipo de caracteres-->
+    <meta charset="utf-8">
+
+    <!--para que se ajuste el tamaño de la pantalla-->
+    <meta name="viewport" content="width=device-width">
+
+    <!--titulo de la pestaña del navegador-->
+    <title>RoboWorld | Mi cuenta</title>
+
+    <!--favicon (icono de la pestalla del navegador)-->
+    <link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+
+	<!--para linkear bootstrap-->
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+    
+    <!--para linkear con el CSS-->
+    <link href="{% static 'roboworld_app/css/style_inicio_sesion.css' %}" rel="stylesheet" type="text/css">
+  </head>
+  
+  
+  <body>
+    <ul>
+        {% if user.is_authenticated%}
+        <li>Usuario: {{user.get_username}}</li>
+        <li><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></li>
+        <h1>usuario loggeado</h1>
+
+        {%else%}
+        <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
+        {%endif%}
+    </ul>
+</body>
 </html>
