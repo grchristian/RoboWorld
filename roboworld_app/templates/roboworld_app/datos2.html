@@ -7,8 +7,8 @@
             {% if user.is_authenticated%}
             <li>User: {{user.get_username}}</li>
             <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-            <h1>Esta es la lista de jugadores registrados</h1>
             <!--
+            <h1>Esta es la lista de jugadores registrados</h1>
                 <ul>
                     {% for j in lista_jugadores %}
                     <li>{{j.nombre}} ha jugado {{j.minutos_jugados}}</li>

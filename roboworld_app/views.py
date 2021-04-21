@@ -204,5 +204,4 @@ def proceso2(request):
 
 @login_required
 def datos2(request):
-    jugadores = Usuarios.objects.all() #select * from Reto;
-    return render(request, 'roboworld_app/datos2.html', {'lista_jugadores':jugadores})
+    return render(request, 'roboworld_app/datos2.html')
