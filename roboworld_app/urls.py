@@ -17,7 +17,7 @@ urlpatterns = [
 
     path('index2',views.index2, name = 'index2'),
     path('proceso2',views.proceso2, name = 'proceso2'),
-    path('datos2',views.datos2, name = 'datos2')
+    #path('datos2',views.datos2, name = 'datos2')
 ]
 
 
