@@ -18,7 +18,8 @@ urlpatterns = [
     path('index2',views.index2, name = 'index2'),
     path('proceso2',views.proceso2, name = 'proceso2'),
     
-    path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario')
+    path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario'),
+    path('register/', views.register, name='register')
 ]
 
 
