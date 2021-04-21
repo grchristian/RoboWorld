@@ -201,3 +201,8 @@ def proceso2(request):
     nombre = request.POST['nombre']
     nombre = nombre.upper()
     return render(request,'roboworld_app/proceso2.html',{'name':nombre})
+
+@login_required
+def datos2(request):
+    jugadores = Usuarios.objects.all() #select * from Reto;
+    return render(request, 'roboworld_app/datos2.html', {'lista_jugadores':jugadores})
