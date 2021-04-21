@@ -8,13 +8,7 @@ from random import randrange
 import psycopg2
 
 
-'''
-from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from json import loads
-from . models import Reto
-import psycopg2
-'''
+
 def grafica(request):
     #data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],[ 4,      5],[ 3,      3.5],[ 6.5,    7]]
     data = [['Edad', 'Peso']]
@@ -200,3 +194,5 @@ def score(request):
     return render(request, "roboworld_app/score.html")
 '''
 
+def index2(request):
+    return render(request,'roboworld_app/index2.html')
