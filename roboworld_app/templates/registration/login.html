@@ -25,22 +25,21 @@
     </tr>
   </table>
   <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
+  <input type="hidden" name="next" value="{{ next }}"/>
+
+  <div class="wrapper">
+    <form class="form-signin">       
+      <h2 class="form-signin-heading">Iniciar sesión</h2>
+      <input type="text" class="form-control" name="username" placeholder="Email address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Recordarme
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      <br>
+      <p>/* Si el usuario no habia iniciado sesión, se abrirá esta ventana y despues de iniciar sesión se regrasa a <a href="{% url 'inicio' %}">INICIO</a></p>
+      <p>Si había sesión iniciada, se abre <a href="{% url 'micuenta' %}">MI CUENTA</a> */</p>
+    </form>
+  </div>
 </form>
-
-<div class="wrapper">
-  <form class="form-signin">       
-    <h2 class="form-signin-heading">Iniciar sesión</h2>
-    <input type="text" class="form-control" name="username" placeholder="Email address" required="" autofocus="" />
-    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-    
-    <label class="checkbox">
-      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Recordarme
-    </label>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-    <br>
-    <p>/* Si el usuario no habia iniciado sesión, se abrirá esta ventana y despues de iniciar sesión se regrasa a <a href="{% url 'inicio' %}">INICIO</a></p>
-    <p>Si había sesión iniciada, se abre <a href="{% url 'micuenta' %}">MI CUENTA</a> */</p>
-  </form>
-</div>
-
