@@ -17,7 +17,8 @@ urlpatterns = [
     path('score',views.score, name = 'score'),
     path('grafica',views.grafica, name = 'grafica'),
 
-    path('index2',views.index2, name = 'index2')
+    path('index2',views.index2, name = 'index2'),
+    path('proceso2',views.proceso2, name = 'proceso2'),
 ]
 
 
