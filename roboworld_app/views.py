@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
@@ -6,10 +6,6 @@ from json import loads, dumps
 from . models import Reto
 from random import randrange
 import psycopg2
-
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-
 
 
 def grafica(request):
@@ -22,15 +18,19 @@ def grafica(request):
     datos_formato = dumps(data)    
     return render(request,'grafica.html', {'losDatos':datos_formato})
 
+#envia a index (ya está bien)
 def inicio(request):
     return render(request, "roboworld_app/index.html")
 
+#envia a stats (ya está bien)
 def stats(request):
     return render(request, "roboworld_app/stats.html")
 
+#envia al juego (ya está bien)
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
+#envia inciar sesión (pendiente)
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
 
@@ -205,27 +205,8 @@ def proceso2(request):
     nombre = nombre.upper()
     return render(request,'roboworld_app/proceso2.html',{'name':nombre})
 
-#este ya está bien
+#envia ceunta usuario (pendiente)
 @login_required
 def cuenta_usuario(request):
     return render(request, 'roboworld_app/cuenta_usuario.html')
 
-
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-
-def signup(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('inicio')
-            
-            else:
-                form = UserCreationForm()
-                return render(request, 'signup.html', {'form': form})
