@@ -1,0 +1,19 @@
+<html>
+    <head>
+        {% load static%}
+        <link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <ul>
+            {% if user.is_authenticated%}
+            <li>User: {{user.get_username}}</li>
+            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+            <h1>usuario loggeado</h1>
+
+            {%else%}
+            <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+            {%endif%}
+        </ul>
+    </body>
+</html>

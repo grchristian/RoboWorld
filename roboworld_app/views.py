@@ -203,5 +203,5 @@ def proceso2(request):
     return render(request,'roboworld_app/proceso2.html',{'name':nombre})
 
 @login_required
-def datos2(request):
-    return render(request, 'roboworld_app/datos2.html')
+def cuenta_usuario(request):
+    return render(request, 'roboworld_app/cuenta_usuario.html')
