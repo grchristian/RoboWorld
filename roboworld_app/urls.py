@@ -2,6 +2,8 @@ from django.urls import path, include
 from . import views
 
 
+
+
 urlpatterns = [
     path('', views.inicio, name="inicio"),
     path('proceso',views.proceso, name = 'proceso'),
@@ -27,3 +29,7 @@ urlpatterns += [
 ]
 
 
+urlpatterns = [
+    ...
+    url(r'^signup/$', core_views.signup, name='signup'),
+]

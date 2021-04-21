@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
@@ -6,6 +6,9 @@ from json import loads, dumps
 from . models import Reto
 from random import randrange
 import psycopg2
+
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
 
 
 
@@ -202,6 +205,27 @@ def proceso2(request):
     nombre = nombre.upper()
     return render(request,'roboworld_app/proceso2.html',{'name':nombre})
 
+#este ya está bien
 @login_required
 def cuenta_usuario(request):
     return render(request, 'roboworld_app/cuenta_usuario.html')
+
+
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('inicio')
+            
+            else:
+                form = UserCreationForm()
+                return render(request, 'signup.html', {'form': form})
