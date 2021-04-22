@@ -10,16 +10,16 @@ class Usuario(models.Model):
     
 class Reto(models.Model):
     Userid = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    minutos_jugados = models.IntegerField()
-    minimo = models.IntegerField()
-    maximo = models.IntegerField()
-    repeticion_niveles = models.IntegerField()
-    engranes = models.IntegerField()
+    minutos_jugados = models.IntegerField(null=True)
+    minimo = models.IntegerField(null=True)
+    maximo = models.IntegerField(null=True)
+    repeticion_niveles = models.IntegerField(null=True)
+    engranes = models.IntegerField(null=True)
     duracion_promedio = models.IntegerField(null=True)
-    success_promedio = models.IntegerField()
+    success_promedio = models.IntegerField(null=True)
     a_que_nivel_llego = models.IntegerField(null=True)
-    sesion_iniciada_dia=models.IntegerField()
-    sesion_iniciada_mes=models.IntegerField()
+    sesion_iniciada_dia=models.IntegerField(null=True)
+    sesion_iniciada_mes=models.IntegerField(null=True)
  
    
     
