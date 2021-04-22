@@ -142,8 +142,7 @@ Level
 def Level(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    Levelid = body_json['Levelid']
-    Lvelid = ""
+    level_number = body_json['level_number']
     level_number = ""
     enemigo = ""
     dificultad = ""
@@ -158,11 +157,10 @@ def Level(request):
             database = "dataroboworld"
         )
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM roboworld_app_level")
+        cursor.execute("SELECT * FROM roboworld_app_level;")
         rows = cursor.fetchall()
         for row in rows:
             if row[1] == level_number:
-               
                 level_number = row[1]
                 enemigo = row[2]
                 dificultad = row[3]
