@@ -57,7 +57,12 @@
         <div id="home">
           <div class="box">
             <div class="box__header">
-              <h3 class="box__header-title">{{nombre}}</h3>
+
+
+
+
+              <h3 class="box__header-title">{{user.get_username}}</h3>
+              <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
               <div class="profilepic"><img src="{% static 'roboworld_app/img/profile.png' %}" width="70%"></div>
             </div>
             <div class="box__body">
@@ -89,11 +94,6 @@
     </div>
     <!--el div de container (todo lo de la pagina)-->
 
-
-
-                <li>Usuario: {{user.get_username}}</li>
-                <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-                <h1>usuario loggeado</h1>
             {%else%}
                 <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
             {%endif%}
