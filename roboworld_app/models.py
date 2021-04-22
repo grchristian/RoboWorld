@@ -20,7 +20,7 @@ class Reto(models.Model):
     a_que_nivel_llego = models.IntegerField()
     sesion_iniciada_dia=models.IntegerField()
     sesion_iniciada_mes=models.IntegerField()
-    decoracion = model.IntegerField()
+    decoracion = models.IntegerField()
    
     
 
