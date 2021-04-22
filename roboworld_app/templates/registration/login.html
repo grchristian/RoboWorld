@@ -8,23 +8,16 @@
   <meta name="viewport" content="width=device-width">
 
   <!--titulo de la pestaña del navegador-->
-  <title>RoboWorld | Mi cuenta</title>
+  <title>RoboWorld | Iniciar sesión</title>
 
   <!--favicon (icono de la pestalla del navegador)-->
   <link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
 
-  <!--para linkear con la libreria de jQuery en la pagina de google APIS-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!--linkear con los scripts de JS-->
-  <script src="{% static 'roboworld_app/js/script.js' %}"></script>
-
-  <!--linkear los iconos-->
-  <script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
-
-  <!--para linkear con la hoja de estilos-->
-  <link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
-  <link href="{% static 'roboworld_app/css/style_micuenta.css' %}" rel="stylesheet" type="text/css">
+  <!--para linkear bootstrap-->
+  <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+  
+  <!--para linkear con el CSS-->
+  <link href="{% static 'roboworld_app/css/style_inicio_sesion.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 {% if form.errors %}
