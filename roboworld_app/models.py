@@ -15,9 +15,9 @@ class Reto(models.Model):
     maximo = models.IntegerField()
     repeticion_niveles = models.IntegerField()
     engranes = models.IntegerField()
-    duracion_promedio = models.IntegerField()
+    duracion_promedio = models.IntegerField(null=True)
     success_promedio = models.IntegerField()
-    a_que_nivel_llego = models.IntegerField()
+    a_que_nivel_llego = models.IntegerField(null=True)
     sesion_iniciada_dia=models.IntegerField()
     sesion_iniciada_mes=models.IntegerField()
  
