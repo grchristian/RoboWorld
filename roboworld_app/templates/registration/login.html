@@ -29,11 +29,10 @@
     {% if form.errors %}
       <h6>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h6>
     {% endif %}
-    
+
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
     <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
     
-    <label class="checkbox"><input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Recordarme</label>
     <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Entrar</button>
     <input type="hidden" name="next" value="{{ next }}"/>
   </form>
