@@ -20,57 +20,27 @@
   <link href="{% static 'roboworld_app/css/style_inicio_sesion.css' %}" rel="stylesheet" type="text/css">
 </head>
 
-{% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
-  <p>Tu nombre</p>
-{% endif %}
-
-{% if next %}
-  {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
-  {% else %}
-    <p>Para visualizar la información es necesario realizar autenticación.</p>
-  {% endif %}
-{% endif %}
-
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
-  <table>
-    <tr>
-      <td>{{ form.username.label_tag }}</td>
-      <td>{{ form.username }}</td>
-    </tr>
-    <tr>
-      <td>{{ form.password.label_tag }}</td>
-      <td>{{ form.password }}</td>
-    </tr>
-  </table>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}"/>
-</form>
 
 <div class="wrapper">
   <form class="form-signin" method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <h2 class="form-signin-heading">Iniciar sesión</h2>
     {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
-  <p>Tu nombre</p>
-{% endif %}
-
-{% if next %}
-  {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
-  {% else %}
-    <p>Para visualizar la información es necesario realizar autenticación.</p>
-  {% endif %}
-{% endif %}
+      <p>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.</p>
+    {% endif %}
+    
+    {% if next %}
+      {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+      {% else %}
+        <p>Para visualizar la información es necesario realizar autenticación.</p>
+      {% endif %}
+    {% endif %}
+    
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
     <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
     
-    <label class="checkbox">
-      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Recordarme
-    </label>
+    <label class="checkbox"><input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">Recordarme</label>
     <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Entrar</button>
     <input type="hidden" name="next" value="{{ next }}"/>
   </form>
