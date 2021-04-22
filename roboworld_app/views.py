@@ -137,7 +137,7 @@ def ejemploSQL(request):
 
 '''
 Level
-
+'''
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -158,16 +158,15 @@ def Level(request):
             database = "dataroboworld"
         )
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM ***createnewone***roboworld_app_reto;")
+        cursor.execute("SELECT * FROM roboworld_app_level")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == Levelid:
+            if row[1] == level_number:
                
-                Levelid = row[1]
-                level_number = row[2]
-                enemigo = row[3]
-                dificultad = row[4]
-                duracion_individual=row[5]
+                level_number = row[1]
+                enemigo = row[2]
+                dificultad = row[3]
+                duracion_individual=row[4]
             print(row)
     
     except(Exception, psycopg2.Error) as error:
@@ -179,13 +178,12 @@ def Level(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    retorno = {"nivelID":Levelid,
-        "level_number":level_number,
+    retorno = {"level_number":level_number,
          "enemigo":enemigo,
          "dificultad":dificultad,
-              " duracion_individual": duracion_individual}
+         "duracion_individual": duracion_individual}
     return JsonResponse(retorno)
-'''
+
 
 '''
 def login(request):
