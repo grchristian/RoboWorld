@@ -26,14 +26,7 @@
     {% csrf_token %}
     <h2 class="form-signin-heading">Iniciar sesión</h2>
     
-    {% if next %}
-      <h5>Para visualizar la información es necesario realizar autenticación.</h5>
-      
-      {% if form.errors %}
-        <h5>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h5>
-      {% endif %}
-    {% endif %}
-
+    <h4>Para visualizar la información es necesario realizar autenticación.</h4>
 
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
     <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
@@ -41,4 +34,8 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Entrar</button>
     <input type="hidden" name="next" value="{{ next }}"/>
   </form>
+  
+  {% if form.errors %}
+    <h4>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h4>
+  {% endif %}
 </div>
