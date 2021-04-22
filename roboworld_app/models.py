@@ -17,7 +17,7 @@ class Reto(models.Model):
     engranes = models.IntegerField()
     duracion_promedio = models.IntegerField()
     success_promedio = models.IntegerField()
-    a_que_nivel_llego = models.IntegerField()
+    #a_que_nivel_llego = models.IntegerField()
     sesion_iniciada_dia=models.IntegerField()
     sesion_iniciada_mes=models.IntegerField()
  
