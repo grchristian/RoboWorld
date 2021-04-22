@@ -1,11 +1,4 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        {% load static %}
-        <!--para linkear con el CSS-->
-        <link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
-    </head>
-    
     <body>
         <ul>
             {% if user.is_authenticated%}
