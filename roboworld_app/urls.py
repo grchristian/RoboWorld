@@ -11,7 +11,6 @@ urlpatterns = [
 
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
-    path('micuenta/', views.micuenta, name="micuenta"),
     path('iniciar_sesion/', views.iniciar_sesion, name="iniciar_sesion"),
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
