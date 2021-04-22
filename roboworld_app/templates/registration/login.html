@@ -25,16 +25,9 @@
   <form class="form-signin" method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <h2 class="form-signin-heading">Iniciar sesión</h2>
+
     {% if form.errors %}
-      <p>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.</p>
-    {% endif %}
-    
-    {% if next %}
-      {% if user.is_authenticated %}
-        <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
-      {% else %}
-        <p>Para visualizar la información es necesario realizar autenticación.</p>
-      {% endif %}
+      <h6>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h6>
     {% endif %}
     
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
