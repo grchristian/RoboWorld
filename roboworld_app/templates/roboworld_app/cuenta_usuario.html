@@ -9,5 +9,24 @@
                 <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
             {%endif%}
         </ul>
+            <!--header-->
+    <header>
+        <a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+        <nav>
+          <ul class="nav-bar"><div class="bg"></div>
+                      <li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
+                      <li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
+                      <li><a class="nav-link" href="{% url 'stats' %}">ESTADÍSTICAS</a></li>
+                      <li><a class="nav-link" href="{% url 'micuenta' %}">MI CUENTA</a></li>
+                  </ul>
+          
+          <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>
+      
     </body>
 </html>
