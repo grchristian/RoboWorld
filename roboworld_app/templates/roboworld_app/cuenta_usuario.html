@@ -57,12 +57,7 @@
         <div id="home">
           <div class="box">
             <div class="box__header">
-
-
-
-
               <h3 class="box__header-title">{{user.get_username}}</h3>
-              <h3 class="box__header-title"><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></h3>
               <div class="profilepic"><img src="{% static 'roboworld_app/img/profile.png' %}" width="70%"></div>
             </div>
             <div class="box__body">
@@ -80,7 +75,9 @@
                 <div class="stats__amount">{{num_engranes}}</div>
                 <div class="stats__caption">Engranes totales</div>
               </div>
+              <h3 class="box__header-title"><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></h3>
             </div>
+            <h3 class="box__header-title"><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></h3>
           </div>
   
         </div>
