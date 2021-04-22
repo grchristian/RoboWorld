@@ -20,6 +20,7 @@ class Reto(models.Model):
     a_que_nivel_llego = models.IntegerField()
     sesion_iniciada_dia=models.IntegerField()
     sesion_iniciada_mes=models.IntegerField()
+    decoracion = model.IntegerField()
    
     
 
@@ -44,12 +45,13 @@ class Sesion(models.Model):
    # UserID = models.IntegerField()
     started = models.IntegerField()
     ended = models.IntegerField()
-    score = models.IntegerField()
+  
+   
 
 
 
 class Recompensas(models.Model):
-   # recompensasid = models.IntegerField()
+    usa_decoraciones = models.ForeignKey(Reto, on_delete=models.CASCADE)
     engranes_necesarios = models.IntegerField()
     top_score_global = models.IntegerField()
     top_five = models.IntegerField()
