@@ -18,21 +18,30 @@ def grafica(request):
     datos_formato = dumps(data)    
     return render(request,'grafica.html', {'losDatos':datos_formato})
 
-#envia a index (ya está bien)
+#envia a index (listo)
 def inicio(request):
     return render(request, "roboworld_app/index.html")
 
-#envia a stats (ya está bien)
+#envia a stats (listo)
 def stats(request):
     return render(request, "roboworld_app/stats.html")
 
-#envia al juego (ya está bien)
+#envia al juego (listo)
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
-#envia inciar sesión (pendiente)
+#envia inciar sesión (listo)
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
+
+#envia a cuenta de usuario (pendiente, conectar con db)
+@login_required
+def cuenta_usuario(request):
+    num_engranes = "43"
+    min_jugados = "53"
+    veces_jugadas = "5"
+    return render(request, "roboworld_app/cuenta_usuario.html", {"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
+
 
 def proceso(request):
     nombre = request.POST['nombre']
@@ -177,13 +186,6 @@ def Level(request):
               " duracion_individual": duracion_individual}
     return JsonResponse(retorno)
 '''
-def micuenta(request):
-    nombre = "Rebeca"
-    num_engranes = "43"
-    min_jugados = "53"
-    veces_jugadas = "5"
-    return render(request, "roboworld_app/micuenta.html", {"nombre":nombre,"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-
 
 '''
 def login(request):
@@ -205,7 +207,3 @@ def proceso2(request):
     nombre = nombre.upper()
     return render(request,'roboworld_app/proceso2.html',{'name':nombre})
 
-#envia ceunta usuario (pendiente)
-@login_required
-def cuenta_usuario(request):
-    return render(request, 'roboworld_app/cuenta_usuario.html')
