@@ -18,6 +18,7 @@ urlpatterns = [
     path('score',views.score, name = 'score'),
     path('level',views.Level, name = 'level'),
     path('grafica',views.grafica, name = 'grafica'),
+    path('engranes',views.engranes, name = 'engranes'),
 
     #ejemplos clase
     path('index2',views.index2, name = 'index2'),

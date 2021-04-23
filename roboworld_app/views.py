@@ -187,6 +187,49 @@ def Level(request):
 
 
 '''
+Engranes
+'''
+@csrf_exempt
+def Level(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    sessionObtained = body_json['sessionObtained']
+    sesionObtained= ""
+    numero = ""
+
+    try:
+        connection = psycopg2.connect(
+            user = "admin",
+            password = "adminpass",
+            host = "localhost",
+            port = "5432",
+            database = "dataroboworld"
+        )
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM roboworld_app_engranes;")
+        rows = cursor.fetchall()
+        for row in rows:
+            if row[1] == sessionObtained:
+                sessionObtained = row[1]
+                numero = row[2]
+            print(row)
+    
+    except(Exception, psycopg2.Error) as error:
+        print('Error connecting to PostgreSQL database', error)
+        connection = None
+    
+    finally:
+        if(connection != None):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is now closed")
+    retorno = {"sessionObtained":sessionObtained,
+         "numero":numero}
+    return JsonResponse(retorno)
+
+
+
+'''
 def login(request):
     return render(request, "roboworld_app/login.html")
 
