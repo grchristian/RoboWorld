@@ -265,7 +265,7 @@ def sesion(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    retorno = {"started":started
+    retorno = {"started":started,
          "ended":ended}
     return JsonResponse(retorno)
 
