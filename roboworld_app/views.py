@@ -50,11 +50,6 @@ def cuenta_usuario(request):
 
 @login_required
 def cuenta_usuario(request):
-    usuario_test = "0"
-    usuario = Reto.objects.filter(Userid=usuario_test)
-
-    resultados = Reto.objects.filter(usuario)
-    engranes = resultados[0].engranes
 
     #send.user = request.user # set the currently logged in user
     active_usuario = Reto.objects.filter(user=request.user) # fetch it from database then render it to the template
