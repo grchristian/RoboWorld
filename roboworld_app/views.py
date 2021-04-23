@@ -26,7 +26,7 @@ def inicio(request):
 
 #envia a estadistica 1º (listo)
 def stats1(request):
-    return render(request, "roboworld_app/stats/stats1.html")
+    return render(request, "roboworld_app/stat1.html")
 
 
 #envia al juego (listo)
