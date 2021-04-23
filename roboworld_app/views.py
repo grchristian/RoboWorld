@@ -227,6 +227,134 @@ def engranes(request):
          "numero":numero}
     return JsonResponse(retorno)
 
+'''
+Sesion
+'''
+@csrf_exempt
+def sesion(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    started = body_json['started']
+    started = ""
+    ended = ""
+ 
+
+    try:
+        connection = psycopg2.connect(
+            user = "admin",
+            password = "adminpass",
+            host = "localhost",
+            port = "5432",
+            database = "dataroboworld"
+        )
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM roboworld_app_sesion;")
+        rows = cursor.fetchall()
+        for row in rows:
+            if row[1] == started:
+                started = row[1]
+                ended = row[2]
+            print(row)
+    
+    except(Exception, psycopg2.Error) as error:
+        print('Error connecting to PostgreSQL database', error)
+        connection = None
+    
+    finally:
+        if(connection != None):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is now closed")
+    retorno = {"started":started
+         "ended":ended}
+    return JsonResponse(retorno)
+
+'''
+Level
+'''
+@csrf_exempt
+def recompensas(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    engranes_necesarios = body_json['engranes_necesarios']
+   
+    engranes_necesarios = ""
+    top_score_global = ""
+    top_five=""
+
+    try:
+        connection = psycopg2.connect(
+            user = "admin",
+            password = "adminpass",
+            host = "localhost",
+            port = "5432",
+            database = "dataroboworld"
+        )
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM roboworld_app_recompensas;")
+        rows = cursor.fetchall()
+        for row in rows:
+            if row[1] == engranes_necesarios:
+                engranes_necesarios = row[1]
+                top_score_global = row[2]
+                top_five = row[3]
+                
+            print(row)
+    
+    except(Exception, psycopg2.Error) as error:
+        print('Error connecting to PostgreSQL database', error)
+        connection = None
+    
+    finally:
+        if(connection != None):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is now closed")
+    retorno = {"engranes_necesarios":engranes_necesarios,
+         "top_score_global":top_score_global,
+         "top_five":top_five,
+        }
+    return JsonResponse(retorno)
+'''
+Prueba
+'''
+@csrf_exempt
+def prueba(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    sessionID = body_json['sessionID']
+    sessionID = ""
+    success = ""
+
+    try:
+        connection = psycopg2.connect(
+            user = "admin",
+            password = "adminpass",
+            host = "localhost",
+            port = "5432",
+            database = "dataroboworld"
+        )
+        cursor = connection.cursor()
+        cursor.execute("SELECT * FROM roboworld_app_prueba;")
+        rows = cursor.fetchall()
+        for row in rows:
+            if row[1] == sessionID:
+                sessionID = row[1]
+                success = row[2]
+            print(row)
+    
+    except(Exception, psycopg2.Error) as error:
+        print('Error connecting to PostgreSQL database', error)
+        connection = None
+    
+    finally:
+        if(connection != None):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is now closed")
+    retorno = {"sessionID ":sessionID ,
+        "success":success}
+    return JsonResponse(retorno)
 
 
 '''

@@ -19,6 +19,9 @@ urlpatterns = [
     path('level',views.Level, name = 'level'),
     path('grafica',views.grafica, name = 'grafica'),
     path('engranes',views.engranes, name = 'engranes'),
+    path('sesion',views.sesion, name = 'sesion'),
+    path('recompensas',views.recompensas, name = 'recompensas'),
+    path('prueba',views.prueba, name = 'prueba'),
 
     #ejemplos clase
     path('index2',views.index2, name = 'index2'),
