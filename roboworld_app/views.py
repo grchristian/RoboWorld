@@ -169,16 +169,17 @@ def Level(request):
                 dificultad = row[3]
                 duracion_individual=row[4]
             print(row)
-    
+            print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
         connection = None
-    
+        
     finally:
         if(connection != None):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
+    print(level_number, enemigo,dificultad,duracion_individual)      
     retorno = {"level_number":level_number,
          "enemigo":enemigo,
          "dificultad":dificultad,
@@ -270,7 +271,7 @@ def sesion(request):
     return JsonResponse(retorno)
 
 '''
-Level
+recomoensas
 '''
 @csrf_exempt
 def recompensas(request):
