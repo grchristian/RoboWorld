@@ -16,6 +16,7 @@ urlpatterns = [
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
     path('score',views.score, name = 'score'),
+    path('level',views.Level, name = 'level'),
     path('grafica',views.grafica, name = 'grafica'),
 
     #ejemplos clase
