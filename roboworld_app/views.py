@@ -22,9 +22,13 @@ def grafica(request):
 def inicio(request):
     return render(request, "roboworld_app/index.html")
 
+
+'''
 #envia a stats (listo)
 def stats(request):
     return render(request, "roboworld_app/stats.html")
+'''
+
 
 #envia al juego (listo)
 def juego_unity(request):

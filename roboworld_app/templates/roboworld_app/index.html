@@ -24,7 +24,8 @@
 		
 		<!--para linkear con la hoja de estilos-->
 		<link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
-		
+		<link href="{% static 'roboworld_app/css/style_menu.css' %}" rel="stylesheet" type="text/css">
+
 		<!--linkear con los scripts de JS-->
 		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
 	</head>
@@ -38,7 +39,7 @@
 				<ul class="nav-bar"><div class="bg"></div>
 					<li><a class="nav-link active" href="#home">INICIO</a></li>
 					<li><a class="nav-link" href="#howtoplay">COMO JUGAR</a></li>
-					<li><a class="nav-link" href="{% url 'stats' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="#estadisticas">ESTADÍSTICAS</a></li>
 					<li><a class="nav-link" href="{% url 'cuenta_usuario' %}">MI CUENTA</a></li>
 				</ul>
 					
@@ -105,8 +106,55 @@
 					</div>
 				</div>
 			</div>
+			
+			<div id="estadisticas"> 
+				<h3>ESTADÍSTICAS<hr></h3>
+				<p>Aquí puedes ver algunas de las gráficas generadas por el videojuego</p>
+				<div class="work-box">
+					<div class="work"> 
+						<link href="https://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+						<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+						
+						<nav class='menu'>
+							<a class="nav" href="#">
+								<div class="icon">
+								<i class="fas fa-globe-europe"></i></div>
+								<div class="icon">Top players</div>
+							</a>
+
+							<a class="nav" href="#">
+								<div class="icon"><i class="fas fa-layer-group"></i></li></div>
+								<div class="icon">Minutos</div>
+							</a>
+
+							<a class="nav" href="#">
+								<div class="icon"><i class="fa fa-book fa-fw"></i></i></div>
+								<div class="icon">library</div>
+							</a>
+
+							<a class="nav" href="#">
+								<div class="icon"><i class="fa fa-camera-retro"></i></div>
+								<div class="icon">galery</div>
+							</a>
+
+							<a class="nav" href="#">
+								<div class="icon"><i class="fa fa-map-marker"></i></div>
+								<div class="icon">map</div>
+							</a>
+
+							<a class="nav" href="#">
+								<div class="icon"><i class="fa fa-rss"></i></div>
+								<div class="icon">Rss</div>
+							</a>
+						</nav>
+					</div>
+				</div>
+			</div>
 		</main>
 		
+
+
+
 		<!--comienza el footer-->
 		<footer class="copyright">
 			<p><a href="https://github.com/grchristian/RoboWorld-App" target="_blank"><i class="fab fa-github"></i></a></p>

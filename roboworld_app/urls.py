@@ -5,9 +5,10 @@ from . import views
 urlpatterns = [
     #finales
     path('', views.inicio, name="inicio"),
-    path('stats/', views.stats, name="stats"),
     path('juego_unity/', views.juego_unity, name="juego_unity"),
     path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario'),
+
+    #path('stats/', views.stats, name="stats"),
 
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
