@@ -11,7 +11,7 @@ class Usuario(models.Model):
     contraseña = models.CharField(max_length=30)
     
 class Reto(models.Model):
-    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL)
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
 
     minutos_jugados = models.IntegerField(null=True)
     minimo = models.IntegerField(null=True)
