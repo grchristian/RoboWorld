@@ -37,13 +37,24 @@ def juego_unity(request):
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
 
+
 #envia a cuenta de usuario (pendiente, conectar con db)
+'''
 @login_required
 def cuenta_usuario(request):
     num_engranes = "43"
     min_jugados = "53"
     veces_jugadas = "5"
     return render(request, "roboworld_app/cuenta_usuario.html", {"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
+'''
+
+@login_required
+def cuenta_usuario(request):
+    usuario = request.user
+    resultados = Reto.objects.filter(nombre=usuario)
+    engranes = resultados[0].engranes
+    return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes":engranes})
+
 
 
 def proceso(request):
