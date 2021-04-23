@@ -23,11 +23,10 @@ def inicio(request):
     return render(request, "roboworld_app/index.html")
 
 
-'''
-#envia a stats (listo)
-def stats(request):
-    return render(request, "roboworld_app/stats.html")
-'''
+
+#envia a estadistica 1º (listo)
+def stats1(request):
+    return render(request, "roboworld_app/stats1.html")
 
 
 #envia al juego (listo)

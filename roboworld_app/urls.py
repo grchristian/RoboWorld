@@ -8,7 +8,7 @@ urlpatterns = [
     path('juego_unity/', views.juego_unity, name="juego_unity"),
     path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario'),
 
-    #path('stats/', views.stats, name="stats"),
+    path('stats1/', views.stats1, name="stats1"),
 
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
