@@ -190,7 +190,7 @@ def Level(request):
 Engranes
 '''
 @csrf_exempt
-def Level(request):
+def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     sessionObtained = body_json['sessionObtained']
