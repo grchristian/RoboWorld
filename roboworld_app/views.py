@@ -50,10 +50,13 @@ def cuenta_usuario(request):
 
 @login_required
 def cuenta_usuario(request):
-    usuario = request.user
-    resultados = Reto.objects.filter(Userid=usuario)
+    current_request = CrequestMiddleware.get_request()
+    user = current_request.user
+
+    resultados = Reto.objects.filter(user)
     engranes = resultados[0].engranes
-    return render(request, 'roboworld_app/cuenta_usuario.html', {"score":score})
+    return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes":engranes})
+
 
 '''
 @login_required
