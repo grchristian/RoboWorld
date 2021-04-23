@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.conf import settings
+
 # Create your models here.
 
 class Usuario(models.Model):
@@ -9,7 +11,10 @@ class Usuario(models.Model):
     contraseña = models.CharField(max_length=30)
     
 class Reto(models.Model):
-    id_de_usuario = models.ForeignKey(User, on_delete=models.CASCADE,null=True))
+
+    
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL)
+
     minutos_jugados = models.IntegerField(null=True)
     minimo = models.IntegerField(null=True)
     maximo = models.IntegerField(null=True)
@@ -20,9 +25,13 @@ class Reto(models.Model):
     a_que_nivel_llego = models.IntegerField(null=True)
     sesion_iniciada_dia=models.IntegerField(null=True)
     sesion_iniciada_mes=models.IntegerField(null=True)
- 
-   
-    
+
+
+
+class Article(models.Model):
+    headline = models.CharField(max_length=255)
+    article = models.TextField()
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
 
 
 class Level(models.Model):
