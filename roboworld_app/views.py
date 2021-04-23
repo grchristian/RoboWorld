@@ -53,8 +53,9 @@ def cuenta_usuario(request):
     usuario = request.user
     resultados = Reto.objects.filter(Userid=usuario)
     engranes = resultados[0].engranes
-    return render(request, 'score.html', {"engranes":engranes})
+    return render(request, 'roboworld_app/cuenta_usuario.html', {"score":score})
 
+'''
 @login_required
 def score(request):
     usuario = request.user
@@ -62,7 +63,7 @@ def score(request):
     nombre = resultados[0].nombre
     score = resultados[0].minutos_jugados
     return render(request, 'score.html', {"nombreUsuario":nombre,"score":score})
-
+'''
 
 
 
