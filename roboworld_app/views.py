@@ -146,7 +146,7 @@ def Level(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     level_number = body_json['level_number']
-    level_number = ""
+    #level_number = ""
     enemigo = ""
     dificultad = ""
     duracion_individual=""
@@ -168,8 +168,8 @@ def Level(request):
                 enemigo = row[2]
                 dificultad = row[3]
                 duracion_individual=row[4]
-            print(row)
-            print(level_number, enemigo,dificultad,duracion_individual) 
+                print(row)
+                print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
         connection = None
