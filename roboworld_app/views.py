@@ -55,18 +55,12 @@ def cuenta_usuario(request):
 
     resultados = Reto.objects.filter(usuario)
     engranes = resultados[0].engranes
-    return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes":engranes})
 
+    #send.user = request.user # set the currently logged in user
+    active_usuario = Reto.objects.filter(user=request.user) # fetch it from database then render it to the template
 
-'''
-@login_required
-def score(request):
-    usuario = request.user
-    resultados = Reto.objects.filter(nombre=usuario)
-    nombre = resultados[0].nombre
-    score = resultados[0].minutos_jugados
-    return render(request, 'score.html', {"nombreUsuario":nombre,"score":score})
-'''
+    return render(request, 'roboworld_app/cuenta_usuario.html', {"active_usuario":active_usuario})
+
 
 
 
