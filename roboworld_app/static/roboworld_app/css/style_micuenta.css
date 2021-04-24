@@ -79,17 +79,12 @@ body {
 }
 
 
-a{
-	color: #00ff08;
-	text-decoration: none;
-}
 
-a:hover{
-	text-decoration: none;
-	color: #74e145;
-}
 
-.contraseña-link a:hover {
+
+
+.passreset-link a:hover {
 	text-decoration: none;
 	color: #35c6ff;
 }
+
