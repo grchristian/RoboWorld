@@ -3,21 +3,23 @@ from . import views
 
 
 urlpatterns = [
-    #finales
+    #---------------------- URLS LISTOS Y TRABAJANDO ----------------------
     path('', views.inicio, name="inicio"),
     path('juego_unity/', views.juego_unity, name="juego_unity"),
     path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario'),
+    #---------------------- URLS LISTOS Y TRABAJANDO ----------------------
 
+    
     path('grafica1/', views.grafica1, name="grafica1"),
+
+
 
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
-    path('iniciar_sesion/', views.iniciar_sesion, name="iniciar_sesion"),
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
     path('score',views.score, name = 'score'),
     path('level',views.Level, name = 'level'),
-    path('grafica',views.grafica, name = 'grafica'),
     path('engranes',views.engranes, name = 'engranes'),
     path('sesion',views.sesion, name = 'sesion'),
     path('recompensas',views.recompensas, name = 'recompensas'),

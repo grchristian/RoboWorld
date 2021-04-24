@@ -37,33 +37,28 @@
 		  google.charts.setOnLoadCallback(drawChart);
 	
 		  function drawChart() {
-	
-			var data = google.visualization.arrayToDataTable([
-			  ['Jugador', 'Engranes'],
-			  ['carlosjg3',     11],
-			  ['marianagh20',      20],
-			  ['diegoTT2',  4],
-			  ['perez11', 15],
-			  ['xt20player',    7]
-			]);
+			var data = google.visualization.arrayToDataTable({{ losDatos| safe }});
 	
 			var options = {
-			  title: 'ENGRANES RECOLECTADOS POR JUGADOR'
+			  title: 'Age vs. Weight comparison',
+			  hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+			  vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+			  legend: 'none'
 			};
 	
-			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+			var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 	
 			chart.draw(data, options);
 		  }
 		</script>
 	  </head>
-	  <!------------------------- GOOGLE CHARTS ------------------------->
+	<!------------------------- GOOGLE CHARTS ------------------------->
 	  
 
 
 	  
-	  <body>
-		<!------------------ HEADER ------------------>
+	<body>
+	<!------------------ HEADER ------------------>
 		<header>
 			<a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
 			<nav>
@@ -87,7 +82,9 @@
 			<!--seccion de home-->
 			<div id="home">
 				<section class="intro">
-            		<div id="piechart" style="width: 900px; height: 500px;"></div>
+					<!----------------- GRAFICA ----------------->
+            		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+					<!----------------- GRAFICA ----------------->
 				</section>
 			</div>
 		</main>
