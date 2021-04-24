@@ -33,13 +33,35 @@ def cuenta_usuario(request):
     engranes_info = resultados[0].engranes
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 #-----------------------------------------------------------------------------------------
-
+'''
 #envia a grafica 1º (working)
 def grafica1(request):
     return render(request,'roboworld_app/graficas/grafica1.html')
+'''
 
-
-
+def grafica1(request):
+    '''
+    data = [
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]
+    '''
+    data = [['Nombre', 'Minutos jugados']]
+    resultados = Reto.objects.all() #select * from Reto;
+    for i in resultados:
+        x = i.nombre
+        y = i.minutos_jugados
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Minutos jugados totales'
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'grafica1.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
 def proceso(request):
     nombre = request.POST['nombre']

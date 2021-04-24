@@ -33,22 +33,23 @@
 	<head>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
-		  google.charts.load('current', {'packages':['corechart']});
+		  google.charts.load('current', {'packages':['bar']});
 		  google.charts.setOnLoadCallback(drawChart);
 	
 		  function drawChart() {
-			var data = google.visualization.arrayToDataTable({{ losDatos| safe }});
+			var data = google.visualization.arrayToDataTable({{losDatos|safe}});
 	
 			var options = {
-			  title: 'Age vs. Weight comparison',
-			  hAxis: {title: 'Age', minValue: 0, maxValue: 15},
-			  vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-			  legend: 'none'
+			  chart: {
+				title: {{titulo|safe}},
+				subtitle: {{subtitulo|safe}},
+			  },
+			  bars: 'horizontal' // Required for Material Bar Charts.
 			};
 	
-			var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+			var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 	
-			chart.draw(data, options);
+			chart.draw(data, google.charts.Bar.convertOptions(options));
 		  }
 		</script>
 	  </head>
@@ -83,7 +84,7 @@
 			<div id="home">
 				<section class="intro">
 					<!----------------- GRAFICA ----------------->
-            		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+            		<div id="barchart_material" style="width: 900px; height: 500px;"></div>
 					<!----------------- GRAFICA ----------------->
 				</section>
 			</div>
