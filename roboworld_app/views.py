@@ -8,6 +8,7 @@ from random import randrange
 import psycopg2
 
 from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 # FUNCIONES LISTAS Y FUNCIONANDO
 #-----------------------------------------------------------------------------------------
