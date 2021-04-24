@@ -8,7 +8,7 @@ body {
 }
 
 #logo {
-  size: 50%;
+  width: 100px;
 }
 
 .form-signin {
