@@ -79,12 +79,22 @@ body {
 }
 
 
-a{
-	color: #00ff08;
+#passreset-link a {
 	text-decoration: none;
+	color: #ff2d85;
+}
+#passreset-link a:hover {
+	text-decoration: none;
+	color: #b8205f;
 }
 
-a:hover{
+
+#logout-link a {
 	text-decoration: none;
-	color: #74e145;
+	color: #4dffa0;
 }
+#logout-link a:hover {
+	text-decoration: none;
+	color: #40c07c;
+}
+

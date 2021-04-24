@@ -23,6 +23,7 @@
 
 <div class="wrapper">
   <form class="form-signin" method="post" action="{% url 'login' %}">
+
     {% csrf_token %}
     <h2 class="form-signin-heading">Iniciar sesión</h2>
     
@@ -37,11 +38,15 @@
     <input type="hidden" name="next" value="{{ next }}"/>
 
 
-    <br>
-    <p>/*<br>iniciar sesion con:<br>usuarioprueba<br>usuario123<br>*/</p>
-
-
 
     
+    <br>
+    <p>/*<br>iniciar sesion con:<br>usuarioprueba<br>pass12345<br>*/</p>
+
+
+
+
+
+
   </form>
 </div>
