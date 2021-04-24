@@ -43,7 +43,7 @@ def grafica1(request):
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
 
-    resultados = Reto.objects.all()
+    resultados = Reto.objects.all(), User.objects.all()
 
     for i in resultados:
         x = i.get_username()
