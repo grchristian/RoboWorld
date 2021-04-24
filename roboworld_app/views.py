@@ -37,7 +37,7 @@ def cuenta_usuario(request):
 #-----------------------------------------------------------------------------------------
 
 def change_password(request, *args, **kwargs):
-    return HttpResponseRedirect("/")
+    return render(request, "roboworld_app/index.html")
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
