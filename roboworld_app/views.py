@@ -52,12 +52,12 @@ def cuenta_usuario(request):
 
 @login_required
 def cuenta_usuario(request):
+    usuario = request.user
+    resultados = Reto.objects.filter(nombre=usuario)
 
-    jugador = request.user # set the currently logged in user
-    engranes_info = Reto.objects.filter(engranes=jugador) # fetch it from database then render it to the template
+    engranes_info = resultados[0].engranes
 
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info})
-
 
 
 
