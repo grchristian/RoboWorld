@@ -7,6 +7,8 @@ from . models import Reto
 from random import randrange
 import psycopg2
 
+from django.contrib.auth.models import User
+
 
 def grafica(request):
     #data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],[ 4,      5],[ 3,      3.5],[ 6.5,    7]]
@@ -51,7 +53,7 @@ def cuenta_usuario(request):
 @login_required
 def cuenta_usuario(request):
 
-    jugador = request.User_id # set the currently logged in user
+    jugador = request.user # set the currently logged in user
     engranes_info = Reto.objects.filter(engranes=jugador) # fetch it from database then render it to the template
 
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info})
@@ -371,17 +373,7 @@ def prueba(request):
     return JsonResponse(retorno)
 
 
-'''
-def login(request):
-    return render(request, "roboworld_app/login.html")
 
-def logged_out(request):
-    return render(request, "roboworld_app/logged_out.html")
-
-
-def score(request):
-    return render(request, "roboworld_app/score.html")
-'''
 
 def index2(request):
     return render(request,'roboworld_app/index2.html')
