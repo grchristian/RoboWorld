@@ -43,7 +43,7 @@ def grafica1(request):
     data = [['Nombre', 'Minutos jugados']]
     resultados = Reto.objects.all() #select * from Reto;
     for i in resultados:
-        x = i.id_de_usuario
+        x = i. a_que_nivel_llego
         y = i.engranes
         data.append([x,y])
     
