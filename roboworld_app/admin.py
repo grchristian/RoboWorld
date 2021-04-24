@@ -4,9 +4,7 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import Usuario
 from .models import Reto
-
 from .models import Level
 from .models import Engranes
 from .models import Sesion
