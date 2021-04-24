@@ -1,3 +1,9 @@
+.logo-login {
+  size: 5%;
+}
+
+
+
 body {
   background:#222222;
 }
@@ -6,12 +12,6 @@ body {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-
-.logo-login {
-  padding: 150px 350px 450px;
-}
-
-
 
 .form-signin {
   max-width: 380px;
