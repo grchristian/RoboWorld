@@ -5,21 +5,8 @@ from django.conf import settings
 
 # Create your models here.
 
-'''
-'''
-# eliminar este modelo
-class Usuario(models.Model):
-    #UserioId = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=30)
-    contraseña = models.CharField(max_length=30)
-'''
-'''
-
 class Reto(models.Model):
-    #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
-
-    jugador_id = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True,)
-
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     minutos_jugados = models.IntegerField(null=True)
     minimo = models.IntegerField(null=True)
     maximo = models.IntegerField(null=True)
