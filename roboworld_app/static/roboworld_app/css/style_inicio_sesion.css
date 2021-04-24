@@ -7,8 +7,8 @@ body {
   margin-bottom: 80px;
 }
 
-.logo {
-  width: 50%;
+#logo {
+  size: 50%;
 }
 
 .form-signin {
