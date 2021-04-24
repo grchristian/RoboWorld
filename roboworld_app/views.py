@@ -40,12 +40,10 @@ def grafica1(request):
     return render(request,'roboworld_app/graficas/grafica1.html')
 '''
 
-from itertools import chain
-
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
 
-    resultados = chain(Reto, User)
+    resultados = Reto.objects.all(), User.objects.all(), 
 
     for i in resultados:
         x = i.username
