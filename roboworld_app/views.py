@@ -8,25 +8,11 @@ from random import randrange
 import psycopg2
 from django.contrib.auth.models import User
 
-
-def grafica(request):
-    #data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],[ 4,      5],[ 3,      3.5],[ 6.5,    7]]
-    data = [['Edad', 'Peso']]
-    for i in range(0,11):
-        x = randrange(100)
-        y = randrange(100)
-        data.append([x,y])
-    datos_formato = dumps(data)    
-    return render(request,'grafica.html', {'losDatos':datos_formato})
-
+# FUNCIONES LISTAS Y FUNCIONANDO
+#-----------------------------------------------------------------------------------------
 #envia a index (listo)
 def inicio(request):
     return render(request, "roboworld_app/index.html")
-
-#envia a estadistica 1º (LISTO)
-def grafica1(request):
-    return render(request, "roboworld_app/graficas/grafica1.html")
-
 
 #envia al juego (LIST)
 def juego_unity(request):
@@ -42,15 +28,26 @@ def iniciar_sesion(request):
 def cuenta_usuario(request):
     usuario = request.user # asigna a "usuario" el usuario loggeado
     resultados = Reto.objects.filter(id_de_usuario_id=usuario)
-
     minutos_info = resultados[0].minutos_jugados
     veces_info = resultados[0].repeticion_niveles
     engranes_info = resultados[0].engranes
-
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
+#-----------------------------------------------------------------------------------------
+
+#envia a grafica 1º (working)
+def grafica(request):
+    #data = [ ['Age', 'Weight'], [ 8,      12], [ 4,      5.5], [ 11,     14],[ 4,      5],[ 3,      3.5],[ 6.5,    7]]
+    data = [['Edad', 'Peso']]
+    for i in range(0,11):
+        x = randrange(100)
+        y = randrange(100)
+        data.append([x,y])
+    datos_formato = dumps(data)    
+    return render(request,'grafica.html', {'losDatos':datos_formato})
 
 
 
+    
 def proceso(request):
     nombre = request.POST['nombre']
     nombre=nombre.upper()
