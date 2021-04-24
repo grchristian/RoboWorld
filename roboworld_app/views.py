@@ -40,20 +40,11 @@ def grafica1(request):
 '''
 
 def grafica1(request):
-    '''
-    data = [
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
-        ]
-    '''
     data = [['Nombre', 'Minutos jugados']]
     resultados = Reto.objects.all() #select * from Reto;
     for i in resultados:
-        x = i.nombre
-        y = i.minutos_jugados
+        x = i.id_de_usuario
+        y = i.engranes
         data.append([x,y])
     
     datos_formato = dumps(data)    
