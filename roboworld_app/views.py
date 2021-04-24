@@ -37,17 +37,15 @@ def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
 
 
-#envia a cuenta de usuario (listo)
+#envia a cuenta de usuario (LISTO)
 @login_required
 def cuenta_usuario(request):
-
     usuario = request.user # asigna a "usuario" el usuario loggeado
     resultados = Reto.objects.filter(id_de_usuario_id=usuario)
 
     minutos_info = resultados[0].minutos_jugados
     veces_info = resultados[0].repeticion_niveles
     engranes_info = resultados[0].engranes
-
 
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 
