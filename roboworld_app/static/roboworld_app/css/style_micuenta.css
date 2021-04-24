@@ -88,3 +88,8 @@ a:hover{
 	text-decoration: none;
 	color: #74e145;
 }
+
+.contraseña-link a:hover {
+	text-decoration: none;
+	color: #35c6ff;
+}
