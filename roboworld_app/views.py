@@ -184,8 +184,8 @@ def Level(request):
                 enemigo = row[2]
                 dificultad = row[3]
                 duracion_individual=row[4]
-                print(row)
-                print(level_number, enemigo,dificultad,duracion_individual) 
+            print(row)
+                #print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
         connection = None
