@@ -21,12 +21,6 @@
 </head>
 
 
-
-
-<img src="{% static 'roboworld_app/img/logo.png' %}">
-
-
-
 <div class="wrapper">
   <form class="form-signin" method="post" action="{% url 'login' %}">
 
@@ -37,9 +31,6 @@
       <h6>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h6>
     {% endif %}
 
-    <img src="{% static 'roboworld_app/img/logo.png' %}">
-
-
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
     <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
     
@@ -47,12 +38,15 @@
     <input type="hidden" name="next" value="{{ next }}"/>
 
 
+
+    
     <br>
     <p>/*<br>iniciar sesion con:<br>usuarioprueba<br>usuario123<br>*/</p>
 
-    <img src="{% static 'roboworld_app/img/logo.png' %}">
 
 
-    
+
+
+
   </form>
 </div>
