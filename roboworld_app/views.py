@@ -59,7 +59,8 @@ def grafica1(request):
     return render(request,'roboworld_app/graficas/grafica1.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
 
-
+def grafica2(request):
+    return render(request,'roboworld_app/graficas/grafica1.html')
 
 def proceso(request):
     nombre = request.POST['nombre']
