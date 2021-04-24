@@ -53,7 +53,8 @@ def cuenta_usuario(request):
 @login_required
 def cuenta_usuario(request):
     usuario = request.user
-    resultados = Reto.objects.filter(nombre=usuario)
+    
+    resultados = Reto.objects.filter(id_de_usuario_id=usuario)
 
     engranes_info = resultados[0].engranes
 
