@@ -12,10 +12,8 @@ from .models import Recompensas
 from .models import Prueba
 
 
-admin.site.register(Usuario)
+
 admin.site.register(Reto)
-
-
 admin.site.register(Level)
 admin.site.register(Engranes)
 admin.site.register(Sesion)
