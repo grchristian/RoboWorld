@@ -7,7 +7,6 @@
       <meta name="viewport" content="width=device-width">
 	  <!--titulo de la pestaña del navegador-->
       <title>RoboWorld</title>
-
 	  <!--para linkear con la hoja de estilos-->
       <link href="css/style.css" rel="stylesheet" type="text/css" />
 	  <!--favicon (icono de la pestalla del navegador)-->
@@ -18,40 +17,13 @@
       <script src="js/script.js"></script>
 	  <!--linkear los iconos-->
 	  <script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
-	</head>
 
-	<head>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-		  google.charts.load('current', {'packages':['corechart']});
-		  google.charts.setOnLoadCallback(drawVisualization);
-	
-		  function drawVisualization() {
-			// Some raw data (not necessarily accurate)
-			var data = google.visualization.arrayToDataTable([
-			  ['Juan', 'Mariana', 'Luis', 'Karla', 'María', 'Carlo', 'Promedio'],
-			  ['2004/05',  165,      938,         522,             998,           450,      614.6],
-			  ['2005/06',  135,      1120,        599,             1268,          288,      682],
-			  ['2006/07',  157,      1167,        587,             807,           397,      623],
-			  ['2007/08',  139,      1110,        615,             968,           215,      609.4],
-			  ['2008/09',  136,      691,         629,             1026,          366,      569.6]
-			]);
-	
-			var options = {
-			  title : 'Jugadores con mayor puntaje',
-			  vAxis: {title: 'Engranes'},
-			  hAxis: {title: 'Fechas'},
-			  seriesType: 'bars',
-			  series: {5: {type: 'line'}}
-			};
-	
-			var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-			chart.draw(data, options);
-		  }
-		</script>
-	  </head>
+<link rel="stylesheet" href="/css/style_menu.css">
+
+	</head>
   
   <body>
+	  
 		  <!--header-->
 		  <header>
 			  <a class="logo" href="index.html"><img src="img/logo.png" alt="roboworld logo"/></a>
@@ -78,7 +50,46 @@
 				<!--seccion de home-->
 				<div id="home">
 					<section class="intro">
-						<div id="chart_div" style="width: 900px; height: 500px;"></div>
+						<!--<div id="chart_div" style="width: 900px; height: 500px;"></div>-->
+
+
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+
+<nav class='menu'>
+<a class="nav" href="#">
+  <div class="icon">
+    <i class="fas fa-globe-europe"></i></div>
+  <div class="icon">Top players</div>
+</a>
+<a class="nav" href="#">
+  <div class="icon"><i class="fas fa-layer-group"></i></li>
+</div>
+  <div class="icon">Minutos</div>
+</a>
+<a class="nav" href="#">
+  <div class="icon"><i class="fa fa-book fa-fw"></i></i></div>
+  <div class="icon">library</div>
+</a>
+<a class="nav" href="#">
+  <div class="icon"><i class="fa fa-camera-retro"></i></div>
+  <div class="icon">galery</div>
+</a>
+<a class="nav" href="#">
+  <div class="icon"><i class="fa fa-map-marker"></i></div>
+  <div class="icon">map</div>
+</a>
+<a class="nav" href="#">
+  <div class="icon"><i class="fa fa-rss"></i></div>
+  <div class="icon">Rss</div>
+</a>
+</nav>
+<!-- partial -->
+
+
+
+						
 					</section>
 				</div>
 			</main>
