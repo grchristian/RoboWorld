@@ -18,7 +18,7 @@ class Usuario(models.Model):
 class Reto(models.Model):
     #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
 
-    jugador_id = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,primary_key=True,)
+    jugador_id = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True,)
 
     minutos_jugados = models.IntegerField(null=True)
     minimo = models.IntegerField(null=True)
