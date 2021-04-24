@@ -8,7 +8,6 @@ from random import randrange
 import psycopg2
 
 from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
 
 # FUNCIONES LISTAS Y FUNCIONANDO
 #-----------------------------------------------------------------------------------------
@@ -47,7 +46,7 @@ def grafica1(request):
 
     resultados = Reto.objects.all() #select * from Reto;
     for i in resultados:
-        x = get_user_model(i)
+        x = request.user
         y = i.engranes
         data.append([x,y])
     
