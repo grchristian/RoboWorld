@@ -91,6 +91,7 @@
     <!--el div de container (todo lo de la pagina)-->
 
             {%else%}
+            <img src="{% static 'roboworld_app/img/logo.png' %}" class="form-signin">
                 <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
             {%endif%}
         </ul>
