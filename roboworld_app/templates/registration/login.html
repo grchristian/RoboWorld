@@ -24,7 +24,7 @@
 <div class="wrapper">
   <form class="form-signin" method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/>
+    <img class="logo" src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/>
     <h2 class="form-signin-heading">Iniciar sesión</h2>
     
     {% if form.errors %}

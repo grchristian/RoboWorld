@@ -7,6 +7,10 @@ body {
   margin-bottom: 80px;
 }
 
+.logo {
+  width: 50%;
+}
+
 .form-signin {
   max-width: 380px;
   padding: 15px 35px 45px;
