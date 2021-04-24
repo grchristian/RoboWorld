@@ -43,10 +43,14 @@ def grafica1(request):
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
 
-    resultados = Reto.objects.all()
+    resultados = Reto.objects.all().values('id_de_usuario_id','engranes')
+
+   # return JsonResponse(list(all_pro))
+
+
 
     for i in resultados:
-        x = i.id_de_usuario
+        x = i.id_de_usuario_id
         y = i.engranes
         data.append([x,y])
     
