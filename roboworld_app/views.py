@@ -46,7 +46,7 @@ def grafica1(request):
     resultados = Reto.objects.all()
 
     for i in resultados:
-        x = i.id_de_usuario_id_username
+        x = i.id_de_usuario_id
         y = i.engranes
         data.append([x,y])
     
