@@ -36,7 +36,7 @@ def cuenta_usuario(request):
 
 #envia a grafica 1º (working)
 def grafica1(request):
-    return render(request,'roboworld_app/grafica1.html')
+    return render(request,'roboworld_app/graficas/grafica1.html')
 
 
 
