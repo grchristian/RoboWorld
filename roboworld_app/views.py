@@ -6,7 +6,6 @@ from json import loads, dumps
 from . models import Reto
 from random import randrange
 import psycopg2
-
 from django.contrib.auth.models import User
 
 
@@ -24,32 +23,21 @@ def grafica(request):
 def inicio(request):
     return render(request, "roboworld_app/index.html")
 
-
-
-#envia a estadistica 1º (listo)
+#envia a estadistica 1º (LISTO)
 def grafica1(request):
     return render(request, "roboworld_app/graficas/grafica1.html")
 
 
-#envia al juego (listo)
+#envia al juego (LIST)
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
-#envia inciar sesión (listo)
+#envia inciar sesión (LISTO)
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
 
 
-#envia a cuenta de usuario (pendiente, conectar con db)
-'''
-@login_required
-def cuenta_usuario(request):
-    num_engranes = "43"
-    min_jugados = "53"
-    veces_jugadas = "5"
-    return render(request, "roboworld_app/cuenta_usuario.html", {"num_engranes":num_engranes,"min_jugados":min_jugados,"veces_jugadas":veces_jugadas}) 
-'''
-
+#envia a cuenta de usuario (listo)
 @login_required
 def cuenta_usuario(request):
 
