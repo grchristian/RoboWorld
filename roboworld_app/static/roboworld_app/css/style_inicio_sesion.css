@@ -7,9 +7,11 @@ body {
   margin-bottom: 80px;
 }
 
-.logo_login {
-  width: 100px;
+.logo-login {
+  padding: 150px 350px 450px;
 }
+
+
 
 .form-signin {
   max-width: 380px;
