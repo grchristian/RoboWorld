@@ -6,6 +6,7 @@ from json import loads, dumps
 from . models import Reto
 from random import randrange
 import psycopg2
+
 from django.contrib.auth.models import User
 
 # FUNCIONES LISTAS Y FUNCIONANDO
@@ -39,12 +40,13 @@ def grafica1(request):
     return render(request,'roboworld_app/graficas/grafica1.html')
 '''
 
+
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
 
     resultados = Reto.objects.all() #select * from Reto;
     for i in resultados:
-        x = i.username
+        x = get_user_model(i)
         y = i.engranes
         data.append([x,y])
     
