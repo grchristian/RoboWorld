@@ -79,8 +79,12 @@ body {
 }
 
 
-h3 a:hover {
+.passreset-link a:hover {
 	text-decoration: none;
-	color: #ff4bba;
+	color: #ff62ea;
 }
 
+.logout-link a:hover {
+	text-decoration: none;
+	color: #48fff0;
+}
