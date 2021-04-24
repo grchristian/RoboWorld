@@ -2,6 +2,18 @@ body {
   background:#222222;
 }
 
+#home .filter{
+	background: url(https://i.ibb.co/n8P9vPj/Untitled-design.jpg) no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.40;
+}
+
 .wrapper {
   margin-top: 80px;
   margin-bottom: 80px;
