@@ -24,7 +24,6 @@ def juego_unity(request):
 def iniciar_sesion(request):
     return render(request, "roboworld_app/iniciar_sesion.html")
 
-
 #envia a cuenta de usuario (LISTO)
 @login_required
 def cuenta_usuario(request):
@@ -36,8 +35,7 @@ def cuenta_usuario(request):
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 #-----------------------------------------------------------------------------------------
 
-def change_password(request, *args, **kwargs):
-    return render(request, "roboworld_app/index.html")
+
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
