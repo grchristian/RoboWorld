@@ -79,12 +79,8 @@ body {
 }
 
 
-
-
-
-
-.passreset-link a:hover {
+h3 a:hover {
 	text-decoration: none;
-	color: #35c6ff;
+	color: #ff4bba;
 }
 
