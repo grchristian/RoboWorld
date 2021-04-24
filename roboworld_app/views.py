@@ -195,7 +195,7 @@ def Level(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    print(level_number, enemigo,dificultad,duracion_individual)      
+    #print(level_number, enemigo,dificultad,duracion_individual)      
     retorno = {"level_number":level_number,
          "enemigo":enemigo,
          "dificultad":dificultad,
