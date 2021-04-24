@@ -2,6 +2,10 @@ body {
   background:#222222;
 }
 
+.logo_login {
+  background:#ff0000;
+  width: 100px;
+}
 
 
 .wrapper {
