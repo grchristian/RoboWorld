@@ -40,16 +40,17 @@ def grafica1(request):
 '''
 
 def grafica1(request):
-    data = [['Nombre', 'Minutos jugados']]
+    data = [['Nombre', 'Engranes recolectados']]
+
     resultados = Reto.objects.all() #select * from Reto;
     for i in resultados:
-        x = i. a_que_nivel_llego
+        x = i.sesion_iniciada_mes
         y = i.engranes
         data.append([x,y])
     
     datos_formato = dumps(data)    
     titulo = 'Indicador STEM'
-    subtitulo = 'Minutos jugados totales'
+    subtitulo = 'Engranes recolectados'
 
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
