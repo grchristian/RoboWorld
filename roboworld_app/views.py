@@ -161,8 +161,8 @@ Level
 def Level(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    level_number = body_json['level_number']
-    #level_number = ""
+    numero_nivel = body_json['nivel']
+    level_number = ""
     enemigo = ""
     dificultad = ""
     duracion_individual=""
@@ -179,13 +179,13 @@ def Level(request):
         cursor.execute("SELECT * FROM roboworld_app_level;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == level_number:
+            if row[1] == numero_nivel:
                 level_number = row[1]
                 enemigo = row[2]
                 dificultad = row[3]
                 duracion_individual=row[4]
-                print(row)
-                print(level_number, enemigo,dificultad,duracion_individual) 
+            print(row)
+                #print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
         connection = None
@@ -195,7 +195,7 @@ def Level(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    print(level_number, enemigo,dificultad,duracion_individual)      
+    #print(level_number, enemigo,dificultad,duracion_individual)      
     retorno = {"level_number":level_number,
          "enemigo":enemigo,
          "dificultad":dificultad,
