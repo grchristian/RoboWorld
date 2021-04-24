@@ -9,9 +9,14 @@ urlpatterns = [
     path('cuenta_usuario',views.cuenta_usuario, name = 'cuenta_usuario'),
     #---------------------- URLS LISTOS Y TRABAJANDO ----------------------
 
+
+
+    #------------------------------ GRÁFICAS ------------------------------
     path('grafica1/', views.grafica1, name="grafica1"),
     path('grafica2/', views.grafica2, name="grafica2"),
+    #------------------------------ GRÁFICAS ------------------------------
 
+    
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),

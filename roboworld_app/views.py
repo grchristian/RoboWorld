@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
@@ -6,8 +6,9 @@ from json import loads, dumps
 from . models import Reto
 from random import randrange
 import psycopg2
-
 from django.contrib.auth.models import User
+
+
 
 # FUNCIONES LISTAS Y FUNCIONANDO
 #-----------------------------------------------------------------------------------------
@@ -34,11 +35,9 @@ def cuenta_usuario(request):
     engranes_info = resultados[0].engranes
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 #-----------------------------------------------------------------------------------------
-'''
-#envia a grafica 1º (working)
-def grafica1(request):
-    return render(request,'roboworld_app/graficas/grafica1.html')
-'''
+
+def change_password(request, *args, **kwargs):
+    return HttpResponseRedirect("/")
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
