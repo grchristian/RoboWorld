@@ -11,6 +11,9 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 
+
+from .forms import CustomUserCreationForm
+
 #---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 #------------------------ ENVÍA A INDEX ------------------------#
 def inicio(request):
@@ -31,25 +34,28 @@ def cuenta_usuario(request):
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 #---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 
+'''
 def register(request):
     if request.method == 'POST':
         f = UserCreationForm(request.POST)
         if f.is_valid():
-
-
-            user_iniciado = User.objects.get(id="1")
-            user.reto = user_iniciado
-            user.reto.save()
-
-
-            b = Reto(minutos_jugados="1",repeticion_niveles="1",engranes="1")
-            b.save()
-
             f.save()
             return render(request, "roboworld_app/index.html")
     else:
         f = UserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
+'''
+
+def register(request):
+    if request.method == 'POST':
+        f = CustomUserCreationForm(request.POST)
+        if f.is_valid():
+            f.save()
+            messages.success(request, 'Account created successfully')
+            return redirect('register')
+    else:
+        f = CustomUserCreationForm()
+    return render(request, 'cadmin/register.html', {'form': f})
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
