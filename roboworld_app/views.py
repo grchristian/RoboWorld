@@ -55,7 +55,18 @@ def register(request):
             return redirect('register')
     else:
         f = CustomUserCreationForm()
-    return render(request, 'cadmin/register.html', {'form': f})
+    return render(request, 'roboworld_app/register.html', {'form': f})
+
+
+
+
+
+
+
+
+
+
+
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
