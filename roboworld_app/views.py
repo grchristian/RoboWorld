@@ -11,21 +11,16 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 
-# FUNCIONES LISTAS Y FUNCIONANDO
-#-----------------------------------------------------------------------------------------
-#envia a index (listo)
+#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
+#------------------------ ENVÍA A INDEX ------------------------#
 def inicio(request):
     return render(request, "roboworld_app/index.html")
-
-#envia al juego (LIST)
+    
+#----------------------- ENVÍA AL JUEGO -----------------------#
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
-#envia inciar sesión (LISTO)
-def iniciar_sesion(request):
-    return render(request, "roboworld_app/iniciar_sesion.html")
-
-#envia a cuenta de usuario (LISTO)
+#-------------- ENVÍA A MI CUENTA / INCIAR SESIÓN --------------#
 @login_required
 def cuenta_usuario(request):
     usuario = request.user # asigna a "usuario" el usuario loggeado
@@ -34,15 +29,14 @@ def cuenta_usuario(request):
     veces_info = resultados[0].repeticion_niveles
     engranes_info = resultados[0].engranes
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
-#-----------------------------------------------------------------------------------------
+#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 
 def register(request):
     if request.method == 'POST':
         f = UserCreationForm(request.POST)
         if f.is_valid():
             f.save()
-            messages.success(request, 'Account created successfully')
-            return render(request, "roboworld_app/cuenta_usuario.html")
+            return render(request, "roboworld_app/index.html")
     else:
         f = UserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
