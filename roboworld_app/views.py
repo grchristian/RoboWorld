@@ -15,7 +15,7 @@ from django.contrib.auth.forms import UserCreationForm
 #------------------------ ENVÍA A INDEX ------------------------#
 def inicio(request):
     return render(request, "roboworld_app/index.html")
-    
+
 #----------------------- ENVÍA AL JUEGO -----------------------#
 def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
@@ -35,6 +35,9 @@ def register(request):
     if request.method == 'POST':
         f = UserCreationForm(request.POST)
         if f.is_valid():
+            b = Reto(id_de_usuario_id="0",minutos_jugados="1",repeticion_niveles="1",engranes="1")
+            b.save()
+
             f.save()
             return render(request, "roboworld_app/index.html")
     else:
