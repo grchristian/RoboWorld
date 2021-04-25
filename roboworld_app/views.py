@@ -15,7 +15,7 @@ from .forms import CustomUserCreationForm
 
 from django.contrib.auth import authenticate, login
 
-#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
+#------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
 #------------------------ ENVÍA A INDEX ------------------------#
 def inicio(request):
     return render(request, "roboworld_app/index.html")
@@ -34,9 +34,7 @@ def cuenta_usuario(request):
     engranes_info = resultados[0].engranes
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info})
 
-#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
-
-
+#------------------ REGISTRAR NUEVO USUARIO ------------------#
 def register(request):
     if request.method == 'POST':
         f = CustomUserCreationForm(request.POST)
@@ -54,11 +52,10 @@ def register(request):
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
+#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
+#------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
 
-
-
-
-
+#funciona pero hay que darle mas formato
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
 
