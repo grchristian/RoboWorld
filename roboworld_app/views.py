@@ -49,7 +49,7 @@ def register(request):
                                     )
             login(request, new_user)
 
-            Reto.objects.create(id_de_usuario=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
+            Reto.objects.create(id_de_usuario_id=request.user.id,minutos_jugados="55",repeticion_niveles="55",engranes="55")
 
             return render(request, "roboworld_app/index.html")
     else:
