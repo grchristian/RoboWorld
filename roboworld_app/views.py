@@ -49,8 +49,8 @@ def register(request):
             messages.success(request, 'Account created successfully')
 
             new_user = f.save()
-            new_user = authenticate(username=form.cleaned_data['username'],
-                                    password=form.cleaned_data['password1'],
+            new_user = authenticate(username=f.cleaned_data['username'],
+                                    password=f.cleaned_data['password1'],
                                     )
             login(request, new_user)
 
