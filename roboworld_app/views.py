@@ -11,8 +11,9 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 
-
 from .forms import CustomUserCreationForm
+
+from django.contrib.auth import authenticate, login
 
 #---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 #------------------------ ENVÍA A INDEX ------------------------#
@@ -35,37 +36,31 @@ def cuenta_usuario(request):
 
 #---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 
-'''
+
 def register(request):
     if request.method == 'POST':
         f = CustomUserCreationForm(request.POST)
         if f.is_valid():
 
-            Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
+            #Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
 
 
             f.save()
             messages.success(request, 'Account created successfully')
+
+            new_user = f.save()
+            new_user = authenticate(username=form.cleaned_data['username'],
+                                    password=form.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
+
             return render(request, "roboworld_app/index.html")
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
 
-'''
-from django.contrib.auth import authenticate, login
 
 
-def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            new_user = form.save()
-            messages.info(request, "Thanks for registering. You are now logged in.")
-            new_user = authenticate(username=form.cleaned_data['username'],
-                                    password=form.cleaned_data['password1'],
-                                    )
-            login(request, new_user)
-            return render(request, "roboworld_app/index.html")
 
 
 
