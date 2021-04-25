@@ -88,7 +88,6 @@
         </footer>
 
       {%else%}
-        <a href="{% url 'register' %}">Registrarse</a>
         <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
       {%endif%}
     </ul>
