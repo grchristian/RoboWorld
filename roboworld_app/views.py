@@ -65,7 +65,7 @@ def register(request):
                                     password=form.cleaned_data['password1'],
                                     )
             login(request, new_user)
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect("/cuenta_usuario/")
 
 
 
