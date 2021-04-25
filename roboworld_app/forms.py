@@ -5,10 +5,10 @@ from django.core.exceptions import ValidationError
 
 
 class CustomUserCreationForm(forms.Form):
-    username = forms.CharField(label='Enter Username', min_length=4, max_length=150)
-    email = forms.EmailField(label='Enter email')
-    password1 = forms.CharField(label='Enter password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput)
+    username = forms.CharField(label='Usuario', min_length=4, max_length=150)
+    email = forms.EmailField(label='Correo electrónico')
+    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Confirmar contraseña', widget=forms.PasswordInput)
 
     def clean_username(self):
         username = self.cleaned_data['username'].lower()
@@ -21,7 +21,7 @@ class CustomUserCreationForm(forms.Form):
         email = self.cleaned_data['email'].lower()
         r = User.objects.filter(email=email)
         if r.count():
-            raise  ValidationError("Email already exists")
+            raise  ValidationError("Este correo electrónico ya está registrado")
         return email
 
     def clean_password2(self):
@@ -29,7 +29,7 @@ class CustomUserCreationForm(forms.Form):
         password2 = self.cleaned_data.get('password2')
 
         if password1 and password2 and password1 != password2:
-            raise ValidationError("Password don't match")
+            raise ValidationError("Las contraseñas deben ser iguales")
 
         return password2
 

@@ -24,6 +24,7 @@ def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
 #-------------- ENVÍA A MI CUENTA / INCIAR SESIÓN --------------#
+
 @login_required
 def cuenta_usuario(request):
     usuario = request.user # asigna a "usuario" el usuario loggeado
@@ -31,20 +32,10 @@ def cuenta_usuario(request):
     minutos_info = resultados[0].minutos_jugados
     veces_info = resultados[0].repeticion_niveles
     engranes_info = resultados[0].engranes
-    return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
+    return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info})
+
 #---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
 
-'''
-def register(request):
-    if request.method == 'POST':
-        f = UserCreationForm(request.POST)
-        if f.is_valid():
-            f.save()
-            return render(request, "roboworld_app/index.html")
-    else:
-        f = UserCreationForm()
-    return render(request, 'roboworld_app/register.html', {'form': f})
-'''
 
 def register(request):
     if request.method == 'POST':
