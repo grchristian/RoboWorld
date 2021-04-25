@@ -35,7 +35,14 @@ def register(request):
     if request.method == 'POST':
         f = UserCreationForm(request.POST)
         if f.is_valid():
-            b = Reto(id_de_usuario="1",minutos_jugados="1",repeticion_niveles="1",engranes="1")
+
+
+            user_iniciado = User.objects.get(id="1")
+            user.reto = user_iniciado
+            user.reto.save()
+
+
+            b = Reto(minutos_jugados="1",repeticion_niveles="1",engranes="1")
             b.save()
 
             f.save()
