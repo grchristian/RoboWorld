@@ -51,9 +51,9 @@ def register(request):
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
 
-
-from django.contrib.auth import authenticate, login
 '''
+from django.contrib.auth import authenticate, login
+
 
 def register(request):
     if request.method == 'POST':
@@ -65,7 +65,7 @@ def register(request):
                                     password=form.cleaned_data['password1'],
                                     )
             login(request, new_user)
-            return render(request, "roboworld_app/index.html")
+            return HttpResponseRedirect("/")
 
 
 
