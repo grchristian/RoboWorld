@@ -24,7 +24,6 @@ def juego_unity(request):
     return render(request, "roboworld_app/juego_unity/index_unity.html")
 
 #-------------- ENVÍA A MI CUENTA / INCIAR SESIÓN --------------#
-
 @login_required
 def cuenta_usuario(request):
     usuario = request.user # asigna a "usuario" el usuario loggeado
@@ -42,7 +41,7 @@ def register(request):
         f = CustomUserCreationForm(request.POST)
         if f.is_valid():
 
-            Reto.objects.create(minutos_jugados="5",repeticion_niveles="5",engranes="5")
+            Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
 
 
             f.save()
