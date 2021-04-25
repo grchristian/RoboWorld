@@ -45,7 +45,7 @@ def register(request):
             #Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
 
 
-            f.save()
+            #f.save()
             messages.success(request, 'Account created successfully')
 
             new_user = f.save()
