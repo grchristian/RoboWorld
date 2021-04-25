@@ -8,7 +8,8 @@ from random import randrange
 import psycopg2
 from django.contrib.auth.models import User
 
-
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 
 # FUNCIONES LISTAS Y FUNCIONANDO
 #-----------------------------------------------------------------------------------------
@@ -35,7 +36,16 @@ def cuenta_usuario(request):
     return render(request, 'roboworld_app/cuenta_usuario.html', {"engranes_info":engranes_info,"veces_info":veces_info,"minutos_info":minutos_info}) 
 #-----------------------------------------------------------------------------------------
 
-
+def register(request):
+    if request.method == 'POST':
+        f = UserCreationForm(request.POST)
+        if f.is_valid():
+            f.save()
+            messages.success(request, 'Account created successfully')
+            return redirect('register')
+    else:
+        f = UserCreationForm()
+    return render(request, 'roboworld_app/register.html', {'form': f})
 
 def grafica1(request):
     data = [['Nombre', 'Engranes recolectados']]
