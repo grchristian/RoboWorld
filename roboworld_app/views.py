@@ -44,29 +44,20 @@ def register(request):
 
             #Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
 
-
-            #f.save()
             messages.success(request, 'Account created successfully')
-
             new_user = f.save()
+            #para que se loggee automaticamente despues de crear cuenta
             new_user = authenticate(username=f.cleaned_data['username'],
                                     password=f.cleaned_data['password1'],
                                     )
             login(request, new_user)
 
+            Reto.objects.create(id_de_usuario_id=request.user,minutos_jugados="55",repeticion_niveles="55",engranes="55")
+
             return render(request, "roboworld_app/index.html")
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
-
-
-
-
-
-
-
-
-
 
 
 
