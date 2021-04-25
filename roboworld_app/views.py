@@ -42,7 +42,7 @@ def register(request):
         if f.is_valid():
             f.save()
             messages.success(request, 'Account created successfully')
-            return redirect('register')
+            return render(request, "roboworld_app/cuenta_usuario.html")
     else:
         f = UserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
