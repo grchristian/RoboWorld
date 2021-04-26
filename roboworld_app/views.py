@@ -267,7 +267,7 @@ Sesion
 def sesion(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    empezo = body_json['start]
+    empezo = body_json['start']
     started = ""
     ended = ""
  
