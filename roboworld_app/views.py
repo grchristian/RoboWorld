@@ -385,7 +385,7 @@ def prueba(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    retorno = {"sessionID ":sessionID ,
+        retorno = {"sessionID ":sessionID ,
         "success":success}
     return JsonResponse(retorno)
 
