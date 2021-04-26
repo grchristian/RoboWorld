@@ -226,7 +226,7 @@ Engranes
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    sesionObtenida = body_json['sesion']
+    sesionObtenida = body_json['ses']
     sesionObtained= ""
     numero = ""
 
