@@ -52,7 +52,7 @@ def register(request):
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
-    
+
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
 
 #funciona pero hay que darle mas formato
@@ -76,7 +76,7 @@ def grafica1(request):
 
 
 def grafica2(request):
-    return render(request,'roboworld_app/graficas/grafica1.html')
+    return render(request,'roboworld_app/graficas/grafica2.html')
 
 def proceso(request):
     nombre = request.POST['nombre']
