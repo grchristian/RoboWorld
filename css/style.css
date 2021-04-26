@@ -264,7 +264,7 @@ footer {
 .copyright2 {
 	color: #FFFFFF;
 	font-size: 15px;
-	line-height: 150%;
+	line-height: 100%;
 	text-align: left;
 }
 .copyright2 a{
@@ -273,7 +273,7 @@ footer {
     text-decoration: none;
 }
 .copyright2 a:hover{
-	color: var(--main-decor-color);
+	color: #FFFFFF;
 }
 /*──── hr ─────*/
 
