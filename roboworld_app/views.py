@@ -374,7 +374,7 @@ def prueba(request):
             if row[1] == sesion_id:
                 sessionID = row[1]
                 success = row[2]
-            print(row)
+                print(row)
     
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
