@@ -272,6 +272,9 @@ footer {
 	font-size: 15px;
     text-decoration: none;
 }
+.copyright2 a:hover{
+	color: #B8B8B8;
+}
 
 /*──── hr ─────*/
 
