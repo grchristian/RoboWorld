@@ -273,7 +273,7 @@ footer {
     text-decoration: none;
 }
 .copyright2 a:hover{
-	color: #B8B8B8;
+	color: var(--main-decor-color);
 }
 
 /*──── hr ─────*/
