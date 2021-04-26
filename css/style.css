@@ -262,13 +262,13 @@ footer {
 
 
 .copyright2 {
-	color: #f2f2f2;
+	color: #FFFFFF;
 	font-size: 15px;
 	line-height: 150%;
-	text-align: center;
+	text-align: left;
 }
 .copyright2 a{
-	color: #f2f2f2;
+	color: #FFFFFF;
 	font-size: 15px;
     text-decoration: none;
 }
