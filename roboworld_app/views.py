@@ -52,7 +52,7 @@ def register(request):
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
-#---------------------------------------------- FINALES FUNCIONANDO ----------------------------------------------#
+    
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
 
 #funciona pero hay que darle mas formato
