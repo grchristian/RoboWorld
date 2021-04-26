@@ -2,9 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 
-
-# Create your models here.
-
 class Reto(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     minutos_jugados = models.IntegerField(null=True)
@@ -19,15 +16,12 @@ class Reto(models.Model):
     sesion_iniciada_mes=models.IntegerField(null=True)
 
 
-
 class Level(models.Model):
     #Nivelid = models.AutoField(primary_key=True)
     level_number = models.IntegerField()
     enemigo = models.CharField(max_length=30)
     dificultad = models.IntegerField()
     duracion_indivudual = models.IntegerField()
-    
-  
 
 
 class Engranes(models.Model):
@@ -40,13 +34,10 @@ class Sesion(models.Model):
    # UserID = models.IntegerField()
     started = models.IntegerField()
     ended = models.IntegerField()
-  
-   
-
 
 
 class Recompensas(models.Model):
-    
+  
     engranes_necesarios = models.IntegerField()
     top_score_global = models.IntegerField()
     top_five = models.IntegerField()
