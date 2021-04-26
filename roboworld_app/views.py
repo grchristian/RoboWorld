@@ -327,7 +327,7 @@ def recompensas(request):
         cursor.execute("SELECT * FROM roboworld_app_recompensas;")
         rows = cursor.fetchall()
         for row in rows:
-            print "resultados"
+            print ("resultados")
             print(row [1], engranes_need)
             if row[1] == engranes_need:
                 engranes_necesarios = row[1]
