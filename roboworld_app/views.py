@@ -226,7 +226,7 @@ Engranes
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    sessionObtained = body_json['sessionObtained']
+    sesionObtenida = body_json['sesion']
     sesionObtained= ""
     numero = ""
 
@@ -242,7 +242,7 @@ def engranes(request):
         cursor.execute("SELECT * FROM roboworld_app_engranes;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == sessionObtained:
+            if row[1] == sesionObtenida:
                 sessionObtained = row[1]
                 numero = row[2]
             print(row)
@@ -267,7 +267,7 @@ Sesion
 def sesion(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    started = body_json['started']
+    empezo = body_json['start]
     started = ""
     ended = ""
  
@@ -284,7 +284,7 @@ def sesion(request):
         cursor.execute("SELECT * FROM roboworld_app_sesion;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == started:
+            if row[1] == empezo:
                 started = row[1]
                 ended = row[2]
             print(row)
@@ -309,7 +309,7 @@ recomoensas
 def recompensas(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    engranes_necesarios = body_json['engranes_necesarios']
+    engranes_need= body_json['engranes']
    
     engranes_necesarios = ""
     top_score_global = ""
@@ -327,7 +327,7 @@ def recompensas(request):
         cursor.execute("SELECT * FROM roboworld_app_recompensas;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == engranes_necesarios:
+            if row[1] == engranes_need:
                 engranes_necesarios = row[1]
                 top_score_global = row[2]
                 top_five = row[3]
@@ -355,7 +355,7 @@ Prueba
 def prueba(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    sessionID = body_json['sessionID']
+    sesion_id= body_json['sesion']
     sessionID = ""
     success = ""
 
@@ -371,7 +371,7 @@ def prueba(request):
         cursor.execute("SELECT * FROM roboworld_app_prueba;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == sessionID:
+            if row[1] == sesion_id:
                 sessionID = row[1]
                 success = row[2]
             print(row)
