@@ -206,7 +206,7 @@ def Level(request):
         cursor.execute("SELECT * FROM roboworld_app_level;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == numero_nivel
+            if row[1] == numero_nivel:
                 level_number = row[1]
                 enemigo = row[2]
                 dificultad = row[3]
