@@ -56,6 +56,7 @@ class PerfilForm(forms.Form):
         return genero
 
     def saveDatos(self, commit=True):
+        print ("datos")
         print (genero,birth_date)
         perfil = Perfil.objects.create(self.cleaned_data['genero'],birth_date)
         return perfil
