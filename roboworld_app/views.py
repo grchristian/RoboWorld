@@ -95,11 +95,11 @@ def grafica2(request):
 def graficaExito(request):
     data = [['Nombre', 'Promedio de exito']]
 
-    resultados = Reto.objects.all()
+    resultados = Prueba.objects.all()
 
     for i in resultados:
         x = i.id_de_usuario_id
-        y = i.success_promedio
+        y = i.success
         data.append([x,y])
     
     datos_formato = dumps(data)    
