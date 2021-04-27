@@ -211,7 +211,7 @@ def Level(request):
                 enemigo = row[2]
                 dificultad = row[3]
                 duracion_individual=row[4]
-            print(row)
+                print(row)
                 #print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
@@ -236,8 +236,8 @@ def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     sesionObtenida = body_json['sesion']
-    sessionObtained= "1"
-    numero = "1"
+    sessionObtained= ""
+    numero = ""
 
     try:
         connection = psycopg2.connect(
@@ -275,8 +275,8 @@ def sesion(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     empezo = body_json['start']
-    started = ""
-    ended = ""
+    started = "2:02"
+    ended = "2:10"
  
 
     try:
