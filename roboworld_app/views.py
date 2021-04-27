@@ -219,7 +219,7 @@ def Level(request):
     return JsonResponse(retorno)
 
 
-
+'''
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -383,9 +383,23 @@ def prueba(request):
         "success":success}
     return JsonResponse(retorno)
 
-'''
 
 
+@csrf_exempt
+def Level(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    Numero_nivel = body_json['nivel']
+    resultados = Level.objects.filter(level_number=Numero_nivel)  #select * from Reto where nombre = jugador_nombre
+    level_number = resultados[0].level_number
+    enemigo = resultados[0].enemigo
+    dificultad = resultados[0].dificultad
+    duracion_individual = resultados[0].duracion_individual
+    retorno = {"numero d enivel":level_number,
+        "enemigo":enemigo
+        "dificultad": dificultad
+        "duracion individual": duracion_individual}
+    return JsonResponse(retorno)
 
 
 
