@@ -40,13 +40,6 @@ def register(request):
             messages.success(request, 'done')
             new_user = f.save()
 
-            '''
-            '''
-            fp = PerfilForm(request.POST)
-            fp.saveDatos()
-            '''
-            '''
-
             #para que se loggee automaticamente despues de crear cuenta
             new_user = authenticate(username=f.cleaned_data['username'],
                                     password=f.cleaned_data['password1'],
@@ -55,7 +48,7 @@ def register(request):
             #Crea un registro en RETO con el usuario creado
             Reto.objects.create(id_de_usuario_id=request.user.id,minutos_jugados="0",minimo="0",maximo="0",repeticion_niveles="0",engranes="0",duracion_promedio="0",success_promedio="0",a_que_nivel_llego="0",sesion_iniciada_dia="0",sesion_iniciada_mes="0")
 
-
+            
             '''
             Perfil.objects.create(id_de_usuario_id=request.user.id,genero="i",birth_date="13/04/2000")
             '''
