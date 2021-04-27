@@ -384,7 +384,7 @@ def prueba(request):
 
 
 @csrf_exempt
-    def level(request):
+def level(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     Numero_nivel = body_json['nivel']
@@ -400,7 +400,7 @@ def prueba(request):
     return JsonResponse(retorno)
 
 @csrf_exempt
-    def engranes(request):
+def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     Numero_engranes = body_json['engranes']
