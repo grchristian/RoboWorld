@@ -9,8 +9,8 @@ from random import randrange
 import psycopg2
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
-from .forms import CustomUserCreationForm
+from django.contrib.auth.forms import UserCreationForm 
+from .forms import CustomUserCreationForm, PerfilForm
 from django.contrib.auth import authenticate, login
 
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
