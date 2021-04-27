@@ -18,6 +18,8 @@ urlpatterns = [
     path('graficaExito/', views.graficaExito, name="graficaExito"),
     path('graficaMinimo/', views.graficaMinimo, name="graficaMinimo"),
     path('graficaMaximo/', views.graficaMaximo, name="graficaMaximo"),
+    path('graficaNiveLlego/', views.graficaNiveLlego, name="graficaNiveLlego"),
+    path('graficaGenero/', views.graficaGenero, name="graficaGenero"),
     #path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
     #------------------------------ GRÁFICAS ------------------------------
 
@@ -32,6 +34,7 @@ urlpatterns = [
     path('sesion',views.sesion, name = 'sesion'),
     path('recompensas',views.recompensas, name = 'recompensas'),
     path('prueba',views.prueba, name = 'prueba'),
+    
 
     #ejemplos clase
     path('index2',views.index2, name = 'index2'),

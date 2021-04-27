@@ -150,6 +150,42 @@ def graficaMaximo(request):
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaMaximo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+def graficaNiveLlego(request):
+    data = [['Nombre', 'Nivel al que llegó']]
+
+    resultados = Reto.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.a_que_nivel_llego
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Nivel al que llegó cada jugador'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaNivelLlego.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+def graficaGenero(request):
+    data = [['Nombre', 'Genero de los jugadores']]
+
+    resultados = Perfil.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.genero
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Genero de los jugadores'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 '''
 def graficaTop5(request):
     data = [['Nombre', 'Maximo tiempo']]
