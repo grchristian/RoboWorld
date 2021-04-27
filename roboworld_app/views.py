@@ -276,8 +276,8 @@ def sesion(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     empezo = body_json['start']
-    started = "2:02"
-    ended = "2:10"
+    started = ""
+    ended = ""
  
 
     try:
@@ -317,9 +317,9 @@ def recompensas(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     engranes_need= body_json['recompensas']
    
-    engranes_necesarios = "20"
-    top_score_global = "5"
-    top_five="5"
+    engranes_necesarios = ""
+    top_score_global = ""
+    top_five=""
 
     try:
         connection = psycopg2.connect(
@@ -351,7 +351,7 @@ def recompensas(request):
             cursor.close()
             connection.close()
             print("PostgreSQL connection is now closed")
-    retorno = {"engranes_necesarios":engranes_necesarios,
+        retorno = {"engranes_necesarios":engranes_necesarios,
          "top_score_global":top_score_global,
          "top_five":top_five,
         }
