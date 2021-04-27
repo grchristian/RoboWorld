@@ -16,6 +16,8 @@ urlpatterns = [
     path('grafica1/', views.grafica1, name="grafica1"),
     path('grafica2/', views.grafica2, name="grafica2"),
     path('graficaExito/', views.graficaExito, name="graficaExito"),
+    path('graficaMinimo/', views.graficaMinimo, name="graficaMinimo"),
+    path('graficaMaximo/', views.graficaMaximo, name="graficaMaximo"),
     #------------------------------ GRÁFICAS ------------------------------
 
     

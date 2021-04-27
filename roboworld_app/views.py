@@ -110,6 +110,43 @@ def graficaExito(request):
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaExito.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+
+def graficaMinimo(request):
+    data = [['Nombre', 'Minimo tiempo']]
+
+    resultados = Reto.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.minimo
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Minimo de tiempo por jugador'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaMinimo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+def graficaMaximo(request):
+    data = [['Nombre', 'Maximo tiempo']]
+
+    resultados = Reto.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.maximo
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Maximo de tiempo por jugador'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaMaximo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 #-----------------------------------------------------------Conexiones----------------------------------#
 
 def proceso(request):
