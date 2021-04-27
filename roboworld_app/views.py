@@ -315,11 +315,11 @@ def sesion(request):
 def recompensas(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    engranes_need= body_json['engranes']
+    engranes_need= body_json['recompensas']
    
-    engranes_necesarios = ""
-    top_score_global = ""
-    top_five=""
+    engranes_necesarios = "20"
+    top_score_global = "5"
+    top_five="5"
 
     try:
         connection = psycopg2.connect(
