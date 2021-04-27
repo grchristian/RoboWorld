@@ -217,7 +217,7 @@ def Level(request):
     return JsonResponse(retorno)
 
 
-'''
+
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -256,7 +256,7 @@ def engranes(request):
          "numero":numero}
     return JsonResponse(retorno)
 
-
+'''
 @csrf_exempt
 def sesion(request):
     body_unicode = request.body.decode('utf-8')
@@ -398,6 +398,20 @@ def level(request):
         "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
+
+@csrf_exempt
+def engranes(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    Numero_engranes = body_json['engranes']
+    resultados = Engranes.objects.filter(sessionObtained=Numero_engranes)  #select * from Reto where nombre = jugador_nombre
+    sessionObtained= resultados[0].sessionObtained
+    numero = resultados[0].numero
+    
+    retorno = {"sesion Obtenida":sessionObtained,
+        "numero":numero}
+    return JsonResponse(retorno)
+
 
 
 
