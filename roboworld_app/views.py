@@ -64,7 +64,7 @@ def register(request):
             return render(request, "roboworld_app/index.html")
     else:
         f = CustomUserCreationForm()
-    return render(request, 'roboworld_app/register.html', {'form': f})
+    return render(request, 'roboworld_app/register.html', {'form':f,'formdatos':fp})
 
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
 
