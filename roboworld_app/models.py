@@ -44,6 +44,7 @@ class Recompensas(models.Model):
 
 
 class Prueba(models.Model):
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
