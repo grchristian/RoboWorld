@@ -28,6 +28,8 @@
     <h2 class="form-signin-heading">Iniciar sesión</h2>
 
     <a href="{% url 'register' %}">Registrarse</a>
+
+    <a href="{% url 'register' %}" class="btn btn-3">Hover</a> 
     
     {% if form.errors %}
       <h6>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h6>
