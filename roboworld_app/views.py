@@ -333,14 +333,14 @@ def recompensas(request):
         cursor.execute("SELECT * FROM roboworld_app_recompensas;")
         rows = cursor.fetchall()
         for row in rows:
-            print ("resultados")
-            print(row [1], engranes_need)
+            #print ("resultados")
+            #print(row [1], engranes_need)
             if row[1] == engranes_need:
                 engranes_necesarios = row[1]
                 top_score_global = row[2]
                 top_five = row[3]
-                
-            print(row)
+              print(row [1], engranes_need)  
+            #print(row)
     
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
