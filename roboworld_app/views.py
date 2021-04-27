@@ -183,9 +183,7 @@ def ejemploSQL(request):
         "score":score}
     return JsonResponse(retorno)
 
-'''
-Level
-'''
+
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -230,7 +228,7 @@ def Level(request):
          "dificultad":dificultad,
          "duracion_individual": duracion_individual}
     return JsonResponse(retorno)
-
+'''
 
 
 @csrf_exempt
@@ -270,7 +268,7 @@ def engranes(request):
     retorno = {"sessionObtained":sessionObtained,
          "numero":numero}
     return JsonResponse(retorno)
-
+'''
 
 @csrf_exempt
 def sesion(request):
@@ -413,7 +411,7 @@ def level(request):
         "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
-
+'''
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -427,7 +425,7 @@ def engranes(request):
         "numero":numero}
     return JsonResponse(retorno)
 
-'''
+
 
 
 
