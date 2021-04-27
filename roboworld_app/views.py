@@ -147,6 +147,35 @@ def graficaMaximo(request):
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaMaximo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+def graficaTop5(request):
+    data = [['Nombre', 'Maximo tiempo']]
+
+    data.addColumn('string', 'Name');
+        data.addColumn('number', 'Salary');
+        data.addColumn('boolean', 'Full Time Employee');
+        data.addRows([
+          ['Mike',  {v: 10000, f: '$10,000'}, true],
+          ['Jim',   {v:8000,   f: '$8,000'},  false],
+          ['Alice', {v: 12500, f: '$12,500'}, true],
+          ['Bob',   {v: 7000,  f: '$7,000'},  true]
+        ]);
+    '''
+    resultados = recompensas.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.maximo
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Maximo de tiempo por jugador'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    '''
+    return render(request,'roboworld_app/graficas/graficaTop5.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 #-----------------------------------------------------------Conexiones----------------------------------#
 
 def proceso(request):
