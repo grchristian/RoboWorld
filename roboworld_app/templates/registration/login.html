@@ -28,9 +28,7 @@
     {% csrf_token %}
     <h2 class="form-signin-heading">Iniciar sesión</h2>
 
-    <a href="{% url 'register' %}">Registrarse</a>
-
-    <a href="{% url 'register' %}" class="btn btn-4"><span>Hover</span></a> 
+    <a href="{% url 'register' %}" class="btn btn-4"><span>CREAR CUENTA</span></a> 
     
     {% if form.errors %}
       <h6>Tu usuario y contraseña no coinciden, por favor intenta de nuevo.<h6>
@@ -39,7 +37,7 @@
     <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus=""/>
     <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
     
-    <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Entrar</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">ENTRAR</button>
     <input type="hidden" name="next" value="{{ next }}"/>
 
 
