@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from json import loads, dumps
 from . models import Reto
 from . models import Level
+from . models import Prueba
 from random import randrange
 import psycopg2
 from django.contrib.auth.models import User
