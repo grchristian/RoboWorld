@@ -206,13 +206,14 @@ def Level(request):
         cursor.execute("SELECT * FROM roboworld_app_level;")
         rows = cursor.fetchall()
         for row in rows:
+            print("resulyados")
             if row[1] == numero_nivel:
                 level_number = row[1]
                 enemigo = row[2]
                 dificultad = row[3]
                 duracion_individual=row[4]
                 print(row)
-                #print(level_number, enemigo,dificultad,duracion_individual) 
+                print(level_number, enemigo,dificultad,duracion_individual) 
     except(Exception, psycopg2.Error) as error:
         print('Error connecting to PostgreSQL database', error)
         connection = None
