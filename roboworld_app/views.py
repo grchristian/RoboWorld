@@ -91,6 +91,26 @@ def grafica2(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/grafica2.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
+
+    def graficaExito(request):
+    data = [['Nombre', 'Minutos jugados']]
+
+    resultados = Reto.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.success_promedio
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Promedio de éxito de jugadores'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaExito.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+#-----------------------------------------------------------Conexiones----------------------------------#
+
 def proceso(request):
     nombre = request.POST['nombre']
     nombre=nombre.upper()
