@@ -19,7 +19,7 @@ urlpatterns = [
     path('graficaMinimo/', views.graficaMinimo, name="graficaMinimo"),
     path('graficaMaximo/', views.graficaMaximo, name="graficaMaximo"),
     path('graficaNiveLlego/', views.graficaNiveLlego, name="graficaNiveLlego"),
-    path('graficaGenero/', views.graficaGenero, name="graficaGenero"),
+    path('graficGenero/', views.graficaGenero, name="graficaGenero"),
     #path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
     #------------------------------ GRÁFICAS ------------------------------
 

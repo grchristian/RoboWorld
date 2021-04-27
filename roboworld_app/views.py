@@ -184,7 +184,7 @@ def graficaGenero(request):
 
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
-    return render(request,'roboworld_app/graficas/graficaGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+    return render(request,'roboworld_app/graficas/graficGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 '''
 def graficaTop5(request):
     data = [['Nombre', 'Maximo tiempo']]
