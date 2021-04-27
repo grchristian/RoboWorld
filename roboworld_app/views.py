@@ -168,7 +168,7 @@ def graficaNiveLlego(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaNivelLlego.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
-def graficGenero(request):
+def graficaGenero(request):
     data = [['Nombre', 'Genero de los jugadores']]
 
     resultados = Perfil.objects.all()
@@ -184,7 +184,7 @@ def graficGenero(request):
 
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
-    return render(request,'roboworld_app/graficas/graficGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+    return render(request,'roboworld_app/graficas/graficaGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 '''
 def graficaTop5(request):
     data = [['Nombre', 'Maximo tiempo']]
