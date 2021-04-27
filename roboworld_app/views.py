@@ -172,7 +172,7 @@ def ejemploSQL(request):
 
 '''
 Level
-'''
+
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -219,9 +219,7 @@ def Level(request):
     return JsonResponse(retorno)
 
 
-'''
-Engranes
-'''
+
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -260,9 +258,7 @@ def engranes(request):
          "numero":numero}
     return JsonResponse(retorno)
 
-'''
-Sesion
-'''
+
 @csrf_exempt
 def sesion(request):
     body_unicode = request.body.decode('utf-8')
@@ -302,9 +298,7 @@ def sesion(request):
          "ended":ended}
     return JsonResponse(retorno)
 
-'''
-recomoensas
-'''
+
 @csrf_exempt
 def recompensas(request):
     body_unicode = request.body.decode('utf-8')
@@ -350,9 +344,7 @@ def recompensas(request):
          "top_five":top_five,
         }
     return JsonResponse(retorno)
-'''
-Prueba
-'''
+
 @csrf_exempt
 def prueba(request):
     body_unicode = request.body.decode('utf-8')
@@ -390,6 +382,10 @@ def prueba(request):
         retorno = {"sessionID ":sessionID ,
         "success":success}
     return JsonResponse(retorno)
+
+'''
+
+
 
 
 
