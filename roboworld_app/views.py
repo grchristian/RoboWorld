@@ -228,7 +228,7 @@ def Level(request):
          "dificultad":dificultad,
          "duracion_individual": duracion_individual}
     return JsonResponse(retorno)
-'''
+
 
 
 @csrf_exempt
@@ -268,7 +268,7 @@ def engranes(request):
     retorno = {"sessionObtained":sessionObtained,
          "numero":numero}
     return JsonResponse(retorno)
-'''
+
 
 @csrf_exempt
 def sesion(request):
