@@ -170,7 +170,7 @@ def ejemploSQL(request):
 
 '''
 Level
-
+'''
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -256,7 +256,7 @@ def engranes(request):
          "numero":numero}
     return JsonResponse(retorno)
 
-'''
+
 @csrf_exempt
 def sesion(request):
     body_unicode = request.body.decode('utf-8')
@@ -382,7 +382,7 @@ def prueba(request):
     return JsonResponse(retorno)
 
 
-
+'''
 @csrf_exempt
 def level(request):
     body_unicode = request.body.decode('utf-8')
@@ -412,7 +412,7 @@ def engranes(request):
         "numero":numero}
     return JsonResponse(retorno)
 
-
+'''
 
 
 
