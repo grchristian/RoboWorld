@@ -47,7 +47,7 @@ class CustomUserCreationForm(forms.Form):
 '''
 class PerfilForm(forms.Form):
     genero = forms.CharField(label='Genero',max_length=1)
-    birth_date = forms.DateField(label='Fecha de nacimiento',initial=datetime.date.today)
+    birth_date = forms.DateField(label='Fecha de nacimiento')
 
     def saveDatos(self, commit=True):
         perfil = Perfil.objects.create_perfil(
