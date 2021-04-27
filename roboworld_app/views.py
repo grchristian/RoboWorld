@@ -37,7 +37,7 @@ def register(request):
     if request.method == 'POST':
         f = CustomUserCreationForm(request.POST)
         if f.is_valid():
-            messages.success(request, 'Account created successfully')
+            messages.success(request, 'done')
             new_user = f.save()
             #para que se loggee automaticamente despues de crear cuenta
             new_user = authenticate(username=f.cleaned_data['username'],
