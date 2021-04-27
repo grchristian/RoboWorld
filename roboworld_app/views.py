@@ -396,8 +396,8 @@ def Level(request):
     dificultad = resultados[0].dificultad
     duracion_individual = resultados[0].duracion_individual
     retorno = {"numero d enivel":level_number,
-        "enemigo":enemigo
-        "dificultad": dificultad
+        "enemigo":enemigo,
+        "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
 
