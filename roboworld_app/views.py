@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from json import loads, dumps
 from . models import Reto
+from . models import Level
 from random import randrange
 import psycopg2
 from django.contrib.auth.models import User
