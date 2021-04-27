@@ -190,9 +190,9 @@ def Level(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     numero_nivel = body_json['nivel']
     level_number = numero_nivel
-    enemigo = "mago"
-    dificultad = "1"
-    duracion_individual="3:00"
+    enemigo = ""
+    dificultad = ""
+    duracion_individual=""
 
     try:
         connection = psycopg2.connect(
@@ -206,7 +206,7 @@ def Level(request):
         cursor.execute("SELECT * FROM roboworld_app_level;")
         rows = cursor.fetchall()
         for row in rows:
-            if row[1] == level_numero:
+            if row[1] == numero_nivel
                 level_number = row[1]
                 enemigo = row[2]
                 dificultad = row[3]
@@ -235,9 +235,9 @@ def Level(request):
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    sesionObtenida = body_json['ses']
-    sessionObtained= ""
-    numero = ""
+    sesionObtenida = body_json['sesion']
+    sessionObtained= "1"
+    numero = "1"
 
     try:
         connection = psycopg2.connect(
