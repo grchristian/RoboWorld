@@ -44,8 +44,7 @@ class CustomUserCreationForm(forms.Form):
 
 
 
-'''
-''
+
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
@@ -56,5 +55,3 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('url', 'location', 'company')
 
-''
-'''
