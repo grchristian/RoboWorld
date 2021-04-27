@@ -52,7 +52,7 @@ class PerfilForm(forms.Form):
     birth_date = forms.DateField(label='Fecha de nacimiento')
 
     def saveDatos(self, commit=True):
-        perfil = Perfil.objects.create(genero,birth_date)
+        perfil = Perfil.objects.create(genero=genero,birth_date=birth_date)
         return perfil
 '''
 '''
