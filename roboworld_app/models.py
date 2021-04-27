@@ -10,7 +10,7 @@ class Reto(models.Model):
     repeticion_niveles = models.IntegerField(null=True)
     engranes = models.IntegerField(null=True)
     duracion_promedio = models.IntegerField(null=True)
-    success_promedio = models.IntegerField(null=True)
+    success_promedio = models.BooleanField(null=True)
     a_que_nivel_llego = models.IntegerField(null=True)
     sesion_iniciada_dia=models.IntegerField(null=True)
     sesion_iniciada_mes=models.IntegerField(null=True)
@@ -44,7 +44,7 @@ class Recompensas(models.Model):
 
 
 class Prueba(models.Model):
-    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
+    #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
