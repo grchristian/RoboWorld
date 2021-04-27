@@ -76,6 +76,15 @@
                 </div>
               </div>
 
+              <!--test-->
+              <form method="post">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+                <button type="submit">Save changes</button>
+              </form>
+              <!--test-->
+
               <h3 class="box__header-title" id="passreset-link"><a href="{% url 'password_change' %}?next=/">Cambiar contraseña</a></h3>
               <h3 class="box__header-title" id="logout-link"><a href="{% url 'logout' %}?next=/">Cerrar sesión</a></h3>
             </div>
