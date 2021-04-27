@@ -48,11 +48,15 @@ class CustomUserCreationForm(forms.Form):
 '''
 '''
 class PerfilForm(forms.Form):
-    genero = forms.CharField(label='Genero',max_length=1)
+    genero = forms.CharField(label='Genero (m/f)',max_length=1)
     birth_date = forms.DateField(label='Fecha de nacimiento')
 
+    def clean_genero(self):
+        genero = self.cleaned_data.get('genero')
+        return genero
+
     def saveDatos(self, commit=True):
-        perfil = Perfil.objects.create(genero,birth_date)
+        perfil = Perfil.objects.create(self.cleaned_data['genero'],birth_date)
         return perfil
 '''
 '''
