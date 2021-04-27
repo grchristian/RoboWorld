@@ -168,7 +168,7 @@ def graficaNiveLlego(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaNivelLlego.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
-def graficaGenero(request):
+def graficGenero(request):
     data = [['Nombre', 'Genero de los jugadores']]
 
     resultados = Perfil.objects.all()
