@@ -92,8 +92,8 @@ def grafica2(request):
     return render(request,'roboworld_app/graficas/grafica2.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
 
-    def graficaExito(request):
-    data = [['Nombre', 'Minutos jugados']]
+def graficaExito(request):
+    data = [['Nombre', 'Promedio de exito']]
 
     resultados = Reto.objects.all()
 
