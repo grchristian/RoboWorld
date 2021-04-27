@@ -190,9 +190,9 @@ def Level(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     numero_nivel = body_json['nivel']
     level_number = numero_nivel
-    #enemigo = "mago"
-    #dificultad = ""
-    #duracion_individual=""
+    enemigo = enemigo.objects.all()
+    dificultad = dificultad.objects.all()
+    duracion_individual=duracion_individual.objects.all()
 
     try:
         connection = psycopg2.connect(
