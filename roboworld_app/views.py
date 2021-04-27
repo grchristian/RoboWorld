@@ -400,7 +400,7 @@ def level(request):
     return JsonResponse(retorno)
 
 @csrf_exempt
-def engranaje(request):
+def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     Numero_engranes = body_json['engranes']
