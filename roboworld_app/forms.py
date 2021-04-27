@@ -40,3 +40,20 @@ class CustomUserCreationForm(forms.Form):
             self.cleaned_data['password1']
         )
         return user
+
+
+
+'''
+'''
+class PerfilForm(forms.Form):
+    genero = forms.CharField(label='Genero',max_length=1)
+    birth_date = forms.DateField(label='Fecha de nacimiento',initial=datetime.date.today)
+
+    def saveDatos(self, commit=True):
+        perfil = Perfil.objects.create_perfil(
+            self.cleaned_data['genero'],
+            self.cleaned_data['birth_date']
+        )
+        return perfil
+'''
+'''
