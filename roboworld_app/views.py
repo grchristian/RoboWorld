@@ -150,7 +150,7 @@ def graficaMaximo(request):
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaMaximo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
-
+'''
 def graficaTop5(request):
     data = [['Nombre', 'Maximo tiempo']]
 
@@ -163,7 +163,7 @@ def graficaTop5(request):
           ['Alice', {v: 12500, f: '$12,500'}, true],
           ['Bob',   {v: 7000,  f: '$7,000'},  true]
         ]);
-    '''
+    
     resultados = recompensas.objects.all()
 
     for i in resultados:
@@ -177,8 +177,9 @@ def graficaTop5(request):
 
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
-    '''
+    
     return render(request,'roboworld_app/graficas/graficaTop5.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+'''
 #-----------------------------------------------------------Conexiones----------------------------------#
 
 def proceso(request):

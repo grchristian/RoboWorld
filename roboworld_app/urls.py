@@ -18,7 +18,7 @@ urlpatterns = [
     path('graficaExito/', views.graficaExito, name="graficaExito"),
     path('graficaMinimo/', views.graficaMinimo, name="graficaMinimo"),
     path('graficaMaximo/', views.graficaMaximo, name="graficaMaximo"),
-    path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
+    #path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
     #------------------------------ GRÁFICAS ------------------------------
 
     
