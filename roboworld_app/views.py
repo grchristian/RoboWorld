@@ -416,8 +416,8 @@ def level(request):
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
-    Numero_engranes = body_json['engranes']
-    resultados = Engranes.objects.filter(sessionObtained=Numero_engranes)  #select * from Reto where nombre = jugador_nombre
+    engranes = body_json['engranes']
+    resultados = engranes.objects.filter(sessionObtained=engranes)  #select * from Reto where nombre = jugador_nombre
     sessionObtained= resultados[0].sessionObtained
     numero = resultados[0].numero
     
