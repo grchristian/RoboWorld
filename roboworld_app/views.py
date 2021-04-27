@@ -177,7 +177,7 @@ def Level(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     numero_nivel = body_json['nivel']
     level_number = numero_nivel
-    enemigo = ""
+    enemigo = Level.objects(enemigo=enemigo)
     dificultad = ""
     duracion_individual=""
 
