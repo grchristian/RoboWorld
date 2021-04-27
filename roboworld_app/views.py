@@ -190,9 +190,9 @@ def Level(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     numero_nivel = body_json['nivel']
     level_number = numero_nivel
-    enemigo = enemigo.objects.all()
-    dificultad = dificultad.objects.all()
-    duracion_individual=duracion_individual.objects.all()
+    enemigo = "mago"
+    dificultad = "1"
+    duracion_individual="3:00"
 
     try:
         connection = psycopg2.connect(
@@ -411,7 +411,7 @@ def level(request):
         "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
-'''
+
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -424,7 +424,7 @@ def engranes(request):
     retorno = {"sesion Obtenida":sessionObtained,
         "numero":numero}
     return JsonResponse(retorno)
-
+'''
 
 
 
