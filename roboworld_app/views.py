@@ -43,7 +43,7 @@ def register(request):
             '''
             '''
             fp = PerfilForm(request.POST)
-            p.save()
+            fp.save()
             '''
             '''
 
