@@ -22,30 +22,27 @@
 
 
 {% block content %}
-
-     <div class="login" class="wrapper">
-
-         {% if messages %}
+    <div class="login" class="wrapper">
+        {% if messages %}
             <ul>
                 {% for message in messages %}
                 <li>{{ message }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
-
+        
         <h1>CREAR CUENTA</h1>
-
-         <form method="post" class="form-signin">
-             {% csrf_token %}
-             <table>
+        
+        <form method="post" class="form-signin">
+            <h2 class="form-signin-heading">CREAR CUENTA</h2>
+            {% csrf_token %}
+            <table>
                 {{ form.as_table }}
-                 <tr>
+                <tr>
                     <td></td>
                     <td><input type="submit" name="submit" value="Register" class="form-control"/></td>
                 </tr>
-             </table>
-         </form>
-     </div>
-
+            </table>
+        </form>
+    </div>
 {% endblock %}
-
