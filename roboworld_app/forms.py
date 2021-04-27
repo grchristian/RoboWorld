@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django import forms
 from django.core.exceptions import ValidationError
 
+from . models import Perfil
+
 
 class CustomUserCreationForm(forms.Form):
     username = forms.CharField(label='Usuario', min_length=4, max_length=150)
@@ -50,10 +52,7 @@ class PerfilForm(forms.Form):
     birth_date = forms.DateField(label='Fecha de nacimiento')
 
     def saveDatos(self, commit=True):
-        perfil = Perfil.objects.create_perfil(
-            self.cleaned_data['genero'],
-            self.cleaned_data['birth_date']
-        )
+        perfil = Perfil.objects.create(self.cleaned_data['genero'],self.cleaned_data['birth_date'])
         return perfil
 '''
 '''
