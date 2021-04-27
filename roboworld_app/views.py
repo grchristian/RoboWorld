@@ -48,51 +48,12 @@ def register(request):
             #Crea un registro en RETO con el usuario creado
             Reto.objects.create(id_de_usuario_id=request.user.id,minutos_jugados="0",minimo="0",maximo="0",repeticion_niveles="0",engranes="0",duracion_promedio="0",success_promedio="0",a_que_nivel_llego="0",sesion_iniciada_dia="0",sesion_iniciada_mes="0")
 
-            '''
-            '''
-            Profile.objects.create(id_de_usuario_id=request.user.id,bio="bio test",location="location test",birth_date="12/12/1990")
-            '''
-            '''
-
             return render(request, "roboworld_app/index.html")
     else:
         f = CustomUserCreationForm()
     return render(request, 'roboworld_app/register.html', {'form': f})
 
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
-
-
-'''
-'''
-def update_profile(request, user_id):
-    user = User.objects.get(pk=user_id)
-    user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
-    user.save()
-
-from django.db import transaction
-
-@login_required
-@transaction.atomic
-def update_profile(request):
-    if request.method == 'POST':
-        user_form = UserForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
-        if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
-            profile_form.save()
-            messages.success(request, _('Your profile was successfully updated!'))
-            return redirect('settings:profile')
-        else:
-            messages.error(request, _('Please correct the error below.'))
-    else:
-        user_form = UserForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.profile)
-    return render(request, 'profiles/profile.html', {
-        'user_form': user_form,
-        'profile_form': profile_form
-    })
-'''
-'''
 
 
 
