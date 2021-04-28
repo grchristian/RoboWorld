@@ -556,7 +556,8 @@ def numero_de_engranes(request):
     engranes_num = body_json['engranes']
     resultados = Engranes.objects.filter(sessionObtained=engranes_num)
     sessionObtained= resultados[0].sessionObtained
-    id_de_usuario= resultados[0].id_de_usuario
+    id_de_usuario= User.objects.get(id=request.user.id)
+    serializer =self.get_serializer(id_de_usuario)
     number = resultados[0].number
     
     retorno = {"sesion Obtenida":sessionObtained,
