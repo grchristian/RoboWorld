@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		{% load static %}
+
+		<!--tipo de caracteres-->
+		<meta charset="utf-8">
+		
+		<!--para que se ajuste el tamaño de la pantalla-->
+		<meta name="viewport" content="width=device-width">
+		
+		<!--titulo de la pestaña del navegador-->
+		<title>RoboWorld</title>
+		
+		<!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+		
+		<!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!--linkear los iconos-->
+		<script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
+		
+		<!--para linkear con la hoja de estilos-->
+		<link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'roboworld_app/css/style_menu.css' %}" rel="stylesheet" type="text/css">
+
+		<!--linkear con los scripts de JS-->
+		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
+	</head>
+	
+	<body>
+		<!--header-->
+		<header>
+			<a class="logo" href="#home"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+			
+			<nav>
+				<ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="#home">INICIO</a></li>
+					<li><a class="nav-link" href="#howtoplay">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="#estadisticas">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'cuenta_usuario' %}">MI CUENTA</a></li>
+				</ul>
+					
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</header>
+
+		<!--aquí comienza la pagina-->
+		<main>
+			<!--seccion de home-->
+			<div id="imagen">
+				<h1>Faltan engranes</h1>
+			</div>
+
+			<!--seccion de how to play-->
+			<div id="imagen2"> 
+				<h1>Faltan engranes</h1>
+			</div>
+			
+			<div id="imagen3"> 
+				<img src="/robotGrande.png">
+			
+			</div>
+		</main>
+		
+
+
+
+		<!--comienza el footer-->
+		<footer class="copyright">
+			<p><a href="https://github.com/grchristian/RoboWorld-App" target="_blank"><i class="fab fa-github"></i></a></p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"/></a>
+			<br>
+			<p style="font-size:40%;">Esta obra está bajo una Licencia Creative Commons Atribución-SinDerivadas 4.0 Internacional.</a></p>
+		</footer>
+	</body>
+
+</html>

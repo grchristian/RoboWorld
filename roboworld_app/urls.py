@@ -27,6 +27,8 @@ urlpatterns = [
     #path('graficaEdad/', views.graficaEdad, name="graficaEdad"),
     #------------------------------ GRÁFICAS ------------------------------
 
+    path('robot/', views.contar, name="robot"),
+
     
     path('proceso',views.proceso, name = 'proceso'),
     path('datos',views.datos, name = 'datos'),
