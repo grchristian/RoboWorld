@@ -30,63 +30,28 @@
 
 
 	<!------------------------- GOOGLE CHARTS ------------------------->
-    <head>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          google.charts.load('current', {'packages':['table']});
-          google.charts.setOnLoadCallback(drawTable);
-    
-          function drawTable() {
-            var data = new google.visualization.DataTable({{losDatos|safe}});
-            
-    
-            var table = new google.visualization.Table(document.getElementById('table_div'));
-    
-            table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-          }
-        </script>
-      </head>
+	<head>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+		  google.charts.load('current', {'packages':['bar']});
+		  google.charts.setOnLoadCallback(drawChart);
+	
+		  function drawChart() {
+			var data = google.visualization.arrayToDataTable({{losDatos|safe}});
+	
+			var options = {
+			  chart: {
+				title: {{titulo|safe}},
+				subtitle: {{subtitulo|safe}},
+			  },
+			  bars: 'vertical' // Required for Material Bar Charts.
+			};
+	
+			var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+	
+			chart.draw(data, google.charts.Bar.convertOptions(options));
+		  }
+		</script>
+	  </head>
 	<!------------------------- GOOGLE CHARTS ------------------------->
 	  
-
-
-	  
-	<body>
-	<!------------------ HEADER ------------------>
-		<header>
-			<a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
-			<nav>
-				<ul class="nav-bar"><div class="bg"></div>
-					<li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
-					<li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
-					<li><a class="nav-link" href="{% url 'inicio' %}">ESTADÍSTICAS</a></li>
-					<li><a class="nav-link" href="{% url 'cuenta_usuario' %}">MI CUENTA</a></li>
-				</ul>
-
-				<div class="hamburger">
-					<div class="line1"></div>
-					<div class="line2"></div>
-					<div class="line3"></div>
-				</div>
-			</nav>
-		</header>
-		<!------------------ HEADER ------------------>
-		<!----------------- CONTENIDO ----------------->
-		<main>
-			<!--seccion de home-->
-			<div id="home">
-				<section class="intro">
-					<!----------------- GRAFICA ----------------->
-            		<div id="table_div"></div>
-					<!----------------- GRAFICA ----------------->
-				</section>
-			</div>
-		</main>
-		<!----------------- CONTENIDO ----------------->
-		<!------------------ FOOOTER ------------------>
-		<footer class="copyright">
-			<p><a href="https://github.com/grchristian/RoboWorld" target="_blank"><i class="fab fa-github"></i></a></p>
-		</footer>
-		<!------------------ FOOOTER ------------------>
-	</body>
-</html>

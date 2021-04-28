@@ -193,6 +193,25 @@ def graficaGenero(request):
     titulo_formato = dumps(titulo)
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaGenero.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
+def graficaTop5(request):
+    data = [['Nombre', 'Top 5 de los jugadores']]
+
+    resultados = Recompensas.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.top_score_global
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Top 5 de los jugadores'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaTop5.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
 '''
 def graficaTop5(request):
     data = [['Nombre', 'Maximo tiempo']]
