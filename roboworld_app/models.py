@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, AbstractUser
 from django.conf import settings
 
 class Engranes(models.Model):
+    engrames_id = models.IntegerField(null=True)
     #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     sessionObtained = models.IntegerField(null=True)
     number = models.IntegerField(null=True)
