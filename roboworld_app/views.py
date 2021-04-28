@@ -365,7 +365,7 @@ def Level(request):
     return JsonResponse(retorno)
 
 
-
+'''
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -403,7 +403,7 @@ def engranes(request):
     retorno = {"sessionObtained":sessionObtained,
          "numero":numero}
     return JsonResponse(retorno)
-
+'''
 
 @csrf_exempt
 def sesion(request):
@@ -546,7 +546,7 @@ def level(request):
         "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
-
+'''
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -559,7 +559,7 @@ def engranes(request):
     retorno = {"sesion Obtenida":sessionObtained,
         "numero":numero}
     return JsonResponse(retorno)
-'''
+
 
 
 
