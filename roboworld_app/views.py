@@ -540,11 +540,11 @@ def numero_de_level(request):
     level_number = resultados[0].level_number
     enemigo = resultados[0].enemigo
     dificultad = resultados[0].dificultad
-    duracion_individual = resultados[0].duracion_individual
+    duracion_indivudual = resultados[0].duracion_indivudual
     retorno = {"numero d enivel":level_number,
         "enemigo":enemigo,
         "dificultad": dificultad,
-        "duracion individual": duracion_individual}
+        "duracion individual": duracion_indivudual}
     return JsonResponse(retorno)
 
 @csrf_exempt
