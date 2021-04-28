@@ -7,9 +7,7 @@ El proyecto consiste en la creación de un sistema que incluye un videojuego ori
 * Alfabetización de datos
 * Alfabetización Digital y ciencias computacionales
 
-El juego está enfocado a niños y niñas de 9 a 12 años de edad interesados en juegos de aventura y se puede hacer un análisis del nivel de competencias STEM de los jugadores
-
-
+_El juego está enfocado a niños y niñas de 9 a 12 años de edad interesados en juegos de aventura y se puede hacer un análisis del nivel de competencias STEM de los jugadores._
 
 ## Lenguajes usados 📦
 * Python
