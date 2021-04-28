@@ -561,6 +561,19 @@ def numero_de_engranes(request):
     return JsonResponse(retorno)
 
 
+@csrf_exempt
+def num_de_sesion(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    sesion_num = body_json['empezar']
+    resultados = Engranes.objects.filter(started=sesion_num)  #select * from Reto where nombre = jugador_nombre
+    started= resultados[0].started
+    ended = resultados[0].ended
+    
+    retorno = {"started":started,
+        "ended":ended}
+    return JsonResponse(retorno)
+
 
 
 

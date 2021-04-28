@@ -31,7 +31,7 @@ urlpatterns = [
     path('score',views.score, name = 'score'),
     path('level',views.numero_de_level, name = 'level'),
     path('engranes',views.numero_de_engranes, name = 'engranes'),
-    path('sesion',views.sesion, name = 'sesion'),
+    path('sesion',views.num_de_sesion, name = 'sesion'),
     path('recompensas',views.recompensas, name = 'recompensas'),
     path('prueba',views.prueba, name = 'prueba'),
     
