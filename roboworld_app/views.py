@@ -598,6 +598,8 @@ def num_de_sesion(request):
         "ended":ended}
     return JsonResponse(retorno)
 
+   
+
 
 @csrf_exempt
 def num_de_recompensas(request):
