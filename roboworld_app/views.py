@@ -317,7 +317,7 @@ def ejemploSQL(request):
         "score":score}
     return JsonResponse(retorno)
 
-
+'''
 @csrf_exempt
 def Level(request):
     body_unicode = request.body.decode('utf-8')
@@ -365,7 +365,7 @@ def Level(request):
     return JsonResponse(retorno)
 
 
-'''
+
 @csrf_exempt
 def engranes(request):
     body_unicode = request.body.decode('utf-8')
@@ -530,9 +530,9 @@ def prueba(request):
     return JsonResponse(retorno)
 
 
-'''
+
 @csrf_exempt
-def level(request):
+def numero_de_level(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     Numero_nivel = body_json['nivel']
@@ -546,7 +546,7 @@ def level(request):
         "dificultad": dificultad,
         "duracion individual": duracion_individual}
     return JsonResponse(retorno)
-'''
+
 @csrf_exempt
 def numero_de_engranes(request):
     body_unicode = request.body.decode('utf-8')
