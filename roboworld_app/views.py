@@ -312,7 +312,7 @@ def graficaTop5(request):
 '''
 #-----------------------------------------------------------Conexiones----------------------------------#
 
-def contar (request):
+def robot(request):
     return render (request, "robot.html")
 
 

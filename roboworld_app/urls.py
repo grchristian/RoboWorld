@@ -27,7 +27,7 @@ urlpatterns = [
     #path('graficaEdad/', views.graficaEdad, name="graficaEdad"),
     #------------------------------ GRÁFICAS ------------------------------
 
-    path('robot/', views.contar, name="robot"),
+    path('robot/', views.robot, name="robot"),
 
     
     path('proceso',views.proceso, name = 'proceso'),
