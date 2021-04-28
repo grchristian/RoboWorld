@@ -555,7 +555,7 @@ def numero_de_engranes(request):
     body_json = loads(body_unicode) #convertir de string a JSON
     engranes_num = body_json['engranes']
     resultados = Engranes.objects.filter(id_de_usuario=engranes_num)
-    id_de_usuario= resultados[0].id_de_usuario
+    id_de_usuario= resultados.first().id_de_usuario
     sessionObtained= resultados[0].sessionObtained
     number = resultados[0].number
     
