@@ -23,37 +23,37 @@ class Perfil(models.Model):
 class Level(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Nivelid = models.AutoField(primary_key=True)
-    level_number = models.IntegerField()
-    enemigo = models.CharField(max_length=30)
-    dificultad = models.IntegerField()
-    duracion_indivudual = models.IntegerField()
+    level_number = models.IntegerField(null=True)
+    enemigo = models.CharField(max_length=30, null=True)
+    dificultad = models.IntegerField(null=True)
+    duracion_indivudual = models.IntegerField(null=True)
 
 
 class Engranes(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
-    sessionObtained = models.IntegerField()
-    number = models.IntegerField()
+    sessionObtained = models.IntegerField(null=True)
+    number = models.IntegerField(null=True)
 
 
 class Sesion(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #SessionId = models.IntegerField()
    # UserID = models.IntegerField()
-    started = models.IntegerField()
-    ended = models.IntegerField()
+    started = models.IntegerField(null=True)
+    ended = models.IntegerField(null=True)
 
 
 class Recompensas(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
-    engranes_necesarios = models.IntegerField()
-    top_score_global = models.IntegerField()
-    top_five = models.IntegerField()
+    engranes_necesarios = models.IntegerField(null=True)
+    top_score_global = models.IntegerField(null=True)
+    top_five = models.IntegerField(null=True)
 
 
 class Prueba(models.Model):
     id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Levelid = models.IntegerField()
-    SesionID = models.IntegerField()
-    success = models.BooleanField() 
+    SesionID = models.IntegerField(null=True)
+    success = models.BooleanField(null=True) 
 
     
