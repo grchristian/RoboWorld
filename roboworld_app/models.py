@@ -8,7 +8,7 @@ class Reto(models.Model):
     minimo = models.IntegerField(null=True)
     maximo = models.IntegerField(null=True)
     repeticion_niveles = models.IntegerField(null=True)
-    engranes = models.IntegerField(null=True)
+    engranes = models.ForeignKey(Engranes,on_delete=models.CASCADE,null=True)
     duracion_promedio = models.IntegerField(null=True)
     success_promedio = models.IntegerField(null=True)
     a_que_nivel_llego = models.IntegerField(null=True)
@@ -30,7 +30,7 @@ class Level(models.Model):
 
 
 class Engranes(models.Model):
-    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
+    #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     sessionObtained = models.IntegerField(null=True)
     number = models.IntegerField(null=True)
 
