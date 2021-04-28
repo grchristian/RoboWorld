@@ -403,7 +403,7 @@ def engranes(request):
     retorno = {"sessionObtained":sessionObtained,
          "numero":numero}
     return JsonResponse(retorno)
-'''
+
 
 @csrf_exempt
 def sesion(request):
@@ -490,7 +490,7 @@ def recompensas(request):
          "top_five":top_five,
         }
     return JsonResponse(retorno)
-
+'''
 @csrf_exempt
 def prueba(request):
     body_unicode = request.body.decode('utf-8')
@@ -566,13 +566,30 @@ def num_de_sesion(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     sesion_num = body_json['empezar']
-    resultados = Engranes.objects.filter(started=sesion_num)  #select * from Reto where nombre = jugador_nombre
+    resultados = Sesion.objects.filter(started=sesion_num)  #select * from Reto where nombre = jugador_nombre
     started= resultados[0].started
     ended = resultados[0].ended
     
     retorno = {"started":started,
         "ended":ended}
     return JsonResponse(retorno)
+
+
+@csrf_exempt
+def num_de_recompensas(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    recompensas_num = body_json['recompensa']
+    resultados = Recompensas.objects.filter(engranes_necesarios=recompensas_num)  #select * from Reto where nombre = jugador_nombre
+    engranes_necesarios= resultados[0].engranes_necesarios
+    top_score_global = resultados[0].top_score_global
+    top_five = resultados[0].top_five
+    
+    retorno = {"engranes_necesarios":engranes_necesarios,
+        "top_score_global":top_score_global,
+        "top_five ":top_five}
+    return JsonResponse(retorno)
+
 
 
 
