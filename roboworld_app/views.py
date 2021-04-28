@@ -20,7 +20,7 @@ def inicio(request):
 
 #----------------------- ENVÍA AL JUEGO -----------------------#
 def juego_unity(request):
-    return render(request, "roboworld_app/juego_unity/index_unity.html")
+    return render(request, "roboworld_app/juego_unity.html")
 
 #-------------- ENVÍA A MI CUENTA / INCIAR SESIÓN --------------#
 @login_required
