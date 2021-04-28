@@ -153,7 +153,7 @@ def graficaMaximo(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaMaximo.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
-def graficaNiveLlego(request):
+def graficaNivelLlego(request):
     data = [['Nombre', 'Nivel al que llegó']]
 
     resultados = Reto.objects.all()
