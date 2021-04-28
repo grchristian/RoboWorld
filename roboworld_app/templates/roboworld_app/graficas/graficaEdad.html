@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+
+		<!--tipo de caracteres-->
+		<meta charset="utf-8">
+		
+		<!--para que se ajuste el tamaño de la pantalla-->
+		<meta name="viewport" content="width=device-width">
+		
+		<!--titulo de la pestaña del navegador-->
+      	<title>RoboWorld | Estadísticas</title>
+
+	  	<!--favicon (icono de la pestalla del navegador)-->
+		<link rel="icon" type="image/svg+xml" href="{% static 'roboworld_app/img/fav.svg' %}" sizes="any">
+
+	  	<!--para linkear con la libreria de jQuery en la pagina de google APIS-->
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  	<!--linkear con los scripts de JS-->
+		<script src="{% static 'roboworld_app/js/script.js' %}"></script>
+	  	
+		<!--linkear los iconos-->
+	  	<script src="https://kit.fontawesome.com/b8043ce943.js" crossorigin="anonymous"></script>
+
+	  	<!--para linkear con la hoja de estilos-->
+	  	<link href="{% static 'roboworld_app/css/style_home.css' %}" rel="stylesheet" type="text/css">
+	</head>
+
+
+	<!------------------------- GOOGLE CHARTS ------------------------->
+	<head>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+		  google.charts.load('current', {'packages':['bar']});
+		  google.charts.setOnLoadCallback(drawChart);
+	
+		  function drawChart() {
+			var data = google.visualization.arrayToDataTable({{losDatos|safe}});
+	
+			var options = {
+			  chart: {
+				title: {{titulo|safe}},
+				subtitle: {{subtitulo|safe}},
+			  },
+			  bars: 'vertical' // Required for Material Bar Charts.
+			};
+	
+			var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+	
+			chart.draw(data, google.charts.Bar.convertOptions(options));
+		  }
+		</script>
+	  </head>
+	<!------------------------- GOOGLE CHARTS ------------------------->
+	  
+
+
+	  
+	<body>
+	<!------------------ HEADER ------------------>
+		<header>
+			<a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+			<nav>
+				<ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'cuenta_usuario' %}">MI CUENTA</a></li>
+				</ul>
+
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</header>
+		<!------------------ HEADER ------------------>
+		<!----------------- CONTENIDO ----------------->
+		<main>
+			<!--seccion de home-->
+			<div id="home">
+				<section class="intro">
+					<!----------------- GRAFICA ----------------->
+            		<div id="barchart_material" style="width: 900px; height: 500px;"></div>
+					<!----------------- GRAFICA ----------------->
+				</section>
+			</div>
+		</main>
+		<!----------------- CONTENIDO ----------------->
+		<!------------------ FOOOTER ------------------>
+		<footer class="copyright">
+			<p><a href="https://github.com/grchristian/RoboWorld-App" target="_blank"><i class="fab fa-github"></i></a></p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"/></a>
+			<br>
+			<p style="font-size:40%;">Esta obra está bajo una Licencia Creative Commons Atribución-SinDerivadas 4.0 Internacional.</a></p>
+		</footer>
+		<!------------------ FOOOTER ------------------>
+	</body>
+</html>

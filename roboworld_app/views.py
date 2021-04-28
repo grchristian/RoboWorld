@@ -207,6 +207,24 @@ def graficaDuracion(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaDuracion.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
+def graficaEdad(request):
+    data = [['Nombre', 'Edad del jugador']]
+
+    resultados = Perfil.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.birth_date
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Edad del jugador'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaEdad.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
 def graficaIntento(request):
     data = [['Nombre', 'Intentos por nivel']]
 
