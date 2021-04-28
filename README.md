@@ -1,11 +1,18 @@
 # RoboWorld 🚀
-_Videojuego creado para la clase de construcción de software y toma de decisiones_
+Los videojuegos actualmente son una de las fuentes de entretenimiento más populares en todo el mundo, pero además son un medio de desarrollo de habilidades.
+El proyecto consiste en la creación de un sistema que incluye un videojuego orientado al desarrollo de las siguientes competencias STEM: 
+* Creatividad
+* Pensamiento crítico
+* Resolución de problemas
+* Alfabetización de datos
+* Alfabetización Digital y ciencias computacionales
+
+_El juego está enfocado a niños y niñas de 9 a 12 años de edad interesados en juegos de aventura y se puede hacer un análisis del nivel de competencias STEM de los jugadores._
 
 ## Lenguajes usados 📦
 * Python
 * C#
-* HTML
-* CSS
+* HTML & CSS
 * JavaScript
 
 
