@@ -16,7 +16,7 @@ class Reto(models.Model):
     maximo = models.IntegerField(null=True)
     repeticion_niveles = models.IntegerField(null=True)
     #engranes = models.IntegerField(null=True)
-    newengranes =models.ForeignKey(Engranes ,on_delete=models.CASCADE,null=True)
+    engranes =models.ForeignKey(Engranes ,on_delete=models.CASCADE,null=True)
     duracion_promedio = models.IntegerField(null=True)
     success_promedio = models.IntegerField(null=True)
     a_que_nivel_llego = models.IntegerField(null=True)
