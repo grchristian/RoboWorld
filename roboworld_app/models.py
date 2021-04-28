@@ -21,6 +21,7 @@ class Perfil(models.Model):
     birth_date = models.DateField(null=True, blank=True)
 
 class Level(models.Model):
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Nivelid = models.AutoField(primary_key=True)
     level_number = models.IntegerField()
     enemigo = models.CharField(max_length=30)
@@ -29,11 +30,13 @@ class Level(models.Model):
 
 
 class Engranes(models.Model):
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     sessionObtained = models.IntegerField()
     number = models.IntegerField()
 
 
 class Sesion(models.Model):
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #SessionId = models.IntegerField()
    # UserID = models.IntegerField()
     started = models.IntegerField()
@@ -41,14 +44,14 @@ class Sesion(models.Model):
 
 
 class Recompensas(models.Model):
-  
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     engranes_necesarios = models.IntegerField()
     top_score_global = models.IntegerField()
     top_five = models.IntegerField()
 
 
 class Prueba(models.Model):
-    #id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
+    id_de_usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,null=True)
     #Levelid = models.IntegerField()
     SesionID = models.IntegerField()
     success = models.BooleanField() 
