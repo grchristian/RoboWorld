@@ -554,10 +554,10 @@ def numero_de_engranes(request):
     engranes_num = body_json['engranes']
     resultados = Engranes.objects.filter(sessionObtained=engranes_num)  #select * from Reto where nombre = jugador_nombre
     sessionObtained= resultados[0].sessionObtained
-    numero = resultados[0].numero
+    number = resultados[0].number
     
     retorno = {"sesion Obtenida":sessionObtained,
-        "numero":numero}
+        "numero":number}
     return JsonResponse(retorno)
 
 
