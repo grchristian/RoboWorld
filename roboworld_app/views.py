@@ -171,6 +171,24 @@ def graficaNivelLlego(request):
     subtitulo_formato = dumps(subtitulo)
     return render(request,'roboworld_app/graficas/graficaNivelLlego.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
 
+def graficaIntento(request):
+    data = [['Nombre', 'Intentos por nivel']]
+
+    resultados = Reto.objects.all()
+
+    for i in resultados:
+        x = i.id_de_usuario_id
+        y = i.repeticion_niveles
+        data.append([x,y])
+    
+    datos_formato = dumps(data)    
+    titulo = 'Indicador STEM'
+    subtitulo = 'Veces que repitio nivel'
+
+    titulo_formato = dumps(titulo)
+    subtitulo_formato = dumps(subtitulo)
+    return render(request,'roboworld_app/graficas/graficaIntento.html', {'losDatos':datos_formato, 'titulo':titulo_formato, 'subtitulo':subtitulo_formato})
+
 def graficaGenero(request):
     data = [['Nombre', 'Genero de los jugadores']]
 

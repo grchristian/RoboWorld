@@ -21,6 +21,7 @@ urlpatterns = [
     path('graficaNivelLlego/', views.graficaNivelLlego, name="graficaNivelLlego"),
     path('graficaGenero/', views.graficaGenero, name="graficaGenero"),
     path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
+    path('graficaIntento/', views.graficaIntento, name="graficaIntento"),
     #------------------------------ GRÁFICAS ------------------------------
 
     
