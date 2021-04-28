@@ -28,6 +28,8 @@ urlpatterns = [
     path('datos',views.datos, name = 'datos'),
     path('buscaJugadorBody', views.buscaJugadorBody, name='buscaJugadorBody'),
     path('ejemploSQL', views.ejemploSQL, name='ejemploSQL'),
+
+    #------------- CONEXIONES
     path('score',views.score, name = 'score'),
     path('level',views.numero_de_level, name = 'level'),
     path('engranes',views.numero_de_engranes, name = 'engranes'),
