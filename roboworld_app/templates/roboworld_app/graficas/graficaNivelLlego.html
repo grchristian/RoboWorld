@@ -55,3 +55,48 @@
 	  </head>
 	<!------------------------- GOOGLE CHARTS ------------------------->
 	  
+
+
+	  
+	<body>
+	<!------------------ HEADER ------------------>
+		<header>
+			<a class="logo" href="{% url 'inicio' %}"><img src="{% static 'roboworld_app/img/logo.png' %}" alt="roboworld logo"/></a>
+			<nav>
+				<ul class="nav-bar"><div class="bg"></div>
+					<li><a class="nav-link active" href="{% url 'inicio' %}">INICIO</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">COMO JUGAR</a></li>
+					<li><a class="nav-link" href="{% url 'inicio' %}">ESTADÍSTICAS</a></li>
+					<li><a class="nav-link" href="{% url 'cuenta_usuario' %}">MI CUENTA</a></li>
+				</ul>
+
+				<div class="hamburger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+		</header>
+		<!------------------ HEADER ------------------>
+		<!----------------- CONTENIDO ----------------->
+		<main>
+			<!--seccion de home-->
+			<div id="home">
+				<section class="intro">
+					<!----------------- GRAFICA ----------------->
+            		<div id="barchart_material" style="width: 900px; height: 500px;"></div>
+					<!----------------- GRAFICA ----------------->
+				</section>
+			</div>
+		</main>
+		<!----------------- CONTENIDO ----------------->
+		<!------------------ FOOOTER ------------------>
+		<footer class="copyright">
+			<p><a href="https://github.com/grchristian/RoboWorld-App" target="_blank"><i class="fab fa-github"></i></a></p>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"/></a>
+			<br>
+			<p style="font-size:40%;">Esta obra está bajo una Licencia Creative Commons Atribución-SinDerivadas 4.0 Internacional.</a></p>
+		</footer>
+		<!------------------ FOOOTER ------------------>
+	</body>
+</html>
