@@ -18,3 +18,7 @@ _Videojuego creado para la clase de construcción de software y toma de decision
 
 ## [JUGAR](https://christiangr.me/RoboWorld)
 
+
+## Licencia
+https://creativecommons.org/licenses/by-nd/4.0/
+Esta obra está bajo una Licencia Creative Commons Atribución-SinDerivadas 4.0 Internacional.
