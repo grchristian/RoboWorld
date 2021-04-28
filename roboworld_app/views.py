@@ -313,9 +313,7 @@ def graficaTop5(request):
 #-----------------------------------------------------------Conexiones----------------------------------#
 
 def contar (request):
-    contador = Reto.objects.filter(engranes > 0).count()
-    resultado = {"Total de engranes": contador}
-    return render (request, "robot.html", resultado)
+    return render (request, "robot.html")
 
 
 
