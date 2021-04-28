@@ -24,7 +24,7 @@ urlpatterns = [
     path('graficaIntento/', views.graficaIntento, name="graficaIntento"),
     path('graficaExito/', views.graficaExito, name="graficaExito"),
     path('graficaDuracion/', views.graficaDuracion, name="graficaDuracion"),
-    path('graficaEdad/', views.graficaEdad, name="graficaEdad"),
+    #path('graficaEdad/', views.graficaEdad, name="graficaEdad"),
     #------------------------------ GRÁFICAS ------------------------------
 
     
