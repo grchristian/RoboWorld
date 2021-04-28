@@ -561,7 +561,7 @@ def numero_de_engranes(request):
     
     retorno = {"sesion Obtenida":sessionObtained,
         "id_de_usuario":id_de_usuario,
-        "numero":numero}
+        "numero":number}
     return JsonResponse(retorno)
 
 
