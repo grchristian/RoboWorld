@@ -22,6 +22,8 @@ urlpatterns = [
     path('graficaGenero/', views.graficaGenero, name="graficaGenero"),
     path('graficaTop5/', views.graficaTop5, name="graficaTop5"),
     path('graficaIntento/', views.graficaIntento, name="graficaIntento"),
+    path('graficaExito/', views.graficaExito, name="graficaExito"),
+    path('graficaDuracion/', views.graficaDuracion, name="graficaDuracion"),
     #------------------------------ GRÁFICAS ------------------------------
 
     
