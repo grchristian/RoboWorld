@@ -590,6 +590,21 @@ def num_de_recompensas(request):
         "top_five ":top_five}
     return JsonResponse(retorno)
 
+@csrf_exempt
+def num_de_pruebas(request):
+    body_unicode = request.body.decode('utf-8')
+    body_json = loads(body_unicode) #convertir de string a JSON
+    prueba_num = body_json['prueba']
+    resultados = Prueba.objects.filter(success=prueba_num)  #select * from Reto where nombre = jugador_nombre
+    success= resultados[0].success
+    SesionID = resultados[0].SesionID
+    
+    
+    retorno = {"success":success,
+        "SesionID":SesionID}
+    return JsonResponse(retorno)
+
+
 
 
 

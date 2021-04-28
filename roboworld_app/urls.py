@@ -33,7 +33,7 @@ urlpatterns = [
     path('engranes',views.numero_de_engranes, name = 'engranes'),
     path('sesion',views.num_de_sesion, name = 'sesion'),
     path('recompensas',views.num_de_recompensas, name = 'recompensas'),
-    path('prueba',views.prueba, name = 'prueba'),
+    path('prueba',views.num_de_pruebas, name = 'prueba'),
     
 
     #ejemplos clase
