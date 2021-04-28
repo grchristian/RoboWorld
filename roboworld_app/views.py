@@ -399,7 +399,7 @@ def engranes(request):
         if(connection != None):
             cursor.close()
             connection.close()
-            print("PostgreSQL connection is now closed")
+            print("Pihohbb")
     retorno = {"sessionObtained":sessionObtained,
          "numero":numero}
     return JsonResponse(retorno)
