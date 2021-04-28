@@ -562,7 +562,7 @@ def numero_de_engranes(request):
     retorno = {"sesion Obtenida":sessionObtained,
         "id_de_usuario":id_de_usuario,
         "numero":number}
-    return JsonResponse(retorno)
+    return JsonResponse(serializer.data)
 
 
 @csrf_exempt
@@ -592,7 +592,7 @@ def num_de_recompensas(request):
     retorno = {"engranes_necesarios":engranes_necesarios,
         "top_score_global":top_score_global,
         "top_five ":top_five}
-    return JsonResponse(serializer.data)
+    return JsonResponse(retorno)
 
 @csrf_exempt
 def num_de_pruebas(request):
