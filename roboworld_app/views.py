@@ -57,7 +57,7 @@ def register(request):
             return render(request, "roboworld_app/index.html")
     else:
         f = CustomUserCreationForm()
-        fp = PerfilForm(request.POST)
+        fp = PerfilForm()
     return render(request, 'roboworld_app/register.html', {'form':f,'formdatos':fp})
 
 #------------------------------------------------------- FINALES FUNCIONANDO -------------------------------------------------------#
