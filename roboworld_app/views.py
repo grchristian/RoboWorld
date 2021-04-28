@@ -592,7 +592,7 @@ def num_de_recompensas(request):
     retorno = {"engranes_necesarios":engranes_necesarios,
         "top_score_global":top_score_global,
         "top_five ":top_five}
-    return JsonResponse({"models_to_return":list(retorno)})
+    return JsonResponse(serializer.data)
 
 @csrf_exempt
 def num_de_pruebas(request):
