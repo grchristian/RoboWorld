@@ -554,15 +554,15 @@ def numero_de_engranes(request):
     body_unicode = request.body.decode('utf-8')
     body_json = loads(body_unicode) #convertir de string a JSON
     engranes_num = body_json['engranes']
-    #resultados = Engranes.objects.filter(sessionObtained=engranes_num)
-    #sessionObtained= resultados[0].sessionObtained
+    resultados = Engranes.objects.filter(sessionObtained=engranes_num)
+    sessionObtained= resultados[0].sessionObtained
     #id_de_usuario= User.objects.get(id=request.user.id)
     #serializer =self.get_serializer(id_de_usuario)
-    #number = resultados[0].number
+    number = resultados[0].number
     
-    retorno = {"sesion Obtenida":1,
+    retorno = {"sesion Obtenida":sessionObtained,
         #"id_de_usuario":id_de_usuario,
-        "numero":2}
+        "numero":number}
     return JsonResponse(retorno)
 
 
