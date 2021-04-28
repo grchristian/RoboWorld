@@ -12,8 +12,7 @@ _El juego está enfocado a niños y niñas de 9 a 12 años de edad interesados e
 ## Lenguajes usados 📦
 * Python
 * C#
-* HTML
-* CSS
+* HTML & CSS
 * JavaScript
 
 
