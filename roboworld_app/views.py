@@ -313,7 +313,7 @@ def graficaTop5(request):
 #-----------------------------------------------------------Conexiones----------------------------------#
 
 def robot(request):
-    return render (request, "robot.html")
+    return render (request, "roboworld_app/robot.html")
 
 
 
