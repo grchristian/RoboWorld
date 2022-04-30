@@ -96,7 +96,7 @@ p a {
 }
 p a:hover {
   background: white;
-  color: #E1332D;
+  color: #e1332d;
 }
 
 .btn {
@@ -164,7 +164,7 @@ p a:hover {
 .btn-2:after,
 .btn-2:before {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   border: 1px solid rgba(255, 255, 255, 0);
   bottom: 0px;
   content: " ";
@@ -178,7 +178,7 @@ p a:hover {
 .btn-2:hover:after,
 .btn-2:hover:before {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   border-color: #fff;
   transition: width 350ms ease-in-out;
   width: 70%;
@@ -248,7 +248,8 @@ p a:hover {
 
 .btn-5:hover {
   border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;

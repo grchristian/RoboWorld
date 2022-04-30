@@ -1,100 +1,95 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-	font: 16px 'Open Sans', sans-serif;
+  font: 16px "Open Sans", sans-serif;
 }
 
 .box {
-	background: linear-gradient(#995339, #5d2943);
-	margin: 100px auto 0;
-	border-radius: 5px;
-	width: 300px;
+  background: linear-gradient(#995339, #5d2943);
+  margin: 100px auto 0;
+  border-radius: 5px;
+  width: 300px;
 }
 
 .box__header {
-	padding: 15px 25px;
-	position: relative;
+  padding: 15px 25px;
+  position: relative;
 }
 
 .box__header-title {
-	color: #fff;
-	font-size: 18px;
-	text-align: center;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
 }
 
 .box__body {
-	padding: 0 25px;
+  padding: 0 25px;
 }
 
 /* STATS */
 
 .profilepic {
-
-	text-align: center;
+  text-align: center;
 }
 
 .stats {
-	color: #fff;
-	position: relative;
-	padding-bottom: 25px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 25px;
 }
 
 .stats__amount {
-	font-size: 42px;
-	font-weight: bold;
-	line-height: 1.2;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .stats__caption {
-	font-size: 18px;
-
+  font-size: 18px;
 }
 
 .stats__change {
-	position: absolute;
-	top: 10px;
-	right: 0;
-	text-align: right;
-	color: #B1B7C8;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-align: right;
+  color: #b1b7c8;
 }
 
 .stats__value {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 .stats__period {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .stats__value--positive {
-	color: #AEDC6F;
+  color: #aedc6f;
 }
 
 .stats__value--negative {
-	color: #FB5055;
+  color: #fb5055;
 }
 
 .stats--main .stats__amount {
-	font-size: 54px;
+  font-size: 54px;
 }
-
 
 #passreset-link a {
-	text-decoration: none;
-	color: #ff2d85;
+  text-decoration: none;
+  color: #ff2d85;
 }
 #passreset-link a:hover {
-	text-decoration: none;
-	color: #b8205f;
+  text-decoration: none;
+  color: #b8205f;
 }
-
 
 #logout-link a {
-	text-decoration: none;
-	color: #4dffa0;
+  text-decoration: none;
+  color: #4dffa0;
 }
 #logout-link a:hover {
-	text-decoration: none;
-	color: #40c07c;
+  text-decoration: none;
+  color: #40c07c;
 }
-

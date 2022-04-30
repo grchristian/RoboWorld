@@ -1,5 +1,5 @@
 body {
-  background:#222222;
+  background: #222222;
 }
 
 .wrapper {
@@ -11,7 +11,7 @@ body {
   max-width: 380px;
   padding: 15px 35px 45px;
   margin: 0 auto;
-  background-color:#ff7848;
+  background-color: #ff7848;
   border: 8px solid #38b27c;
   border-radius: 35px;
 }
@@ -39,28 +39,24 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type=text] {
+.form-signin input[type="text"] {
   margin-bottom: -1px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.form-signin input[type=password] {
+.form-signin input[type="password"] {
   margin-bottom: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-
- a{
-	color: #f2f2f2;
+a {
+  color: #f2f2f2;
   text-decoration: none;
 }
 
-a:hover{
-	text-decoration: none;
+a:hover {
+  text-decoration: none;
   color: #9b72fa;
 }
-
-
-

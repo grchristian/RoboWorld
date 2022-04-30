@@ -1,14 +1,14 @@
 <html>
-    <head>
-        {% load static%}
-    </head>
-    <body>
-        <h1>Registro del usuario!</h1>
-        <form action="proceso2" method="POST">
-            {% csrf_token %}
-            <input type = "text" name = "nombre"/>
-            <input type="submit">
-            <h1>test</h1>
-        </form>
-    </body>
+  <head>
+    {% load static%}
+  </head>
+  <body>
+    <h1>Registro del usuario!</h1>
+    <form action="proceso2" method="POST">
+      {% csrf_token %}
+      <input type="text" name="nombre" />
+      <input type="submit" />
+      <h1>test</h1>
+    </form>
+  </body>
 </html>

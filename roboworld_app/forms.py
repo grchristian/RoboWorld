@@ -4,25 +4,25 @@ from django import forms
 from django.core.exceptions import ValidationError
 
 
-
 class CustomUserCreationForm(forms.Form):
     username = forms.CharField(label='Usuario', min_length=4, max_length=150)
     email = forms.EmailField(label='Correo electrónico')
     password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirmar contraseña', widget=forms.PasswordInput)
+    password2 = forms.CharField(
+        label='Confirmar contraseña', widget=forms.PasswordInput)
 
     def clean_username(self):
         username = self.cleaned_data['username'].lower()
         r = User.objects.filter(username=username)
         if r.count():
-            raise  ValidationError("Este usuario ya existe")
+            raise ValidationError("Este usuario ya existe")
         return username
 
     def clean_email(self):
         email = self.cleaned_data['email'].lower()
         r = User.objects.filter(email=email)
         if r.count():
-            raise  ValidationError("Este correo electrónico ya está registrado")
+            raise ValidationError("Este correo electrónico ya está registrado")
         return email
 
     def clean_password2(self):
@@ -41,5 +41,3 @@ class CustomUserCreationForm(forms.Form):
             self.cleaned_data['password1']
         )
         return user
-
-
